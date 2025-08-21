@@ -137,7 +137,7 @@
             Our journey began with a simple observation: while technology was rapidly advancing, many critical industries remained fragmented, inefficient, and resistant to change. We saw an opportunity to create a unified platform that could accelerate innovation across multiple sectors simultaneously.
           </p>
           <p>
-            Today, we're proud to be at the forefront of this transformation, working with world-class partners to build the intelligent systems that will power the next generation of business operations.
+            Today, we're proud to be at the forefront of this transformation, working with world-class Tools to build the intelligent systems that will power the next generation of business operations.
           </p>
         </div>
         <div class="mt-8">
@@ -157,31 +157,26 @@
 <section id="team" class="py-20 md:py-28 bg-dark-turquoise">
   <div class="max-w-7xl mx-auto px-8">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Leadership Team</h2>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Our Team</h2>
       <p class="text-lg text-cyan-100 max-w-2xl mx-auto">Meet the visionaries driving transformation across industries</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Team Member 1 -->
       <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center card-hover fade-in-up">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="CEO" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
-        <h3 class="font-bold text-white text-lg mb-2">Marcus Chen</h3>
-        <p class="text-cyan-300 text-sm mb-3">Chief Executive Officer</p>
-        <p class="text-cyan-100 text-sm">Former VP of Engineering at leading tech companies, with 15+ years in platform development and strategic innovation.</p>
+        <img src="{{asset('images/image32.webp')}}" alt="CEO" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="font-bold text-white text-lg mb-2">Chrispus Mutwiri Gitonga</h3>
+        <p class="text-cyan-300 text-sm mb-3">Chief Technology Officer</p>
+        <p class="text-cyan-100 text-sm">Laravel and PHP expert with over 4 years of experience in building scalable enterprise platforms across multiple industries.</p>
       </div>
       <!-- Team Member 2 -->
       <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center card-hover fade-in-up" style="transition-delay: 100ms;">
-        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face" alt="CTO" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
-        <h3 class="font-bold text-white text-lg mb-2">Sarah Rodriguez</h3>
-        <p class="text-cyan-300 text-sm mb-3">Chief Technology Officer</p>
+        <img src="{{asset('images/image copy.png')}}" alt="CTO" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="font-bold text-white text-lg mb-2">Chege Antony</h3>
+        <p class="text-cyan-300 text-sm mb-3">100000X Vibe coder in python and machine learning</p>
         <p class="text-cyan-100 text-sm">AI and machine learning expert with deep experience in building scalable enterprise platforms across multiple industries.</p>
       </div>
       <!-- Team Member 3 -->
-      <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center card-hover fade-in-up" style="transition-delay: 200ms;">
-        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="COO" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
-        <h3 class="font-bold text-white text-lg mb-2">David Kim</h3>
-        <p class="text-cyan-300 text-sm mb-3">Chief Operating Officer</p>
-        <p class="text-cyan-100 text-sm">Operations strategist with proven track record in scaling multi-sector businesses and optimizing cross-venture synergies.</p>
-      </div>
+      
     </div>
   </div>
 </section>
