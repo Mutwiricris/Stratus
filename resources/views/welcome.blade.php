@@ -97,7 +97,7 @@
           <img src="https://cdn.simpleicons.org/nodedotjs/" class="h-8 md:h-10 lg:h-12" alt="Node.js">
           <img src="https://cdn.simpleicons.org/react/" class="h-8 md:h-10 lg:h-12" alt="React">
           <img src="https://cdn.simpleicons.org/vuedotjs/" class="h-8 md:h-10 lg:h-12" alt="Vue.js">
-          <img src="https://cdn.simpleicons.org/angular/" class="h-8 md:h-10 lg:h-12" alt="Angular">
+          <img src="https://cdn.simpleicons.org/angular/" class="h-8 md:h-10 lg:h-12" alt="Anogular">
           <img src="https://cdn.simpleicons.org/php/" class="h-8 md:h-10 lg:h-12" alt="PHP">
           <img src="https://cdn.simpleicons.org/laravel/" class="h-8 md:h-10 lg:h-12" alt="Laravel">
           <img src="https://cdn.simpleicons.org/symfony/" class="h-8 md:h-10 lg:h-12" alt="Symfony">
