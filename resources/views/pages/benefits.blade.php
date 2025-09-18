@@ -36,7 +36,7 @@
 <section id="benefits" class="py-20 md:py-28 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Why Partner With Ascend Stratus</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Why Partner With Ascend Stratus</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Unlock competitive advantages through our integrated ecosystem of intelligent solutions</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -114,13 +114,13 @@
 <section id="platform" class="py-20 md:py-28 bg-gradient-to-br from-cyan-50 via-turquoise-50 to-cyan-100">
   <div class="max-w-7xl mx-auto px-8">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">The Ascend Platform</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">The Ascend Platform</h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto">A comprehensive ecosystem that connects, analyzes, and optimizes business operations across multiple sectors through intelligent automation and data-driven insights.</p>
     </div>
     
     <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
       <div class="fade-in-up">
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-dark-turquoise mb-6">Intelligent Data Integration</h3>
+        <h3 class=" text-3xl md:text-4xl font-bold text-dark-turquoise mb-6">Intelligent Data Integration</h3>
         <p class="text-lg text-gray-600 mb-6 leading-relaxed">
           Our platform seamlessly integrates data from all your business operations, creating a unified view that enables smarter decision-making and automated optimization.
         </p>
@@ -208,7 +208,7 @@
 <section class="py-20 md:py-28 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Proven Results</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Proven Results</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Our platform delivers measurable improvements across key business metrics</p>
     </div>
     
@@ -255,7 +255,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-br from-cyan-50 to-turquoise-50">
   <div class="max-w-4xl mx-auto text-center px-8">
     <div class="fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-6">Experience the Platform</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-6">Experience the Platform</h2>
       <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
         See how our unified platform can transform your business operations and unlock new opportunities for growth.
       </p>

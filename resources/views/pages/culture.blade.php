@@ -36,7 +36,7 @@
 <section id="values" class="py-20 md:py-28 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Our Core Values</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Our Core Values</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">The fundamental principles that guide our decisions, shape our culture, and drive our mission forward</p>
     </div>
     
@@ -110,13 +110,13 @@
 <section id="team-culture" class="py-20 md:py-28 bg-gradient-to-br from-dark-turquoise to-turquoise-700">
   <div class="max-w-7xl mx-auto px-8">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">How We Work Together</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-4">How We Work Together</h2>
       <p class="text-lg text-cyan-100 max-w-2xl mx-auto">Our collaborative approach fosters innovation, accelerates growth, and creates lasting impact</p>
     </div>
     
     <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
       <div class="fade-in-up">
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-white mb-6">Collaborative Excellence</h3>
+        <h3 class=" text-3xl md:text-4xl font-bold text-white mb-6">Collaborative Excellence</h3>
         <p class="text-lg text-cyan-100 mb-6 leading-relaxed">
           We believe that the best solutions emerge from diverse perspectives working in harmony. Our culture encourages open dialogue, creative thinking, and collective problem-solving.
         </p>
@@ -194,7 +194,7 @@
 <section class="py-20 md:py-28 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Our Work Environment</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Our Work Environment</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Creating spaces and experiences that inspire innovation and foster collaboration</p>
     </div>
     
@@ -233,7 +233,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-br from-cyan-50 to-turquoise-50">
   <div class="max-w-7xl mx-auto px-8">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">What Our Team Says</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">What Our Team Says</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Hear from the people who make Ascend Stratus extraordinary</p>
     </div>
     
@@ -281,7 +281,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-r from-dark-turquoise to-turquoise-600">
   <div class="max-w-4xl mx-auto text-center px-8">
     <div class="fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Join Our Mission</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-6">Join Our Mission</h2>
       <p class="text-lg text-cyan-100 mb-8 max-w-2xl mx-auto">
         Be part of a team that's transforming industries and building the future of business operations. Your expertise can help shape tomorrow.
       </p>

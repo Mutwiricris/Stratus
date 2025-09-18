@@ -37,7 +37,7 @@
   <div class="max-w-7xl mx-auto">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
       <div class="fade-in-up">
-        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-6">The Ascend Principle</h2>
+        <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-6">The Ascend Principle</h2>
         <p class="text-lg text-gray-600 mb-6 leading-relaxed">
           Our philosophy is simple yet profound: we believe in transformative growth that redefines what's possible. The Ascend Principle guides everything we do – from the ventures we support to the technologies we develop.
         </p>
@@ -96,7 +96,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-r from-cyan-50 to-turquoise-50">
   <div class="max-w-7xl mx-auto px-8">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Transforming Industries at Scale</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Transforming Industries at Scale</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Our impact spans across multiple sectors, driving efficiency and innovation through intelligent platforms.</p>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -128,7 +128,7 @@
         <img src="https://images.unsplash.com/photo-1573496774439-fe3923b03629?q=80&w=1974" alt="Our Story" class="rounded-2xl shadow-2xl w-full">
       </div>
       <div class="fade-in-up" style="transition-delay: 200ms;">
-        <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-6">Our Story</h2>
+        <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-6">Our Story</h2>
         <div class="space-y-6 text-gray-600 leading-relaxed">
           <p>
             Founded with a vision to bridge the gap between traditional industries and cutting-edge technology, Ascend Stratus emerged from the recognition that foundational sectors needed more than incremental improvements – they needed transformation.
@@ -157,7 +157,7 @@
 <section id="team" class="py-20 md:py-28 bg-dark-turquoise">
   <div class="max-w-7xl mx-auto px-8">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Our Team</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-4">Our Team</h2>
       <p class="text-lg text-cyan-100 max-w-2xl mx-auto">Meet the visionaries driving transformation across industries</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -185,7 +185,7 @@
 <section class="py-20 md:py-28 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Our Core Values</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Our Core Values</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">The principles that guide our decisions and shape our culture</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -224,7 +224,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-r from-dark-turquoise to-turquoise-600">
   <div class="max-w-4xl mx-auto text-center px-8">
     <div class="fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Industry?</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Industry?</h2>
       <p class="text-lg text-cyan-100 mb-8 max-w-2xl mx-auto">
         Join the growing ecosystem of forward-thinking companies leveraging our platform to drive unprecedented growth and innovation.
       </p>

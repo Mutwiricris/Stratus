@@ -37,7 +37,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-turquoise-50/30 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">See Ascend Spa in Action</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">See Ascend Spa in Action</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Beautiful, intuitive interface designed for spa and salon professionals</p>
     </div>
     
@@ -46,7 +46,7 @@
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070" alt="Dashboard Screenshot" class="w-full h-80 object-cover">
           <div class="p-6">
-            <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-2">Comprehensive Dashboard</h3>
+            <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Comprehensive Dashboard</h3>
             <p class="text-gray-600">Get a complete overview of your spa's performance with real-time analytics, upcoming appointments, and key metrics.</p>
           </div>
         </div>
@@ -55,7 +55,7 @@
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
           <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=2070" alt="Booking Interface" class="w-full h-80 object-cover">
           <div class="p-6">
-            <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-2">Smart Booking System</h3>
+            <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Smart Booking System</h3>
             <p class="text-gray-600">Intuitive booking interface that makes scheduling appointments effortless for both staff and customers.</p>
           </div>
         </div>
@@ -92,7 +92,7 @@
 <section class="py-20 md:py-28 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Everything You Need to Run Your Spa</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Everything You Need to Run Your Spa</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Streamline operations, delight customers, and grow your business with our comprehensive management platform</p>
     </div>
     
@@ -104,7 +104,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Smart Booking System</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Smart Booking System</h3>
         <p class="text-gray-600 leading-relaxed mb-4">Online booking portal, appointment scheduling, automated reminders, and waitlist management to maximize bookings.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• 24/7 online booking with real-time availability</li>
@@ -122,7 +122,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Service Catalog</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Service Catalog</h3>
         <p class="text-gray-600 leading-relaxed mb-4">Comprehensive service management with packages, pricing, duration tracking, and inventory integration for seamless operations.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• Unlimited service and package creation</li>
@@ -141,7 +141,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Multi-Location Support</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Multi-Location Support</h3>
         <p class="text-gray-600 leading-relaxed mb-4">Manage multiple spa locations from a single dashboard with centralized reporting, staff transfers, and unified customer profiles.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• Centralized multi-location dashboard</li>
@@ -159,7 +159,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Payment Processing</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Payment Processing</h3>
         <p class="text-gray-600 leading-relaxed mb-4">Secure payment gateway with support for cards, digital wallets, gift cards, and flexible payment plans with automated billing.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• PCI-compliant payment processing</li>
@@ -177,7 +177,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Staff Management</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Staff Management</h3>
         <p class="text-gray-600 leading-relaxed mb-4">Complete staff scheduling, performance tracking, commission management, and training modules with role-based access controls.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• Intelligent staff scheduling and availability</li>
@@ -190,12 +190,12 @@
       
       <!-- Analytics -->
       <div class="bg-white rounded-2xl p-8 shadow-lg card-hover fade-in-up" style="transition-delay: 500ms;">
-        <div class="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-500 rounded-2xl flex items-center justify-center mb-6">
+        <div class="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2-2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Analytics & Reports</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Analytics & Reports</h3>
         <p class="text-gray-600 leading-relaxed mb-4">Advanced analytics dashboard with revenue tracking, customer insights, staff performance, and customizable reports for data-driven decisions.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• Real-time revenue and booking analytics</li>
@@ -213,7 +213,7 @@
 <section id="pricing" class="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-turquoise-50/30 px-8">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Simple, Transparent Pricing</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Simple, Transparent Pricing</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Choose the perfect plan for your spa or salon business</p>
     </div>
     
@@ -221,7 +221,7 @@
       <!-- Starter Plan -->
       <div class="bg-white rounded-2xl p-8 shadow-lg fade-in-up">
         <div class="text-center mb-8">
-          <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-2">Starter</h3>
+          <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Starter</h3>
           <div class="text-4xl font-bold text-dark-turquoise mb-2">$49<span class="text-lg text-gray-500">/month</span></div>
           <p class="text-gray-600">Perfect for small spas</p>
         </div>
@@ -240,7 +240,7 @@
       <div class="bg-gradient-to-br from-turquoise-600 to-cyan-accent text-white rounded-2xl p-8 shadow-2xl transform scale-105 fade-in-up" style="transition-delay: 100ms;">
         <div class="text-center mb-8">
           <div class="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">Most Popular</div>
-          <h3 class="font-serif text-2xl font-bold mb-2">Professional</h3>
+          <h3 class=" text-2xl font-bold mb-2">Professional</h3>
           <div class="text-4xl font-bold mb-2">$99<span class="text-lg opacity-80">/month</span></div>
           <p class="opacity-90">For growing businesses</p>
         </div>
@@ -259,7 +259,7 @@
       <!-- Enterprise Plan -->
       <div class="bg-white rounded-2xl p-8 shadow-lg fade-in-up" style="transition-delay: 200ms;">
         <div class="text-center mb-8">
-          <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-2">Enterprise</h3>
+          <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Enterprise</h3>
           <div class="text-4xl font-bold text-dark-turquoise mb-2">$199<span class="text-lg text-gray-500">/month</span></div>
           <p class="text-gray-600">For large operations</p>
         </div>
@@ -281,7 +281,7 @@
 <section class="py-20 md:py-28 px-8 bg-gradient-to-br from-dark-turquoise to-turquoise-600">
   <div class="max-w-4xl mx-auto text-center">
     <div class="fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Spa Business?</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Spa Business?</h2>
       <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">Join thousands of spa owners who have streamlined their operations and increased revenue with Ascend Spa.</p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
         <a href="#" class="bg-cyan-300 text-dark-turquoise px-8 py-4 rounded-lg text-lg font-semibold btn-animate shadow-lg hover:bg-white hover:text-dark-turquoise transition-colors">

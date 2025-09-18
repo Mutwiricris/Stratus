@@ -36,7 +36,7 @@
 <section id="products-grid" class="py-20 md:py-28 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Our Product Portfolio</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Our Product Portfolio</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">From spa management to logistics optimization, our solutions drive efficiency and growth</p>
     </div>
     
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="p-8">
-          <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Ascend Spa</h3>
+          <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Ascend Spa</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">Complete spa/salon management system featuring booking management, service scheduling, multi-location support, integrated payments, and comprehensive expense tracking.</p>
           <div class="flex items-center justify-between mb-4">
             <div class="text-lg font-bold text-turquoise-600">Starting at $49/month</div>
@@ -71,7 +71,7 @@
           </div>
         </div>
         <div class="p-8">
-          <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Retail Pro</h3>
+          <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Retail Pro</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive wholesale/retail management system handling inventory control, financial management, sales analytics, and providing actionable business insights.</p>
           <div class="flex items-center justify-between mb-4">
             <div class="text-lg font-bold text-turquoise-600">Starting at $79/month</div>
@@ -92,7 +92,7 @@
           </div>
         </div>
         <div class="p-8">
-          <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Pool Billiard App</h3>
+          <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Pool Billiard App</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">Connect pool players worldwide, manage tournaments and matches, view live scores for snooker, 8-ball, 9-ball games. Like FlashScore for pool sports.</p>
           <div class="flex items-center justify-between mb-4">
             <div class="text-lg font-bold text-turquoise-600">Free with Premium</div>
@@ -112,11 +112,11 @@
             <span class="bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Travel</span>
           </div>
           <div class="absolute top-4 right-4">
-            <span class="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Coming Soon</span>
+            <span class="bg-teal-600 text-white px-2 py-1 rounded-full text-xs font-semibold">Coming Soon</span>
           </div>
         </div>
         <div class="p-8">
-          <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Tours App</h3>
+          <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Tours App</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">Complete tour management webapp and mobile app for travel agencies and tour operators. Streamline bookings, itineraries, and customer management.</p>
           <div class="flex items-center justify-between mb-4">
             <div class="text-lg font-bold text-gray-500">Coming Soon</div>
@@ -137,7 +137,7 @@
           </div>
         </div>
         <div class="p-8">
-          <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Events Pro</h3>
+          <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Events Pro</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive events management software and mobile app for planning, organizing, and executing events of all sizes with attendee management and analytics.</p>
           <div class="flex items-center justify-between mb-4">
             <div class="text-lg font-bold text-turquoise-600">Starting at $99/month</div>
@@ -158,7 +158,7 @@
           </div>
         </div>
         <div class="p-8">
-          <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">AgriSmart</h3>
+          <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">AgriSmart</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">Advanced agriculture management solution with IoT integration, crop monitoring, weather analytics, and yield optimization for modern farming operations.</p>
           <div class="flex items-center justify-between mb-4">
             <div class="text-lg font-bold text-turquoise-600">Custom Pricing</div>
@@ -179,7 +179,7 @@
           </div>
         </div>
         <div class="p-8">
-          <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">LogiFlow</h3>
+          <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">LogiFlow</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">Complete logistics management solution for supply chain optimization, real-time tracking, delivery management, and route optimization for enterprises.</p>
           <div class="flex items-center justify-between mb-4">
             <div class="text-lg font-bold text-turquoise-600">Enterprise Pricing</div>
@@ -198,7 +198,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-turquoise-50/30 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Why Choose Our Solutions</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Why Choose Our Solutions</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Common features across all our products that drive success</p>
     </div>
     
@@ -209,7 +209,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-xl font-bold text-dark-turquoise mb-3">Easy Setup</h3>
+        <h3 class=" text-xl font-bold text-dark-turquoise mb-3">Easy Setup</h3>
         <p class="text-gray-600 leading-relaxed">Quick deployment with minimal technical requirements and comprehensive onboarding support.</p>
       </div>
       
@@ -219,7 +219,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-xl font-bold text-dark-turquoise mb-3">Secure & Reliable</h3>
+        <h3 class=" text-xl font-bold text-dark-turquoise mb-3">Secure & Reliable</h3>
         <p class="text-gray-600 leading-relaxed">Enterprise-grade security with 99.9% uptime guarantee and automated backups.</p>
       </div>
       
@@ -229,7 +229,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-xl font-bold text-dark-turquoise mb-3">Analytics & Insights</h3>
+        <h3 class=" text-xl font-bold text-dark-turquoise mb-3">Analytics & Insights</h3>
         <p class="text-gray-600 leading-relaxed">Advanced reporting and analytics to help you make data-driven business decisions.</p>
       </div>
       
@@ -239,7 +239,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 11-9.75 9.75A9.75 9.75 0 0112 2.25z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-xl font-bold text-dark-turquoise mb-3">24/7 Support</h3>
+        <h3 class=" text-xl font-bold text-dark-turquoise mb-3">24/7 Support</h3>
         <p class="text-gray-600 leading-relaxed">Round-the-clock customer support with dedicated account managers for enterprise clients.</p>
       </div>
     </div>
@@ -250,7 +250,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-r from-dark-turquoise to-turquoise-600">
   <div class="max-w-4xl mx-auto text-center px-8">
     <div class="fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
       <p class="text-lg text-cyan-100 mb-8 max-w-2xl mx-auto">
         Choose the perfect solution for your industry and start your digital transformation journey today.
       </p>

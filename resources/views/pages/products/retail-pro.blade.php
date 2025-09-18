@@ -37,7 +37,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-turquoise-50/30 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">See Retail Pro in Action</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">See Retail Pro in Action</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Powerful interface designed for wholesale and retail professionals</p>
     </div>
     
@@ -46,7 +46,7 @@
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Business Analytics Dashboard" class="w-full h-80 object-cover">
           <div class="p-6">
-            <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-2">Business Dashboard</h3>
+            <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Business Dashboard</h3>
             <p class="text-gray-600">Real-time overview of sales, inventory levels, top products, and key performance metrics across all channels.</p>
           </div>
         </div>
@@ -55,7 +55,7 @@
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
           <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Modern POS System" class="w-full h-80 object-cover">
           <div class="p-6">
-            <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-2">Point of Sale System</h3>
+            <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Point of Sale System</h3>
             <p class="text-gray-600">Intuitive POS interface with barcode scanning, payment processing, and receipt generation.</p>
           </div>
         </div>

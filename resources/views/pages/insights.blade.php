@@ -36,7 +36,7 @@
 <section class="py-20 md:py-28 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Featured Insight</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Featured Insight</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Our latest deep dive into industry transformation</p>
     </div>
     
@@ -51,7 +51,7 @@
             <span class="bg-gradient-to-r from-turquoise-600 to-cyan-accent text-white px-3 py-1 rounded-full text-sm font-semibold">Featured</span>
             <span class="text-gray-500 text-sm">March 15, 2024</span>
           </div>
-          <h3 class="font-serif text-3xl md:text-4xl font-bold text-dark-turquoise mb-4">The Future of AI in Enterprise: Beyond Automation</h3>
+          <h3 class=" text-3xl md:text-4xl font-bold text-dark-turquoise mb-4">The Future of AI in Enterprise: Beyond Automation</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">
             As artificial intelligence evolves beyond simple automation, enterprises are discovering new ways to leverage AI for strategic advantage. This comprehensive analysis explores the next frontier of AI implementation and its transformative potential.
           </p>
@@ -80,7 +80,7 @@
 <section id="latest" class="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-turquoise-50/30 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Latest Articles</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Latest Articles</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Stay updated with our latest insights and industry analysis</p>
     </div>
     
@@ -95,7 +95,7 @@
         </div>
         <div class="p-6">
           <div class="text-sm text-gray-500 mb-2">March 10, 2024 • 8 min read</div>
-          <h3 class="font-serif text-xl font-bold text-dark-turquoise mb-3 leading-tight">Quantum Computing: The Next Industrial Revolution</h3>
+          <h3 class=" text-xl font-bold text-dark-turquoise mb-3 leading-tight">Quantum Computing: The Next Industrial Revolution</h3>
           <p class="text-gray-600 mb-4 leading-relaxed">Exploring how quantum computing will reshape industries and create unprecedented opportunities for innovation and growth.</p>
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -117,7 +117,7 @@
         </div>
         <div class="p-6">
           <div class="text-sm text-gray-500 mb-2">March 8, 2024 • 6 min read</div>
-          <h3 class="font-serif text-xl font-bold text-dark-turquoise mb-3 leading-tight">Sustainable Finance: Building Tomorrow's Economy</h3>
+          <h3 class=" text-xl font-bold text-dark-turquoise mb-3 leading-tight">Sustainable Finance: Building Tomorrow's Economy</h3>
           <p class="text-gray-600 mb-4 leading-relaxed">How ESG principles and sustainable finance are driving the next wave of economic transformation and investment strategies.</p>
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -139,7 +139,7 @@
         </div>
         <div class="p-6">
           <div class="text-sm text-gray-500 mb-2">March 5, 2024 • 7 min read</div>
-          <h3 class="font-serif text-xl font-bold text-dark-turquoise mb-3 leading-tight">Precision Agriculture: Feeding the Future</h3>
+          <h3 class=" text-xl font-bold text-dark-turquoise mb-3 leading-tight">Precision Agriculture: Feeding the Future</h3>
           <p class="text-gray-600 mb-4 leading-relaxed">How IoT, AI, and satellite technology are revolutionizing agriculture to meet global food security challenges.</p>
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -161,7 +161,7 @@
         </div>
         <div class="p-6">
           <div class="text-sm text-gray-500 mb-2">March 3, 2024 • 5 min read</div>
-          <h3 class="font-serif text-xl font-bold text-dark-turquoise mb-3 leading-tight">The Resilient Supply Chain: Lessons from Disruption</h3>
+          <h3 class=" text-xl font-bold text-dark-turquoise mb-3 leading-tight">The Resilient Supply Chain: Lessons from Disruption</h3>
           <p class="text-gray-600 mb-4 leading-relaxed">Building adaptive supply chains that can withstand global disruptions while maintaining efficiency and sustainability.</p>
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -183,7 +183,7 @@
         </div>
         <div class="p-6">
           <div class="text-sm text-gray-500 mb-2">February 28, 2024 • 9 min read</div>
-          <h3 class="font-serif text-xl font-bold text-dark-turquoise mb-3 leading-tight">Smart Grids: Powering the Clean Energy Transition</h3>
+          <h3 class=" text-xl font-bold text-dark-turquoise mb-3 leading-tight">Smart Grids: Powering the Clean Energy Transition</h3>
           <p class="text-gray-600 mb-4 leading-relaxed">How intelligent energy infrastructure is enabling the shift to renewable energy sources and sustainable power systems.</p>
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -205,7 +205,7 @@
         </div>
         <div class="p-6">
           <div class="text-sm text-gray-500 mb-2">February 25, 2024 • 6 min read</div>
-          <h3 class="font-serif text-xl font-bold text-dark-turquoise mb-3 leading-tight">Digital Transformation: Beyond Technology</h3>
+          <h3 class=" text-xl font-bold text-dark-turquoise mb-3 leading-tight">Digital Transformation: Beyond Technology</h3>
           <p class="text-gray-600 mb-4 leading-relaxed">Understanding the cultural and organizational changes required for successful digital transformation initiatives.</p>
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -231,7 +231,7 @@
 <section id="newsletter" class="py-20 md:py-28 bg-gradient-to-r from-dark-turquoise to-turquoise-600">
   <div class="max-w-4xl mx-auto text-center px-8">
     <div class="fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Stay Informed</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-6">Stay Informed</h2>
       <p class="text-lg text-cyan-100 mb-8 max-w-2xl mx-auto">
         Subscribe to our newsletter and get the latest insights, industry analysis, and innovation trends delivered to your inbox.
       </p>
@@ -252,7 +252,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-br from-cyan-50 to-turquoise-50 px-8">
   <div class="max-w-4xl mx-auto text-center">
     <div class="fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-6">Ready to Transform Your Industry?</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-6">Ready to Transform Your Industry?</h2>
       <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
         Discover how our platform and expertise can help your organization navigate the future of business and technology.
       </p>

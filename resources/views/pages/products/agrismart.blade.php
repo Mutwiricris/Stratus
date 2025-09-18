@@ -37,7 +37,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-turquoise-50/30 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Smart Farming Technology</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Smart Farming Technology</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Advanced agricultural intelligence for modern farming operations</p>
     </div>
     
@@ -46,7 +46,7 @@
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
           <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070" alt="Farm Dashboard" class="w-full h-80 object-cover">
           <div class="p-6">
-            <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-2">Farm Intelligence Dashboard</h3>
+            <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Farm Intelligence Dashboard</h3>
             <p class="text-gray-600">Real-time monitoring of crops, soil conditions, weather patterns, and farm operations from a centralized platform.</p>
           </div>
         </div>
@@ -55,7 +55,7 @@
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
           <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2070" alt="IoT Sensors" class="w-full h-80 object-cover">
           <div class="p-6">
-            <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-2">IoT Sensor Network</h3>
+            <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">IoT Sensor Network</h3>
             <p class="text-gray-600">Advanced sensor technology for monitoring soil moisture, temperature, humidity, and crop health in real-time.</p>
           </div>
         </div>
@@ -92,7 +92,7 @@
 <section class="py-20 md:py-28 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Complete Smart Agriculture Ecosystem</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Complete Smart Agriculture Ecosystem</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Revolutionary technology for sustainable and profitable farming</p>
     </div>
     
@@ -104,7 +104,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">IoT Sensor Network</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">IoT Sensor Network</h3>
         <p class="text-gray-600 leading-relaxed mb-4">Advanced wireless sensor network for comprehensive farm monitoring and data collection.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• Soil moisture and pH monitoring</li>
@@ -124,7 +124,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">AI Crop Intelligence</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">AI Crop Intelligence</h3>
         <p class="text-gray-600 leading-relaxed mb-4">Machine learning-powered crop analysis for optimal growth and early problem detection.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• Computer vision crop health analysis</li>
@@ -145,7 +145,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Precision Farming Tools</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Precision Farming Tools</h3>
         <p class="text-gray-600 leading-relaxed mb-4">GPS-guided precision agriculture with variable rate application and field mapping.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• GPS field mapping and zoning</li>
@@ -165,7 +165,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Weather Intelligence</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Weather Intelligence</h3>
         <p class="text-gray-600 leading-relaxed mb-4">Hyperlocal weather forecasting and climate analytics for informed farming decisions.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• Hyperlocal weather forecasting</li>
@@ -185,7 +185,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Resource Optimization</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Resource Optimization</h3>
         <p class="text-gray-600 leading-relaxed mb-4">Intelligent resource management for water, fertilizers, and energy optimization.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• Smart irrigation scheduling</li>
@@ -200,12 +200,12 @@
       
       <!-- Farm Analytics -->
       <div class="bg-white rounded-2xl p-8 shadow-lg card-hover fade-in-up" style="transition-delay: 500ms;">
-        <div class="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-500 rounded-2xl flex items-center justify-center mb-6">
+        <div class="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2-2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
           </svg>
         </div>
-        <h3 class="font-serif text-2xl font-bold text-dark-turquoise mb-4">Farm Performance Analytics</h3>
+        <h3 class=" text-2xl font-bold text-dark-turquoise mb-4">Farm Performance Analytics</h3>
         <p class="text-gray-600 leading-relaxed mb-4">Comprehensive analytics and reporting for data-driven farming decisions and profitability optimization.</p>
         <ul class="text-sm text-gray-600 space-y-2">
           <li>• Yield performance analysis</li>
@@ -225,7 +225,7 @@
 <section class="py-20 md:py-28 px-8 bg-gradient-to-br from-dark-turquoise to-turquoise-600">
   <div class="max-w-4xl mx-auto text-center">
     <div class="fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Transform Your Farm with Smart Technology</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-6">Transform Your Farm with Smart Technology</h2>
       <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">Join progressive farmers who are increasing yields and reducing costs with AgriSmart intelligence.</p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
         <a href="#" class="bg-cyan-300 text-dark-turquoise px-8 py-4 rounded-lg text-lg font-semibold btn-animate shadow-lg hover:bg-white hover:text-dark-turquoise transition-colors">

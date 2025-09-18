@@ -6,7 +6,7 @@
             <div class="lg:col-span-2">
                 <div class="flex items-center mb-6">
                     <img src="{{ asset('images/logo1.png') }}" alt="Ascend Stratus" class="h-10 w-auto mr-4">
-                    <span class="font-serif text-2xl font-bold">Ascend Stratus</span>
+                    <span class=" text-2xl font-bold">Ascend Stratus</span>
                 </div>
                 <p class="text-cyan-100 mb-6 max-w-md">
                     Engineering software that empowers businesses. We build intelligent platforms that drive efficiency, scalability, and innovation across diverse sectors.

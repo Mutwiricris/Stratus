@@ -44,6 +44,9 @@
     </style>
 </head>
 <body class="bg-white">
+    <!-- Loading Screen -->
+    @include('components.loading-screen')
+    
     <div id="app">
         @include('layouts.header')
         <main>
@@ -52,8 +55,18 @@
         @include('layouts.footer')
     </div>
 
+    <!-- Cookie Consent Modal -->
+    @include('components.cookie-modal')
+    
+    <!-- Scroll to Top Button -->
+    @include('components.scroll-to-top')
+
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
+    
+    <!-- Enhanced Scripts -->
+    @include('components.scripts')
+    
     @stack('scripts')
 </body>
 </html>

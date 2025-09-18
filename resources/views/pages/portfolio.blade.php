@@ -36,7 +36,7 @@
 <section id="ventures" class="py-20 md:py-28 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Active Ventures</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Active Ventures</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Our diverse portfolio spans multiple sectors, each leveraging our unified platform for unprecedented growth and efficiency</p>
     </div>
     
@@ -144,7 +144,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-br from-dark-turquoise to-turquoise-700">
   <div class="max-w-7xl mx-auto px-8">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Portfolio Impact</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-4">Portfolio Impact</h2>
       <p class="text-lg text-cyan-100 max-w-2xl mx-auto">Measurable results across our venture ecosystem</p>
     </div>
     
@@ -177,7 +177,7 @@
 <section id="case-studies" class="py-20 md:py-28 px-8">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Success Stories</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Success Stories</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Real transformations, measurable results</p>
     </div>
     
@@ -189,7 +189,7 @@
         </div>
         <div class="fade-in-up" style="transition-delay: 200ms;">
           <div class="bg-gradient-to-r from-turquoise-600 to-cyan-accent text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 inline-block">Case Study</div>
-          <h3 class="font-serif text-3xl md:text-4xl font-bold text-dark-turquoise mb-4">Global Logistics Transformation</h3>
+          <h3 class=" text-3xl md:text-4xl font-bold text-dark-turquoise mb-4">Global Logistics Transformation</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">
             How a Fortune 500 logistics company reduced operational costs by 35% and improved delivery times by 50% through our integrated platform solution.
           </p>
@@ -219,7 +219,7 @@
         </div>
         <div class="fade-in-up lg:order-1" style="transition-delay: 200ms;">
           <div class="bg-gradient-to-r from-turquoise-600 to-cyan-accent text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 inline-block">Case Study</div>
-          <h3 class="font-serif text-3xl md:text-4xl font-bold text-dark-turquoise mb-4">FinTech Innovation Platform</h3>
+          <h3 class=" text-3xl md:text-4xl font-bold text-dark-turquoise mb-4">FinTech Innovation Platform</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">
             Enabling a regional bank to process $2B+ in transactions while maintaining 99.9% uptime and reducing compliance costs by 60%.
           </p>
@@ -249,7 +249,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-br from-cyan-50 to-turquoise-50">
   <div class="max-w-7xl mx-auto px-8">
     <div class="text-center mb-16 fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Technology Stack</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Technology Stack</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Cutting-edge technologies powering our venture ecosystem</p>
     </div>
     
@@ -315,7 +315,7 @@
 <section class="py-20 md:py-28 bg-gradient-to-r from-dark-turquoise to-turquoise-600">
   <div class="max-w-4xl mx-auto text-center px-8">
     <div class="fade-in-up">
-      <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Ready to Join Our Portfolio?</h2>
+      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-6">Ready to Join Our Portfolio?</h2>
       <p class="text-lg text-cyan-100 mb-8 max-w-2xl mx-auto">
         Discover how our platform can transform your business and unlock new opportunities for growth and innovation.
       </p>
