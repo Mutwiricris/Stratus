@@ -1,7 +1,80 @@
 @extends('layouts.detail')
 
-@section('title', ' Ascend Stratus')
-@section('description', 'Learn about Ascend Stratus, a modern multi-sector holding company revolutionizing foundational industries through technology and innovation.')
+@section('title', 'Ascend Stratus - Leading Technology Solutions & Digital Transformation in Africa')
+@section('description', 'Transform your business with Ascend Stratus - Africa\'s premier technology holding company. We provide enterprise software, fintech solutions, mobile app development, and digital transformation services designed specifically for African markets.')
+@section('keywords', 'enterprise software Africa, fintech solutions Kenya, mobile app development Africa, digital transformation, business automation, custom software development, African technology company, payment processing, digital banking, LogiFlow, AgriSmart')
+
+@section('og_title', 'Ascend Stratus - Transform Your Business with Cutting-Edge Technology')
+@section('og_description', 'Leading African technology company providing enterprise software, fintech solutions, and mobile applications. Join hundreds of successful businesses that have transformed with our solutions.')
+@section('og_image', asset('images/ascend-stratus-social.jpg'))
+
+@section('twitter_title', 'Ascend Stratus - Technology Solutions for African Businesses')
+@section('twitter_description', 'Enterprise software, fintech solutions & mobile apps designed for Africa. Transform your business today.')
+
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Ascend Stratus - Home",
+    "description": "Transform your business with Africa's leading technology solutions provider",
+    "url": "{{ url('/') }}",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "Ascend Stratus",
+        "alternateName": "Ascend Stratus Holdings",
+        "description": "Multi-sector technology holding company transforming businesses across Africa",
+        "foundingDate": "2020",
+        "numberOfEmployees": "50-100",
+        "industry": "Technology Services",
+        "serviceArea": {
+            "@type": "Place",
+            "name": "Africa"
+        },
+        "makesOffer": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Enterprise Software Development",
+                    "category": "Software Development",
+                    "description": "Custom enterprise applications with AI-powered features"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Fintech Solutions",
+                    "category": "Financial Technology",
+                    "description": "Payment processing, digital banking, and mobile money integration"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Mobile App Development",
+                    "category": "Mobile Development",
+                    "description": "Native iOS/Android and cross-platform applications"
+                }
+            }
+        ]
+    },
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "{{ url('/') }}"
+            }
+        ]
+    }
+}
+</script>
+@endpush
 
 @section('content')
 
@@ -101,7 +174,8 @@
           <!-- Main Image -->
           <div class="relative overflow-hidden rounded-3xl shadow-2xl">
             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80" 
-                 alt="African tech team in modern office" 
+                 alt="African tech team in modern office collaborating on innovative technology solutions" 
+                 loading="eager"
                  class="w-full h-[350px] sm:h-[450px] lg:h-[550px] object-cover group-hover:scale-110 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-br from-teal-600/20 via-cyan-600/10 to-blue-600/20 group-hover:opacity-75 transition-opacity duration-500"></div>
           </div>
@@ -349,7 +423,8 @@
           <div class="relative">
             <div class="bg-white rounded-2xl p-4 shadow-2xl transform rotate-3">
               <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=1920&q=80" 
-                   alt="African business technology interface" 
+                   alt="African business professionals using advanced technology interface for digital transformation" 
+                   loading="lazy"
                    class="w-full h-64 object-cover rounded-lg">
             </div>
           </div>
@@ -999,7 +1074,7 @@
                     <!-- Blog Post 1 -->
                     <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover fade-in-up border border-cyan-200 rounded-lg">
                         <div class="relative h-48">
-                            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Modern Agriculture Technology" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Modern Agriculture Technology transforming African farming with smart solutions" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-dark-turquoise mb-3">The Future of AgriTech in Africa</h3>
@@ -1011,7 +1086,7 @@
                     <!-- Blog Post 2 -->
                     <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover fade-in-up border border-cyan-200 rounded-lg" style="transition-delay: 100ms;">
                         <div class="relative h-48">
-                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Logistics Warehouse Innovation" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Logistics warehouse innovation with smart technology and automated systems in Africa" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-dark-turquoise mb-3">Innovating Logistics: A Case Study</h3>
@@ -1023,7 +1098,7 @@
                     <!-- Blog Post 3 -->
                     <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover fade-in-up border border-cyan-200 rounded-lg" style="transition-delay: 200ms;">
                         <div class="relative h-48">
-                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI Technology Development" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI technology development and machine learning solutions empowering African businesses" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-dark-turquoise mb-3">Empowering Businesses with AI</h3>
