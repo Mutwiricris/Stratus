@@ -102,9 +102,13 @@
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             will-change: transform, background-color, box-shadow;
             transform: translateZ(0);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 253, 250, 0.9) 50%, rgba(255, 255, 255, 0.9) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(20, 184, 166, 0.1);
         }
         .navbar-scrolled {
-            background: rgba(255, 255, 255, 0.85) !important;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 253, 250, 0.95) 50%, rgba(255, 255, 255, 0.95) 100%) !important;
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border-bottom: 1px solid rgba(20, 184, 166, 0.2);
@@ -211,7 +215,7 @@
         }
         
         .mobile-menu {
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             transform: translateX(100%);
             will-change: transform, opacity;
             opacity: 0;
@@ -223,10 +227,16 @@
             visibility: visible;
         }
         .mobile-menu.scrolled {
-            background: rgba(15, 118, 110, 0.96) !important;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(240, 253, 250, 0.96) 50%, rgba(204, 251, 241, 0.96) 100%) !important;
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(20, 184, 166, 0.2);
+        }
+        
+        /* Hamburger Animation */
+        .hamburger-line {
+            transform-origin: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         .mobile-menu-overlay {
             position: fixed;
@@ -357,31 +367,50 @@
         
         /* Enhanced Responsive Design */
         @media (max-width: 1024px) {
-            .navbar { padding: 0.75rem 1rem; }
+            .navbar { 
+                padding: 0.75rem 1rem;
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(240, 253, 250, 0.92) 50%, rgba(255, 255, 255, 0.92) 100%);
+            }
             .mobile-menu { width: 85vw; max-width: 400px; }
             h1 { font-size: clamp(2rem, 8vw, 3.5rem); }
         }
         @media (max-width: 768px) {
-            .navbar { padding: 0.625rem 1rem; }
+            .navbar { 
+                padding: 0.625rem 1rem;
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(240, 253, 250, 0.94) 50%, rgba(255, 255, 255, 0.94) 100%);
+            }
             .mobile-menu { width: 90vw; max-width: 380px; }
             h1 { font-size: clamp(1.875rem, 7vw, 3rem); }
             h2 { font-size: clamp(1.5rem, 6vw, 2.5rem); }
         }
         @media (max-width: 640px) {
-            .navbar { padding: 0.5rem 1rem; }
-            .mobile-menu { width: 100vw; max-width: none; }
+            .navbar { 
+                padding: 0.5rem 1rem;
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(240, 253, 250, 0.96) 50%, rgba(255, 255, 255, 0.96) 100%);
+            }
+            .mobile-menu { 
+                width: 100vw; 
+                max-width: none;
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 253, 250, 0.98) 50%, rgba(204, 251, 241, 0.98) 100%);
+            }
             h1 { font-size: clamp(1.75rem, 6vw, 2.5rem); }
             h2 { font-size: clamp(1.25rem, 5vw, 2rem); }
             .floating { animation-duration: 4s; }
         }
         @media (max-width: 480px) {
-            .navbar { padding: 0.5rem 0.75rem; }
+            .navbar { 
+                padding: 0.5rem 0.75rem;
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 253, 250, 0.98) 50%, rgba(255, 255, 255, 0.98) 100%);
+            }
             .mobile-menu { padding: 1rem; }
             h1 { font-size: clamp(1.5rem, 5vw, 2.25rem); }
             h2 { font-size: clamp(1.125rem, 4vw, 1.75rem); }
         }
         @media (max-width: 375px) {
-            .navbar { padding: 0.5rem; }
+            .navbar { 
+                padding: 0.5rem;
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.99) 0%, rgba(240, 253, 250, 0.99) 50%, rgba(255, 255, 255, 0.99) 100%);
+            }
             h1 { font-size: clamp(1.375rem, 4.5vw, 2rem); }
         }
         

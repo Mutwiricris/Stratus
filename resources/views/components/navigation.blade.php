@@ -65,10 +65,12 @@
           <span class="text-gray-700 font-medium">EN</span>
         </div>
         
-        <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gray-200" aria-label="Open mobile menu" aria-expanded="false">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-200 relative" aria-label="Open mobile menu" aria-expanded="false">
+          <div class="hamburger-icon">
+            <span class="hamburger-line block w-6 h-0.5 bg-current transition-all duration-300"></span>
+            <span class="hamburger-line block w-6 h-0.5 bg-current mt-1.5 transition-all duration-300"></span>
+            <span class="hamburger-line block w-6 h-0.5 bg-current mt-1.5 transition-all duration-300"></span>
+          </div>
         </button>
       </div>
     </div>
@@ -79,17 +81,17 @@
 <div id="mobile-menu-overlay" class="mobile-menu-overlay lg:hidden" aria-hidden="true"></div>
 
 <!-- Mobile Menu -->
-<nav id="mobile-menu" class="mobile-menu lg:hidden fixed top-0 right-0 h-full w-80 sm:w-96 bg-white shadow-2xl border-l border-gray-200 z-50" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
+<nav id="mobile-menu" class="mobile-menu lg:hidden fixed top-0 right-0 h-full w-80 sm:w-96 bg-gradient-to-br from-white/95 via-teal-50/90 to-cyan-50/95 backdrop-blur-xl shadow-2xl border-l border-teal-200/30 z-50" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
   <div class="flex flex-col h-full">
     <!-- Mobile Menu Header -->
-    <div class="flex justify-between items-center p-6 border-b border-gray-200">
+    <div class="flex justify-between items-center p-6 border-b border-teal-200/30 bg-white/20 backdrop-blur-sm">
       <a href="{{ url('/') }}" class="flex items-center">
         <div class="flex items-center gap-3">
-          <img src="{{ asset('images/logo.png') }}" alt="Ascend Stratus" class="h-8 w-auto">
+          <img src="{{ asset('images/logo1.png') }}" alt="Ascend Stratus" class="h-8 w-auto">
           <span class="text-xl font-bold text-gray-900" id="mobile-menu-title">Ascend Stratus</span>
         </div>
       </a>
-      <button id="mobile-menu-close" class="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gray-200" aria-label="Close mobile menu">
+      <button id="mobile-menu-close" class="p-2 text-gray-700 hover:bg-teal-100/50 hover:text-teal-600 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-200" aria-label="Close mobile menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
         </svg>
@@ -98,17 +100,31 @@
     
     <!-- Mobile Menu Content -->
     <div class="flex-1 overflow-y-auto px-6 py-6">
-      <ul class="space-y-2 text-base font-medium">
-        <li><a href="{{ url('/') }}" class="block text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200 py-3 px-4 rounded-lg">Home.</a></li>
-        <li><a href="{{ url('/products') }}" class="block text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200 py-3 px-4 rounded-lg">Services.</a></li>
-        <li><a href="{{ url('/about') }}" class="block text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200 py-3 px-4 rounded-lg">About us.</a></li>
-        <li><a href="{{ url('/portfolio') }}" class="block text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200 py-3 px-4 rounded-lg">Cases.</a></li>
-        <li><a href="{{ url('/insights') }}" class="block text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200 py-3 px-4 rounded-lg">Blog.</a></li>
+      <ul class="space-y-3 text-base font-medium">
+        <li><a href="{{ url('/') }}" class="block text-gray-800 hover:text-teal-600 hover:bg-white/50 transition-all duration-200 py-4 px-4 rounded-xl border border-transparent hover:border-teal-200/50">Home</a></li>
+        <li>
+          <a href="{{ url('/services') }}" class="block text-gray-800 hover:text-teal-600 hover:bg-white/50 transition-all duration-200 py-4 px-4 rounded-xl border border-transparent hover:border-teal-200/50">Services</a>
+          <ul class="ml-4 mt-2 space-y-1">
+            <li><a href="{{ url('/services/web-applications') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Web Applications</a></li>
+            <li><a href="{{ url('/services/mobile-app-development') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Mobile Development</a></li>
+            <li><a href="{{ url('/services/digital-transformation') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Digital Transformation</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="{{ url('/about') }}" class="block text-gray-800 hover:text-teal-600 hover:bg-white/50 transition-all duration-200 py-4 px-4 rounded-xl border border-transparent hover:border-teal-200/50">About Us</a>
+          <ul class="ml-4 mt-2 space-y-1">
+            <li><a href="{{ url('/about') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Our Story</a></li>
+            <li><a href="{{ url('/culture') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Our Culture</a></li>
+            <li><a href="{{ url('/benefits') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Benefits</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ url('/portfolio') }}" class="block text-gray-800 hover:text-teal-600 hover:bg-white/50 transition-all duration-200 py-4 px-4 rounded-xl border border-transparent hover:border-teal-200/50">Portfolio</a></li>
+        <li><a href="{{ url('/insights') }}" class="block text-gray-800 hover:text-teal-600 hover:bg-white/50 transition-all duration-200 py-4 px-4 rounded-xl border border-transparent hover:border-teal-200/50">Insights</a></li>
       </ul>
       
       <!-- Language Selector Mobile -->
-      <div class="mt-8 pt-6 border-t border-gray-200">
-        <div class="flex items-center gap-2 px-4 py-3">
+      <div class="mt-8 pt-6 border-t border-teal-200/30">
+        <div class="flex items-center gap-2 px-4 py-3 bg-white/30 rounded-lg">
           <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyMCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjE0IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSI0LjY2NjY3IiBmaWxsPSIjRkY0NDQ0Ii8+CjxyZWN0IHk9IjkuMzMzMzQiIHdpZHRoPSIyMCIgaGVpZ2h0PSI0LjY2NjY3IiBmaWxsPSIjRkY0NDQ0Ii8+Cjwvc3ZnPgo=" alt="EN" class="w-5 h-4">
           <span class="text-gray-700 font-medium">EN</span>
         </div>
@@ -116,9 +132,9 @@
     </div>
     
     <!-- Mobile Menu Footer -->
-    <div class="p-6 border-t border-gray-200">
-      <a href="{{ url('/contact') }}" class="w-full bg-teal-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-teal-700 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 block text-center">
-        Contact
+    <div class="p-6 border-t border-teal-200/30 bg-white/20 backdrop-blur-sm">
+      <a href="{{ url('/contact') }}" class="w-full bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-4 rounded-xl text-base font-semibold hover:from-teal-700 hover:to-cyan-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-400 block text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+        Contact Us
       </a>
     </div>
   </div>
