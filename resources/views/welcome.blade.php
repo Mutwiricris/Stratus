@@ -63,7 +63,7 @@
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-stretch sm:items-center mb-12 fade-in-up" style="transition-delay: 400ms;">
-          <button class="group relative bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/25 transition-all duration-500 hover:scale-105 btn-animate overflow-hidden">
+          <a href='/contact' class="group relative bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/25 transition-all duration-500 hover:scale-105 btn-animate overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-r from-teal-700 via-cyan-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <span class="relative flex items-center justify-center gap-2">
               Get Started Today
@@ -71,8 +71,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
             </span>
-          </button>
-          <button class="group border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-teal-600 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 btn-animate backdrop-blur-sm bg-white/50">
+          </a>
+          <a href='/services' class="group border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-teal-600 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 btn-animate backdrop-blur-sm bg-white/50">
             <span class="flex items-center justify-center gap-2">
               <svg class="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -80,7 +80,7 @@
               </svg>
               View Our Work
             </span>
-          </button>
+          </a>
         </div>
         
         <!-- Client Logos -->
@@ -951,10 +951,10 @@
                         Join hundreds of successful companies that have accelerated their growth with our enterprise solutions.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-                        <a href="#contact" class="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-xl">
+                        <a href="{{ route('contact') }}" class="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-xl">
                             Start Your Project
                         </a>
-                        <a href="#" class="border-2 border-white text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                        <a href="{{ route('contact') }}" class="border-2 border-white text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                             Schedule Consultation
                         </a>
                     </div>
@@ -1004,7 +1004,7 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-dark-turquoise mb-3">The Future of AgriTech in Africa</h3>
                             <p class="text-gray-600 mb-4 leading-relaxed">Explore how technology is revolutionizing agriculture across the continent.</p>
-                            <a href="/insights/agritech-future" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Read More →</a>
+                            <a href="{{ route('insights.detail', 'agritech-future') }}" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Read More →</a>
                         </div>
                     </div>
                     
@@ -1016,7 +1016,7 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-dark-turquoise mb-3">Innovating Logistics: A Case Study</h3>
                             <p class="text-gray-600 mb-4 leading-relaxed">Discover how our LogiFlow solution transformed supply chain efficiency.</p>
-                            <a href="/insights/logistics-case-study" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Read More →</a>
+                            <a href="{{ route('insights.detail', 'logistics-case-study') }}" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Read More →</a>
                         </div>
                     </div>
                     
@@ -1028,13 +1028,13 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-dark-turquoise mb-3">Empowering Businesses with AI</h3>
                             <p class="text-gray-600 mb-4 leading-relaxed">Learn about our AI-driven platforms and their impact on various sectors.</p>
-                            <a href="/insights/ai-empowerment" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Read More →</a>
+                            <a href="{{ route('insights.detail', 'ai-empowerment') }}" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Read More →</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="text-center mt-16 fade-in-up">
-                    <a href="/insights" class="bg-gradient-to-r from-turquoise-600 to-cyan-accent text-white px-8 py-4 rounded-lg text-lg font-semibold btn-animate shadow-lg hover:shadow-xl transition-all">
+                    <a href="{{ route('insights') }}" class="bg-gradient-to-r from-turquoise-600 to-cyan-accent text-white px-8 py-4 rounded-lg text-lg font-semibold btn-animate shadow-lg hover:shadow-xl transition-all">
                         View All Articles
                     </a>
                 </div>

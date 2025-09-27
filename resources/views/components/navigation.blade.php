@@ -7,7 +7,7 @@
         <!-- Logo -->
         <div class="flex items-center">
           <a href="{{ url('/') }}" class="flex items-center space-x-3">
-            <img src="{{ asset('images/logo1.png') }}" alt="Ascend Stratus" class="h-8 w-auto">
+            <!-- <img src="{{ asset('images/logo1.png') }}" alt="Ascend Stratus" class="h-8 w-auto"> -->
             <span class="text-gray-900 font-bold text-xl">Ascend Stratus</span>
           </a>
         </div>
