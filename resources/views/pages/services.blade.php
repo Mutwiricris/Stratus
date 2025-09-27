@@ -99,7 +99,7 @@
             </svg>
           </div>
           <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors duration-300">Mobile App Development</h3>
-          <p class="text-gray-600 leading-relaxed mb-4">15+ years of expertise in developing native and cross-platform apps for iOS and Android devices.</p>
+          <p class="text-gray-600 leading-relaxed mb-4">3+ years of expertise in developing native and cross-platform apps for iOS and Android devices.</p>
           <div class="text-sm text-teal-600 font-semibold mb-4">Technologies:</div>
           <div class="flex flex-wrap gap-2 mb-6">
             <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">React Native</span>
@@ -345,7 +345,7 @@
           </svg>
         </div>
         <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors duration-300">Expert Team</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">15+ years of combined experience with certified professionals in latest technologies.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">3+ years of combined experience with certified professionals in latest technologies.</p>
       </div>
       
       <!-- 24/7 Support -->
@@ -601,7 +601,7 @@
         <div class="text-sm sm:text-base text-cyan-100">Happy Clients</div>
       </div>
       <div class="text-center">
-        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white">15+</div>
+        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white">3+</div>
         <div class="text-sm sm:text-base text-cyan-100">Years Experience</div>
       </div>
       <div class="text-center">

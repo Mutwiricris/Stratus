@@ -78,8 +78,8 @@ Route::group(['prefix' => 'services'], function () {
     })->name('services.digital-transformation');
 
     Route::get('/dev-team-as-a-service', function () {
-        return view('pages.services.dev-team-as-a-service');
-    })->name('services.dev-team-as-a-service');
+        return view('pages.services.custom-ecommerce-solutions');
+    })->name('services.custom-ecommerce-solutions');
 
     Route::get('/ecommerce-solutions', function () {
         return view('pages.services.ecommerce-solutions');
@@ -205,7 +205,7 @@ Route::prefix('api')->name('api.')->group(function () {
                 ['label' => 'Projects Completed', 'value' => '1500+'],
                 ['label' => 'Happy Clients', 'value' => '500+'],
                 ['label' => 'Team Members', 'value' => '20+'],
-                ['label' => 'Years Experience', 'value' => '15+'],
+                ['label' => 'Years Experience', 'value' => '3+'],
             ]
         ]);
     })->name('stats');

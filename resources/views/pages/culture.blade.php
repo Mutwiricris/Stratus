@@ -224,7 +224,7 @@
         <div class="text-sm text-cyan-100">Global talent network</div>
       </div>
       <div class="text-center fade-in-up" style="transition-delay: 200ms;">
-        <div class="text-4xl md:text-5xl font-extrabold text-cyan-300 mb-2">15+</div>
+        <div class="text-4xl md:text-5xl font-extrabold text-cyan-300 mb-2">3+</div>
         <div class="text-white font-semibold mb-1">Countries</div>
         <div class="text-sm text-cyan-100">Diverse global presence</div>
       </div>

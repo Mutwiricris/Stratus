@@ -114,7 +114,7 @@
           </div>
           
           <div class="absolute -bottom-6 -left-6 w-32 h-20 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-4 floating" style="animation-delay: 2s;">
-            <div class="text-2xl font-bold text-gray-900">15+</div>
+            <div class="text-2xl font-bold text-gray-900">3+</div>
             <div class="text-xs text-gray-600 font-medium">Years Experience</div>
           </div>
           

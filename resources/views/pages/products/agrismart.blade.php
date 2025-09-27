@@ -51,7 +51,7 @@
       <div class="fade-in-up" style="transition-delay: 200ms;">
         <div class="relative">
           <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-100">
-            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=2072" alt="AgriSmart" class="w-full h-80 object-cover rounded-2xl">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2072" alt="African Smart Agriculture" class="w-full h-80 object-cover rounded-2xl">
             
             <!-- Floating AgriSmart Stats -->
             <div class="absolute -top-4 -left-4 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-4 floating" style="animation-delay: 1s;">
@@ -89,7 +89,7 @@
     <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
       <div class="fade-in-up">
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070" alt="Farm Dashboard" class="w-full h-80 object-cover">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2070" alt="African Farm Dashboard" class="w-full h-80 object-cover">
           <div class="p-6">
             <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Farm Intelligence Dashboard</h3>
             <p class="text-gray-600">Real-time monitoring of crops, soil conditions, weather patterns, and farm operations from a centralized platform.</p>
@@ -98,7 +98,7 @@
       </div>
       <div class="fade-in-up" style="transition-delay: 200ms;">
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2070" alt="IoT Sensors" class="w-full h-80 object-cover">
+          <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=2070" alt="African IoT Sensors in Agriculture" class="w-full h-80 object-cover">
           <div class="p-6">
             <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">IoT Sensor Network</h3>
             <p class="text-gray-600">Advanced sensor technology for monitoring soil moisture, temperature, humidity, and crop health in real-time.</p>
@@ -109,14 +109,14 @@
     
     <div class="grid lg:grid-cols-3 gap-8">
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-in-up">
-        <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=2070" alt="Crop Monitoring" class="w-full h-48 object-cover">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2070" alt="African Crop Monitoring" class="w-full h-48 object-cover">
         <div class="p-6">
           <h4 class="font-semibold text-dark-turquoise mb-2">Precision Crop Monitoring</h4>
           <p class="text-sm text-gray-600">AI-powered crop health analysis with early disease detection and growth optimization.</p>
         </div>
       </div>
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-in-up" style="transition-delay: 100ms;">
-        <img src="https://images.unsplash.com/photo-1592982736828-1d27b9b2b6d1?q=80&w=2070" alt="Weather Analytics" class="w-full h-48 object-cover">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070" alt="African Weather Analytics" class="w-full h-48 object-cover">
         <div class="p-6">
           <h4 class="font-semibold text-dark-turquoise mb-2">Weather Intelligence</h4>
           <p class="text-sm text-gray-600">Hyperlocal weather forecasting and climate analytics for optimal farming decisions.</p>

@@ -128,10 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if cookies consent was already given
     function checkCookieConsent() {
         const consent = localStorage.getItem('cookie-consent');
-        console.log('Cookie consent check:', consent);
-        console.log('Cookie modal element:', cookieModal);
         if (!consent) {
-            console.log('No consent found, showing modal in 2 seconds');
             setTimeout(() => {
                 showCookieModal();
             }, 2000);
@@ -139,9 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showCookieModal() {
-        console.log('showCookieModal called');
         if (cookieModal) {
-            console.log('Cookie modal found, showing...');
             cookieModal.style.display = 'flex';
             cookieModal.style.opacity = '0';
             setTimeout(() => {
@@ -151,8 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     glassCard.style.transform = 'translateY(0)';
                 }
             }, 100);
-        } else {
-            console.error('Cookie modal element not found!');
         }
     }
     
@@ -249,17 +242,8 @@ document.addEventListener('DOMContentLoaded', function() {
         hideCustomizeModal();
     });
     
-    // Clear any existing consent for testing (remove this line in production)
-    localStorage.removeItem('cookie-consent');
-    
     // Initialize cookie consent check
     checkCookieConsent();
-    
-    // Manual trigger for testing - show modal immediately
-    setTimeout(() => {
-        console.log('Manual trigger - forcing modal display');
-        showCookieModal();
-    }, 1000);
     
     // Counter Animation
     function animateCounters() {

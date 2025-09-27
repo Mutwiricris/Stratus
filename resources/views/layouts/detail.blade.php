@@ -102,17 +102,18 @@
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             will-change: transform, background-color, box-shadow;
             transform: translateZ(0);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 253, 250, 0.9) 50%, rgba(255, 255, 255, 0.9) 100%);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(20, 184, 166, 0.1);
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(59, 130, 246, 0.15) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(20, 184, 166, 0.2);
+            z-index: 1000;
         }
         .navbar-scrolled {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 253, 250, 0.95) 50%, rgba(255, 255, 255, 0.95) 100%) !important;
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.3) 0%, rgba(59, 130, 246, 0.25) 100%) !important;
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            border-bottom: 1px solid rgba(20, 184, 166, 0.2);
-            box-shadow: 0 8px 32px rgba(20, 184, 166, 0.15), 0 4px 16px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(20, 184, 166, 0.3);
+            box-shadow: 0 8px 32px rgba(20, 184, 166, 0.2), 0 4px 16px rgba(0, 0, 0, 0.1);
         }
         
         .gradient-bg {
@@ -220,11 +221,13 @@
             will-change: transform, opacity;
             opacity: 0;
             visibility: hidden;
+            pointer-events: none;
         }
         .mobile-menu.open {
             transform: translateX(0);
             opacity: 1;
             visibility: visible;
+            pointer-events: auto;
         }
         .mobile-menu.scrolled {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(240, 253, 250, 0.96) 50%, rgba(204, 251, 241, 0.96) 100%) !important;
@@ -244,17 +247,19 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             opacity: 0;
             visibility: hidden;
+            pointer-events: none;
             transition: all 0.3s ease;
-            z-index: 40;
+            z-index: 1040;
         }
         .mobile-menu-overlay.open {
             opacity: 1;
             visibility: visible;
+            pointer-events: auto;
         }
         
         .fade-in-up {
@@ -391,7 +396,7 @@
             .mobile-menu { 
                 width: 100vw; 
                 max-width: none;
-                background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 253, 250, 0.98) 50%, rgba(204, 251, 241, 0.98) 100%);
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(115, 218, 194, 0.98) 50%, rgba(204, 251, 241, 0.98) 100%);
             }
             h1 { font-size: clamp(1.75rem, 6vw, 2.5rem); }
             h2 { font-size: clamp(1.25rem, 5vw, 2rem); }
@@ -459,6 +464,8 @@
     </main>
     
     @include('components.footer')
+    
+    @include('components.cookie-modal')
     
     @include('components.scripts')
     <script src="{{ asset('js/navigation.js') }}"></script>

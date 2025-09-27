@@ -7,7 +7,7 @@
 <!-- Hero Section -->
 <section class="relative min-h-[70vh] flex items-center">
   <div class="absolute inset-0">
-    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2074" alt="Ascend Spa" class="w-full h-full object-cover">
+    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2074" alt="African Luxury Spa" class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-gradient-to-br from-dark-turquoise/90 via-turquoise-600/80 to-cyan-accent/70"></div>
   </div>
   <div class="relative z-10 w-full container px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 py-20">
@@ -44,7 +44,7 @@
     <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
       <div class="fade-in-up">
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070" alt="Dashboard Screenshot" class="w-full h-80 object-cover">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2070" alt="African Spa Dashboard" class="w-full h-80 object-cover">
           <div class="p-6">
             <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Comprehensive Dashboard</h3>
             <p class="text-gray-600">Get a complete overview of your spa's performance with real-time analytics, upcoming appointments, and key metrics.</p>
@@ -53,7 +53,7 @@
       </div>
       <div class="fade-in-up" style="transition-delay: 200ms;">
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=2070" alt="Booking Interface" class="w-full h-80 object-cover">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070" alt="African Spa Booking Interface" class="w-full h-80 object-cover">
           <div class="p-6">
             <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Smart Booking System</h3>
             <p class="text-gray-600">Intuitive booking interface that makes scheduling appointments effortless for both staff and customers.</p>
@@ -64,21 +64,21 @@
     
     <div class="grid lg:grid-cols-3 gap-8">
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-in-up">
-        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070" alt="Service Management" class="w-full h-48 object-cover">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070" alt="African Spa Service Management" class="w-full h-48 object-cover">
         <div class="p-6">
           <h4 class="font-semibold text-dark-turquoise mb-2">Service Catalog</h4>
           <p class="text-sm text-gray-600">Manage all your services, packages, and pricing in one place.</p>
         </div>
       </div>
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-in-up" style="transition-delay: 100ms;">
-        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2126" alt="Staff Scheduling" class="w-full h-48 object-cover">
+        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=2126" alt="African Spa Staff Scheduling" class="w-full h-48 object-cover">
         <div class="p-6">
           <h4 class="font-semibold text-dark-turquoise mb-2">Staff Scheduling</h4>
           <p class="text-sm text-gray-600">Efficient staff management with automated scheduling and availability tracking.</p>
         </div>
       </div>
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-in-up" style="transition-delay: 200ms;">
-        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2070" alt="Payment Processing" class="w-full h-48 object-cover">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070" alt="African Spa Payment Processing" class="w-full h-48 object-cover">
         <div class="p-6">
           <h4 class="font-semibold text-dark-turquoise mb-2">Payment Processing</h4>
           <p class="text-sm text-gray-600">Secure, integrated payment system with support for tips and gift cards.</p>

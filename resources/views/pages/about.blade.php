@@ -143,7 +143,7 @@
         <!-- Quick Stats -->
         <div class="grid grid-cols-2 gap-4">
           <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 text-center">
-            <div class="text-2xl sm:text-3xl font-bold text-teal-600 mb-2">15+</div>
+            <div class="text-2xl sm:text-3xl font-bold text-teal-600 mb-2">3+</div>
             <div class="text-sm text-gray-600">Years Experience</div>
           </div>
           <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 text-center">
@@ -231,7 +231,7 @@
           </svg>
         </div>
         <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors duration-300">Expert Team</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">15+ years of combined experience with certified professionals in latest technologies.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">3+ years of combined experience with certified professionals in latest technologies.</p>
       </div>
       
       <!-- 24/7 Support -->

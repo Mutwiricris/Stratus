@@ -499,7 +499,7 @@
           </svg>
         </div>
         <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors duration-300">Expert Team</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">15+ senior developers with 15 years industry experience</p>
+        <p class="text-gray-600 text-sm leading-relaxed">3+ senior developers with 15 years industry experience</p>
       </div>
       
       <!-- Benefit 4 -->

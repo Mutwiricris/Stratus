@@ -61,15 +61,14 @@
         
         <!-- Language Selector -->
         <div class="hidden sm:flex items-center gap-2 text-sm">
-          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyMCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjE0IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSI0LjY2NjY3IiBmaWxsPSIjRkY0NDQ0Ii8+CjxyZWN0IHk9IjkuMzMzMzQiIHdpZHRoPSIyMCIgaGVpZ2h0PSI0LjY2NjY3IiBmaWxsPSIjRkY0NDQ0Ii8+Cjwvc3ZnPgo=" alt="EN" class="w-5 h-4">
           <span class="text-gray-700 font-medium">EN</span>
         </div>
         
-        <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-200 relative" aria-label="Open mobile menu" aria-expanded="false">
-          <div class="hamburger-icon">
+        <button id="mobile-menu-btn" class="lg:hidden p-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-200 relative z-50 cursor-pointer" aria-label="Open mobile menu" aria-expanded="false" style="min-width: 44px; min-height: 44px;">
+          <div class="hamburger-icon flex flex-col justify-center items-center">
+            <span class="hamburger-line block w-6 h-0.5 bg-current transition-all duration-300 mb-1"></span>
+            <span class="hamburger-line block w-6 h-0.5 bg-current transition-all duration-300 mb-1"></span>
             <span class="hamburger-line block w-6 h-0.5 bg-current transition-all duration-300"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-current mt-1.5 transition-all duration-300"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-current mt-1.5 transition-all duration-300"></span>
           </div>
         </button>
       </div>
@@ -81,7 +80,7 @@
 <div id="mobile-menu-overlay" class="mobile-menu-overlay lg:hidden" aria-hidden="true"></div>
 
 <!-- Mobile Menu -->
-<nav id="mobile-menu" class="mobile-menu lg:hidden fixed top-0 right-0 h-full w-80 sm:w-96 bg-gradient-to-br from-white/95 via-teal-50/90 to-cyan-50/95 backdrop-blur-xl shadow-2xl border-l border-teal-200/30 z-50" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
+<nav id="mobile-menu" class="mobile-menu lg:hidden fixed top-0 right-0 h-full w-80 sm:w-96 bg-gradient-to-br from-teal-500/20 via-cyan-500/15 to-blue-500/20 backdrop-blur-xl shadow-2xl border-l border-teal-200/30" style="z-index: 1050; transform: translateX(100%); opacity: 0; visibility: hidden; pointer-events: none;" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
   <div class="flex flex-col h-full">
     <!-- Mobile Menu Header -->
     <div class="flex justify-between items-center p-6 border-b border-teal-200/30 bg-white/20 backdrop-blur-sm">
