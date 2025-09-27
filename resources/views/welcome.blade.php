@@ -6,55 +6,80 @@
 @section('content')
 
 <!-- HERO SECTION -->
-<section class="bg-gray-50 min-h-screen">
-  <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+<section class="bg-gradient-to-br from-gray-50 via-white to-teal-50/30 min-h-screen relative overflow-hidden">
+  <!-- Background Elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-blue-400/20 to-teal-400/20 rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
     <!-- Top Hero Content -->
-    <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16 lg:mb-24">
+    <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-16 sm:mb-20 lg:mb-24">
       <!-- Left Column - Content -->
       <div class="order-2 lg:order-1 fade-in-up">
-        <div class="mb-6">
-          <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 slide-in-left" style="transition-delay: 100ms;">
+        <div class="mb-8">
+          <span class="inline-flex items-center gap-2 text-teal-600 font-semibold text-sm uppercase tracking-wide mb-6 slide-in-left bg-teal-50 px-4 py-2 rounded-full" style="transition-delay: 100ms;">
+            <div class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
             ASCEND STRATUS
           </span>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight fade-in-scale" style="transition-delay: 200ms;">
-            Engineering software
-            <span class="text-teal-600">for real</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-8 leading-[1.1] fade-in-scale" style="transition-delay: 200ms;">
+            Smart software
+            <span class="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">for real</span>
             <span class="block">business impact.</span>
           </h1>
         </div>
         
-        <p class="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed max-w-lg slide-in-left" style="transition-delay: 300ms;">
-          Specializing in custom software development, mobile apps, and digital transformation. With 15 years of experience and 98% customer satisfaction from 1,500+ completed projects.
+        <p class="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-10 leading-relaxed max-w-2xl slide-in-left" style="transition-delay: 300ms;">
+          We build software that grows with you.
         </p>
         
         <!-- Trust Indicators -->
-        <div class="flex flex-wrap items-center gap-6 mb-8 slide-in-left" style="transition-delay: 350ms;">
-          <div class="flex items-center gap-2 text-sm text-gray-600">
-            <svg class="w-5 h-5 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-            </svg>
-            <span>ISO 27001 Certified</span>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 slide-in-left" style="transition-delay: 350ms;">
+          <div class="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+            <div class="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center">
+              <svg class="w-4 h-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <span class="text-sm font-medium text-gray-700">ISO 27001 Certified</span>
           </div>
-          <div class="flex items-center gap-2 text-sm text-gray-600">
-            <svg class="w-5 h-5 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-            </svg>
-            <span>99.9% Uptime SLA</span>
+          <div class="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+            <div class="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center">
+              <svg class="w-4 h-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <span class="text-sm font-medium text-gray-700">99.9% Uptime SLA</span>
           </div>
-          <div class="flex items-center gap-2 text-sm text-gray-600">
-            <svg class="w-5 h-5 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-            </svg>
-            <span>24/7 Support</span>
+          <div class="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+            <div class="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center">
+              <svg class="w-4 h-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <span class="text-sm font-medium text-gray-700">24/7 Support</span>
           </div>
         </div>
         
-        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-12 fade-in-up" style="transition-delay: 400ms;">
-          <button class="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-teal-700 hover:to-cyan-700 transition-all duration-300 hover:scale-105 hover:shadow-xl btn-animate shadow-lg">
-            Get Started Today
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-stretch sm:items-center mb-12 fade-in-up" style="transition-delay: 400ms;">
+          <button class="group relative bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/25 transition-all duration-500 hover:scale-105 btn-animate overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-teal-700 via-cyan-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <span class="relative flex items-center justify-center gap-2">
+              Get Started Today
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </span>
           </button>
-          <button class="border-2 border-teal-600 text-teal-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-teal-600 hover:text-white transition-all duration-300 btn-animate">
-            View Our Work
+          <button class="group border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-teal-600 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 btn-animate backdrop-blur-sm bg-white/50">
+            <span class="flex items-center justify-center gap-2">
+              <svg class="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+              View Our Work
+            </span>
           </button>
         </div>
         
@@ -72,11 +97,29 @@
       
       <!-- Right Column - Image -->
       <div class="order-1 lg:order-2 slide-in-right" style="transition-delay: 200ms;">
-        <div class="relative">
-          <img src="{{ asset('images/main.jpg') }}" 
-               alt="Team working in modern office" 
-               class="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-br from-teal-600/10 to-transparent rounded-2xl"></div>
+        <div class="relative group">
+          <!-- Main Image -->
+          <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80" 
+                 alt="African tech team in modern office" 
+                 class="w-full h-[350px] sm:h-[450px] lg:h-[550px] object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-600/20 via-cyan-600/10 to-blue-600/20 group-hover:opacity-75 transition-opacity duration-500"></div>
+          </div>
+          
+          <!-- Floating Elements -->
+          <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl shadow-lg flex items-center justify-center floating" style="animation-delay: 1s;">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          
+          <div class="absolute -bottom-6 -left-6 w-32 h-20 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-4 floating" style="animation-delay: 2s;">
+            <div class="text-2xl font-bold text-gray-900">15+</div>
+            <div class="text-xs text-gray-600 font-medium">Years Experience</div>
+          </div>
+          
+          <!-- Background Decoration -->
+          <div class="absolute -z-10 top-8 right-8 w-72 h-72 bg-gradient-to-br from-teal-200/30 to-cyan-200/30 rounded-full blur-2xl"></div>
         </div>
       </div>
     </div>
@@ -103,7 +146,8 @@
             WHAT DOES ASCEND STRATUS DO?
           </span>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight fade-in-scale" style="transition-delay: 700ms;">
-            We <span class="text-teal-400">custom software together</span>
+            We develop custom
+            <span class="block">software together</span>
             <span class="block">with our customers.</span>
           </h2>
         </div>
@@ -111,99 +155,113 @@
     </div>
 
     <!-- Enhanced Statistics Section -->
-    <div class="bg-gradient-to-r from-teal-600 to-cyan-600 rounded-3xl p-8 lg:p-16 mb-16 lg:mb-24 text-white">
-      <div class="text-center mb-12 fade-in-up">
-        <h2 class="text-3xl lg:text-4xl font-bold mb-4">Delivering Results That Matter</h2>
-        <p class="text-lg text-cyan-100 max-w-2xl mx-auto">Our track record speaks for itself - trusted by businesses worldwide</p>
+    <div class="relative bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 rounded-3xl p-8 sm:p-12 lg:p-16 mb-16 lg:mb-24 text-white overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-full h-full">
+          <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#grid)" />
+          </svg>
+        </div>
       </div>
       
-      <div class="grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 text-center">
-        <div class="fade-in-up" style="transition-delay: 100ms;">
-          <div class="text-4xl lg:text-5xl font-bold mb-2 counter" data-target="50">0</div>
-          <div class="text-lg font-semibold text-cyan-100 mb-1">Countries</div>
-          <div class="text-sm text-cyan-200">Global presence</div>
+      <div class="relative z-10">
+        <div class="text-center mb-16 fade-in-up">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Delivering Results That Matter</h2>
+          <p class="text-lg sm:text-xl text-cyan-100 max-w-3xl mx-auto">Our track record speaks for itself - trusted by businesses worldwide</p>
         </div>
-        <div class="fade-in-up" style="transition-delay: 200ms;">
-          <div class="text-4xl lg:text-5xl font-bold mb-2 counter" data-target="15">0</div>
-          <div class="text-lg font-semibold text-cyan-100 mb-1">Years</div>
-          <div class="text-sm text-cyan-200">Industry experience</div>
-        </div>
-        <div class="fade-in-up" style="transition-delay: 300ms;">
-          <div class="text-4xl lg:text-5xl font-bold mb-2"><span class="counter" data-target="99">0</span>%</div>
-          <div class="text-lg font-semibold text-cyan-100 mb-1">Satisfaction</div>
-          <div class="text-sm text-cyan-200">Client retention rate</div>
-        </div>
-        <div class="fade-in-up" style="transition-delay: 400ms;">
-          <div class="text-4xl lg:text-5xl font-bold mb-2 counter" data-target="2500">0</div>
-          <div class="text-lg font-semibold text-cyan-100 mb-1">Projects</div>
-          <div class="text-sm text-cyan-200">Successfully delivered</div>
-        </div>
-        <div class="fade-in-up" style="transition-delay: 500ms;">
-          <div class="text-4xl lg:text-5xl font-bold mb-2"><span class="counter" data-target="24">0</span>/7</div>
-          <div class="text-lg font-semibold text-cyan-100 mb-1">Support</div>
-          <div class="text-sm text-cyan-200">Always available</div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
+          <div class="text-center fade-in-up" style="transition-delay: 100ms;">
+            <div class="text-4xl lg:text-5xl font-bold mb-2 counter" data-target="12">0</div>
+            <div class="text-base text-cyan-100">countries</div>
+          </div>
+          <div class="text-center fade-in-up" style="transition-delay: 200ms;">
+            <div class="text-4xl lg:text-5xl font-bold mb-2 counter" data-target="15">0</div>
+            <div class="text-base text-cyan-100">Year</div>
+          </div>
+          <div class="text-center fade-in-up" style="transition-delay: 300ms;">
+            <div class="text-4xl lg:text-5xl font-bold mb-2"><span class="counter" data-target="98">0</span>%</div>
+            <div class="text-base text-cyan-100">Satisfaction</div>
+          </div>
+          <div class="text-center fade-in-up" style="transition-delay: 400ms;">
+            <div class="text-4xl lg:text-5xl font-bold mb-2"><span class="counter" data-target="1500">0</span></div>
+            <div class="text-base text-cyan-100">Projects</div>
+          </div>
+          <div class="text-center fade-in-up" style="transition-delay: 500ms;">
+            <div class="text-4xl lg:text-5xl font-bold mb-2"><span class="counter" data-target="20">0</span></div>
+            <div class="text-base text-cyan-100">Devs</div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- About Ascend Stratus Section -->
     <div class="mb-16 lg:mb-24">
-      <div class="text-center mb-12 fade-in-up">
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">About Ascend Stratus</h2>
-        <div class="w-16 h-1 bg-teal-600 mx-auto"></div>
-        <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">Established 15 years ago, Ascend Stratus specializes in inventing, designing, developing, and maintaining custom software solutions. We pride ourselves on honesty, innovation, and deep domain knowledge.</p>
+      <div class="text-center mb-16 fade-in-up">
+        <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
+          About Us
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">About Ascend Stratus</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-teal-600 to-cyan-600 mx-auto mb-6"></div>
+        <p class="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">Established 15 years ago, Ascend Stratus specializes in inventing, designing, developing, and maintaining custom software solutions. We pride ourselves on honesty, innovation, and deep domain knowledge.</p>
       </div>
       
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Honesty -->
-        <div class="text-center card-hover fade-in-up border border-cyan-200 rounded-lg" style="transition-delay: 100ms;">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-            <svg class="w-12 h-12 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        <div class="text-center fade-in-up" style="transition-delay: 100ms;">
+          <div class="w-16 h-16 mx-auto mb-6 bg-orange-100 rounded-2xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Honesty</h3>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            We believe in transparent communication and honest business practices. Our clients trust us because we deliver on our promises with 98% customer satisfaction from 1,500+ completed projects.
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Honesty</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Honest and transparent communication is fundamental to our approach. We believe in building trust through clear expectations and delivering on our promises.
           </p>
         </div>
 
         <!-- Innovative -->
-        <div class="text-center card-hover border border-cyan-200 rounded-lg p-6 fade-in-up" style="transition-delay: 200ms;">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-            <svg class="w-12 h-12 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        <div class="text-center fade-in-up" style="transition-delay: 200ms;">
+          <div class="w-16 h-16 mx-auto mb-6 bg-red-100 rounded-2xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Innovative</h3>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            We believe that continuous innovation is the key to future success. Our team is driven by the passion for creating cutting-edge software that challenges the standards of technology and design.
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Innovative</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We embrace new technologies and methodologies to solve complex problems. Innovation drives us to create solutions that push boundaries and exceed expectations.
           </p>
         </div>
 
         <!-- Domain Knowledge -->
-        <div class="text-center card-hover fade-in-up border border-cyan-200 rounded-lg" style="transition-delay: 300ms;">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-            <svg class="w-12 h-12 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        <div class="text-center fade-in-up" style="transition-delay: 300ms;">
+          <div class="w-16 h-16 mx-auto mb-6 bg-blue-100 rounded-2xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
             </svg>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Domain Knowledge</h3>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            We serve Process Engineering & Manufacturing, Healthcare, Business Services, Startups, and FinTech industries with deep understanding of each sector's unique challenges and requirements.
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Domain Knowledge</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Deep understanding of various industries allows us to create tailored solutions. We speak your business language and understand your unique challenges.
           </p>
         </div>
 
         <!-- Full-service -->
-        <div class="text-center card-hover fade-in-up border border-cyan-200 rounded-lg" style="transition-delay: 400ms;">
-          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-            <svg class="w-12 h-12 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm8 6v6m3-3h-6"/>
+        <div class="text-center fade-in-up" style="transition-delay: 400ms;">
+          <div class="w-16 h-16 mx-auto mb-6 bg-teal-100 rounded-2xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
             </svg>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Full-service</h3>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            We offer a full spectrum of services from concept development to final implementation. Our clients enjoy a seamless experience with a single point of contact for all their software needs.
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Full-service</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            From strategy and design to development and support, we provide comprehensive services. One team, one vision, seamless execution from start to finish.
           </p>
         </div>
       </div>
@@ -212,7 +270,47 @@
     <!-- Showcase Section -->
     <div class="mb-16 lg:mb-24">
       <div class="text-center mb-12 fade-in-up">
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">This is what we work on every day.</h2>
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">This is what we work on every day.</h2>
+      </div>
+      
+      <!-- Project Showcase Card -->
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-3xl p-8 lg:p-12 mb-8 relative overflow-hidden fade-in-up">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div>
+            <div class="mb-6">
+              <span class="inline-block bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">Showcase</span>
+              <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                Partners in data-based business growth.
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                We developed a comprehensive business intelligence platform that helps companies make data-driven decisions. The system integrates with multiple data sources and provides real-time analytics and reporting capabilities.
+              </p>
+            </div>
+            
+            <div class="flex items-center gap-2 text-teal-600">
+              <span class="text-sm font-medium">View project</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="bg-white rounded-2xl p-6 shadow-xl">
+              <div class="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-lg h-64 flex items-center justify-center">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-teal-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                  </div>
+                  <h4 class="font-bold text-gray-900 mb-2">Business Intelligence</h4>
+                  <p class="text-sm text-gray-600">Real-time analytics platform</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Case Study 1 - Featured -->
@@ -250,8 +348,8 @@
           
           <div class="relative">
             <div class="bg-white rounded-2xl p-4 shadow-2xl transform rotate-3">
-              <img src="{{ asset('images/main.jpg') }}" 
-                   alt="Healthcare platform interface" 
+              <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=1920&q=80" 
+                   alt="African business technology interface" 
                    class="w-full h-64 object-cover rounded-lg">
             </div>
           </div>

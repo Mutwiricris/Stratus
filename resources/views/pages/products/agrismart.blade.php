@@ -5,28 +5,69 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative min-h-[70vh] flex items-center">
-  <div class="absolute inset-0">
-    <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=2072" alt="AgriSmart" class="w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-br from-dark-turquoise/90 via-turquoise-600/80 to-cyan-accent/70"></div>
+<section class="relative min-h-[80vh] flex items-center bg-gradient-to-br from-gray-50 via-white to-teal-50/30 overflow-hidden">
+  <!-- Background Elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-cyan-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
   </div>
-  <div class="relative z-10 w-full container px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 py-20">
-    <div class="max-w-4xl">
+  
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
       <div class="fade-in-up">
-        <div class="bg-gradient-to-r from-turquoise-600 to-cyan-accent text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 inline-block">Smart Agriculture Solution</div>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-heading">
-          AgriSmart Intelligence Platform
+        <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
+          Smart Agriculture Solution
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+          <span class="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
+            AgriSmart
+          </span>
+          <br>
+          <span class="text-gray-900">Intelligence Platform</span>
         </h1>
-        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
+        <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
           Revolutionary agriculture technology platform featuring IoT sensors, precision farming, crop monitoring, weather analytics, and automated farm management for sustainable and profitable farming operations.
         </p>
         <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-          <a href="#pricing" class="bg-cyan-300 text-dark-turquoise px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold btn-animate shadow-lg hover:bg-white hover:text-dark-turquoise transition-colors">
-            Start Free Trial
+          <a href="#pricing" class="group inline-flex items-center bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/25 transition-all duration-500 hover:scale-105">
+            <span class="relative flex items-center gap-2">
+              Start Free Trial
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </span>
           </a>
-          <a href="#demo" class="text-white/90 hover:text-white font-medium border-b border-white/40 hover:border-cyan-300 transition-all duration-300 py-2">
+          <a href="#demo" class="group inline-flex items-center text-gray-700 hover:text-teal-600 font-semibold transition-colors duration-300">
             Request Demo
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
           </a>
+        </div>
+      </div>
+      
+      <!-- Hero Image/Illustration -->
+      <div class="fade-in-up" style="transition-delay: 200ms;">
+        <div class="relative">
+          <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-100">
+            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=2072" alt="AgriSmart" class="w-full h-80 object-cover rounded-2xl">
+            
+            <!-- Floating AgriSmart Stats -->
+            <div class="absolute -top-4 -left-4 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-4 floating" style="animation-delay: 1s;">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-teal-600 mb-1">30%</div>
+                <div class="text-xs text-gray-600 font-medium">Yield Increase</div>
+              </div>
+            </div>
+            
+            <div class="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-4 floating" style="animation-delay: 1.5s;">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-cyan-600 mb-1">24/7</div>
+                <div class="text-xs text-gray-600 font-medium">Monitoring</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -34,11 +75,15 @@
 </section>
 
 <!-- Technology Preview -->
-<section class="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-turquoise-50/30 px-8">
+<section class="py-24 md:py-32 bg-gradient-to-br from-gray-50 to-teal-50/30 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16 fade-in-up">
-      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Smart Farming Technology</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Advanced agricultural intelligence for modern farming operations</p>
+    <div class="text-center mb-20 fade-in-up">
+      <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
+        Smart Technology
+      </span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Smart Farming Technology</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-teal-600 to-cyan-600 mx-auto mb-6"></div>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Advanced agricultural intelligence for modern farming operations</p>
     </div>
     
     <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">

@@ -1,5 +1,5 @@
 <!-- NAVIGATION -->
-<header id="navbar" class="fixed top-0 inset-x-0 z-50 w-full navbar bg-white  border-b border-gray-100">
+<header id="navbar" class="fixed top-0 inset-x-0 z-50 w-full navbar transition-all duration-300">
   <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
     <div class="flex items-center justify-between">
       <!-- Logo -->
@@ -14,26 +14,43 @@
       </div>
       
       <!-- Desktop Navigation -->
-      <ul class="hidden lg:flex items-center space-x-8 text-sm font-medium">
-        <li><a href="{{ url('/') }}" class="text-gray-700 hover:text-gray-900 transition-colors py-2">Home.</a></li>
+      <ul class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
+        <li><a href="{{ url('/') }}" class="text-gray-800 hover:text-teal-600 transition-colors py-2">Home</a></li>
         <li class="relative group">
-          <a href="{{ url('/products') }}" class="text-gray-700 hover:text-gray-900 transition-colors py-2 flex items-center gap-1">
-            Services. 
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <a href="{{ url('/services') }}" class="text-gray-800 hover:text-teal-600 transition-colors py-2 flex items-center gap-1">
+            Services
+            <svg class="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
             </svg>
           </a>
+          <div class="absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg mt-2 opacity-0 group-hover:opacity-100 group-hover:mt-0 transition-all duration-300 invisible group-hover:visible">
+            <div class="p-4">
+              <a href="{{ url('/services/web-applications') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-lg">Web Applications</a>
+              <a href="{{ url('/services/mobile-app-development') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-lg">Mobile App Development</a>
+              <a href="{{ url('/services/digital-transformation') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-lg">Digital Transformation</a>
+              <a href="{{ url('/services/dev-team-as-a-service') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-lg">Dev Team as a Service</a>
+              <a href="{{ url('/services/ecommerce-solutions') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-lg">E-Commerce Solutions</a>
+              <a href="{{ url('/services/enterprise-software') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-lg">Enterprise Software</a>
+            </div>
+          </div>
         </li>
         <li class="relative group">
-          <a href="{{ url('/about') }}" class="text-gray-700 hover:text-gray-900 transition-colors py-2 flex items-center gap-1">
-            About us. 
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <a href="{{ url('/about') }}" class="text-gray-800 hover:text-teal-600 transition-colors py-2 flex items-center gap-1">
+            About Us
+            <svg class="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
             </svg>
           </a>
+          <div class="absolute top-full left-0 w-56 bg-white shadow-lg rounded-lg mt-2 opacity-0 group-hover:opacity-100 group-hover:mt-0 transition-all duration-300 invisible group-hover:visible">
+            <div class="p-4">
+              <a href="{{ url('/about') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-lg">Our Story</a>
+              <a href="{{ url('/culture') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-lg">Our Culture</a>
+              <a href="{{ url('/benefits') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-lg">Benefits</a>
+            </div>
+          </div>
         </li>
-        <li><a href="{{ url('/portfolio') }}" class="text-gray-700 hover:text-gray-900 transition-colors py-2">Cases.</a></li>
-        <li><a href="{{ url('/insights') }}" class="text-gray-700 hover:text-gray-900 transition-colors py-2">Blog.</a></li>
+        <li><a href="{{ url('/portfolio') }}" class="text-gray-800 hover:text-teal-600 transition-colors py-2">Portfolio</a></li>
+        <li><a href="{{ url('/insights') }}" class="text-gray-800 hover:text-teal-600 transition-colors py-2">Insights</a></li>
       </ul>
       
       <!-- Right Side -->

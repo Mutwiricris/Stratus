@@ -38,11 +38,20 @@
                     animation: {
                         'fade-in': 'fadeIn 0.8s ease-out forwards',
                         'marquee': 'marquee 25s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'scale-in': 'scaleIn 0.5s ease-out forwards'
                     },
                     animationDelay: {
                         '100': '100ms',
                         '200': '200ms',
                         '300': '300ms',
+                        '400': '400ms',
+                        '500': '500ms',
+                        '600': '600ms',
+                        '700': '700ms',
+                        '800': '800ms'
                     },
                     keyframes: {
                         fadeIn: {
@@ -52,7 +61,32 @@
                         marquee: {
                             '0%': { transform: 'translateX(0)' },
                             '100%': { transform: 'translateX(-50%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(20, 184, 166, 0.3)' },
+                            '100%': { boxShadow: '0 0 40px rgba(20, 184, 166, 0.6), 0 0 60px rgba(20, 184, 166, 0.3)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(50px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.8)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' }
                         }
+                    },
+                    screens: {
+                        'xs': '475px',
+                        '3xl': '1600px'
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '88': '22rem',
+                        '128': '32rem'
                     }
                 }
             }
@@ -254,12 +288,44 @@
         }
         
         .floating {
-            animation: floating 3s ease-in-out infinite;
+            animation: floating 6s ease-in-out infinite;
         }
         
         @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(-5px) rotate(-1deg); }
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .text-shadow-lg {
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .backdrop-blur-xs {
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+        }
+        
+        .container-query {
+            container-type: inline-size;
+        }
+        
+        @container (min-width: 768px) {
+            .cq-md\:text-2xl {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+        }
+        
+        @container (min-width: 1024px) {
+            .cq-lg\:text-3xl {
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+            }
         }
         
         .pulse-glow {
@@ -289,31 +355,74 @@
             100% { transform: rotate(360deg); }
         }
         
+        /* Enhanced Responsive Design */
         @media (max-width: 1024px) {
             .navbar { padding: 0.75rem 1rem; }
             .mobile-menu { width: 85vw; max-width: 400px; }
+            h1 { font-size: clamp(2rem, 8vw, 3.5rem); }
         }
         @media (max-width: 768px) {
             .navbar { padding: 0.625rem 1rem; }
             .mobile-menu { width: 90vw; max-width: 380px; }
+            h1 { font-size: clamp(1.875rem, 7vw, 3rem); }
+            h2 { font-size: clamp(1.5rem, 6vw, 2.5rem); }
         }
         @media (max-width: 640px) {
             .navbar { padding: 0.5rem 1rem; }
             .mobile-menu { width: 100vw; max-width: none; }
+            h1 { font-size: clamp(1.75rem, 6vw, 2.5rem); }
+            h2 { font-size: clamp(1.25rem, 5vw, 2rem); }
+            .floating { animation-duration: 4s; }
         }
         @media (max-width: 480px) {
             .navbar { padding: 0.5rem 0.75rem; }
             .mobile-menu { padding: 1rem; }
+            h1 { font-size: clamp(1.5rem, 5vw, 2.25rem); }
+            h2 { font-size: clamp(1.125rem, 4vw, 1.75rem); }
         }
         @media (max-width: 375px) {
             .navbar { padding: 0.5rem; }
+            h1 { font-size: clamp(1.375rem, 4.5vw, 2rem); }
+        }
+        
+        /* Reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            .floating,
+            .pulse-glow,
+            .btn-animate::before {
+                animation: none;
+            }
+            .card-hover:hover,
+            .btn-animate:hover {
+                transform: none;
+            }
+        }
+        
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            .bg-gradient-to-r,
+            .bg-gradient-to-br {
+                background: #0f766e;
+            }
+            .text-gray-600 {
+                color: #374151;
+            }
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            .dark-mode-auto {
+                background-color: #1f2937;
+                color: #f9fafb;
+            }
         }
     </style>
     
+    <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
     @stack('styles')
 </head>
 
-<body class="bg-white text-gray-900 antialiased font-sans">
+<body class="bg-white text-gray-900 antialiased font-sans overflow-x-hidden selection:bg-teal-100 selection:text-teal-900">
     @include('components.navigation')
     
     <main class="pt-20">
@@ -323,6 +432,7 @@
     @include('components.footer')
     
     @include('components.scripts')
+    <script src="{{ asset('js/navigation.js') }}"></script>
     @stack('scripts')
 </body>
 </html>
