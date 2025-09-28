@@ -12,7 +12,33 @@
     <meta name="author" content="Ascend Stratus">
     <meta name="robots" content="@yield('robots', 'index, follow')">
     <link rel="canonical" href="{{ url()->current() }}">
-    
+    <meta name="description" content="Ascend Stratus builds smart, custom software and mobile apps (iOS/Android) for real business impact. Specializing in Digital Transformation, Laravel, and Craft CMS." />
+
+<meta name="robots" content="index, follow" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="canonical" href="https://www.ascendstratus.com/" />
+
+<meta property="og:title" content="Smart Custom Software for Business Growth - Ascend Stratus" />
+
+<meta property="og:description" content="We deliver full-service custom web, mobile, and digital transformation solutions to leading enterprises across Africa. Get 99.9% uptime and 24/7 support." />
+
+<meta property="og:url" content="https://www.ascendstratus.com/" />
+
+<meta property="og:type" content="website" />
+
+<meta property="og:image" content="https://ascendstratus.com/images/social-share-image.jpg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Smart Custom Software for Business Growth - Ascend Stratus" />
+
+<meta name="twitter:description" content="We deliver full-service custom web, mobile, and digital transformation solutions to leading enterprises across Africa." />
+
+<meta name="twitter:image" content="https://ascendstratus.com/images/social-share-image.jpg" />
+
+<meta name="twitter:site" content="@AscendStratus" />
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="@yield('og_type', 'website')">
     <meta property="og:title" content="@yield('og_title', 'Ascend Stratus - Leading Technology Solutions & Digital Transformation in Africa')">
