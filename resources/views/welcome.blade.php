@@ -13,66 +13,66 @@
 
 @push('structured-data')
 <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Ascend Stratus - Home",
-    "description": "Transform your business with Africa's leading technology solutions provider",
-    "url": "{{ url('/') }}",
-    "mainEntity": {
-        "@type": "Organization",
-        "name": "Ascend Stratus",
-        "alternateName": "Ascend Stratus Holdings",
-        "description": "Multi-sector technology holding company transforming businesses across Africa",
-        "foundingDate": "2020",
-        "numberOfEmployees": "50-100",
-        "industry": "Technology Services",
-        "serviceArea": {
-            "@type": "Place",
-            "name": "Africa"
-        },
-        "makesOffer": [
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Enterprise Software Development",
-                    "category": "Software Development",
-                    "description": "Custom enterprise applications with AI-powered features"
-                }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Fintech Solutions",
-                    "category": "Financial Technology",
-                    "description": "Payment processing, digital banking, and mobile money integration"
-                }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Mobile App Development",
-                    "category": "Mobile Development",
-                    "description": "Native iOS/Android and cross-platform applications"
-                }
-            }
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'WebPage',
+    'name' => 'Ascend Stratus - Home',
+    'description' => 'Transform your business with Africa\'s leading technology solutions provider',
+    'url' => url('/'),
+    'mainEntity' => [
+        '@type' => 'Organization',
+        'name' => 'Ascend Stratus',
+        'alternateName' => 'Ascend Stratus Holdings',
+        'description' => 'Multi-sector technology holding company transforming businesses across Africa',
+        'foundingDate' => '2020',
+        'numberOfEmployees' => '50-100',
+        'industry' => 'Technology Services',
+        'serviceArea' => [
+            '@type' => 'Place',
+            'name' => 'Africa'
+        ],
+        'makesOffer' => [
+            [
+                '@type' => 'Offer',
+                'itemOffered' => [
+                    '@type' => 'Service',
+                    'name' => 'Enterprise Software Development',
+                    'category' => 'Software Development',
+                    'description' => 'Custom enterprise applications with AI-powered features'
+                ]
+            ],
+            [
+                '@type' => 'Offer',
+                'itemOffered' => [
+                    '@type' => 'Service',
+                    'name' => 'Fintech Solutions',
+                    'category' => 'Financial Technology',
+                    'description' => 'Payment processing, digital banking, and mobile money integration'
+                ]
+            ],
+            [
+                '@type' => 'Offer',
+                'itemOffered' => [
+                    '@type' => 'Service',
+                    'name' => 'Mobile App Development',
+                    'category' => 'Mobile Development',
+                    'description' => 'Native iOS/Android and cross-platform applications'
+                ]
+            ]
         ]
-    },
-    "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "{{ url('/') }}"
-            }
+    ],
+    'breadcrumb' => [
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            [
+                '@type' => 'ListItem',
+                'position' => 1,
+                'name' => 'Home',
+                'item' => url('/')
+            ]
         ]
-    }
-}
+    ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
 </script>
 @endpush
 

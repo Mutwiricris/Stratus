@@ -494,60 +494,60 @@
     
     <!-- Structured Data - Organization Schema -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Ascend Stratus",
-        "description": "Leading technology holding company providing enterprise software, fintech solutions, and digital transformation services across Africa",
-        "url": "{{ url('/') }}",
-        "logo": "{{ asset('images/logo.png') }}",
-        "foundingDate": "2020",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "Kenya",
-            "addressRegion": "Nairobi"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+254-700-000-000",
-            "contactType": "Customer Service",
-            "availableLanguage": ["English", "Swahili"]
-        },
-        "sameAs": [
-            "https://linkedin.com/company/ascend-stratus",
-            "https://twitter.com/ascendstratus"
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'Organization',
+        'name' => 'Ascend Stratus',
+        'description' => 'Leading technology holding company providing enterprise software, fintech solutions, and digital transformation services across Africa',
+        'url' => url('/'),
+        'logo' => asset('images/logo.png'),
+        'foundingDate' => '2020',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'addressCountry' => 'Kenya',
+            'addressRegion' => 'Nairobi'
         ],
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Technology Solutions",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Enterprise Software Development",
-                        "description": "Custom enterprise software solutions for African businesses"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Fintech Solutions",
-                        "description": "Payment processing, digital banking, and mobile money integration"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Mobile App Development",
-                        "description": "Native and cross-platform mobile applications"
-                    }
-                }
+        'contactPoint' => [
+            '@type' => 'ContactPoint',
+            'telephone' => '+254-700-000-000',
+            'contactType' => 'Customer Service',
+            'availableLanguage' => ['English', 'Swahili']
+        ],
+        'sameAs' => [
+            'https://linkedin.com/company/ascend-stratus',
+            'https://twitter.com/ascendstratus'
+        ],
+        'hasOfferCatalog' => [
+            '@type' => 'OfferCatalog',
+            'name' => 'Technology Solutions',
+            'itemListElement' => [
+                [
+                    '@type' => 'Offer',
+                    'itemOffered' => [
+                        '@type' => 'Service',
+                        'name' => 'Enterprise Software Development',
+                        'description' => 'Custom enterprise software solutions for African businesses'
+                    ]
+                ],
+                [
+                    '@type' => 'Offer',
+                    'itemOffered' => [
+                        '@type' => 'Service',
+                        'name' => 'Fintech Solutions',
+                        'description' => 'Payment processing, digital banking, and mobile money integration'
+                    ]
+                ],
+                [
+                    '@type' => 'Offer',
+                    'itemOffered' => [
+                        '@type' => 'Service',
+                        'name' => 'Mobile App Development',
+                        'description' => 'Native and cross-platform mobile applications'
+                    ]
+                ]
             ]
-        }
-    }
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
     </script>
     
     @stack('structured-data')
