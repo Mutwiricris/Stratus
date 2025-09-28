@@ -251,12 +251,12 @@
         </div>
         
         <div class="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
-          <div class="text-center fade-in-up" style="transition-delay: 100ms;">
+          <!-- <div class="text-center fade-in-up" style="transition-delay: 100ms;">
             <div class="text-4xl lg:text-5xl font-bold mb-2 counter" data-target="12">0</div>
             <div class="text-base text-cyan-100">countries</div>
-          </div>
+          </div> -->
           <div class="text-center fade-in-up" style="transition-delay: 200ms;">
-            <div class="text-4xl lg:text-5xl font-bold mb-2 counter" data-target="15">0</div>
+            <div class="text-4xl lg:text-5xl font-bold mb-2 counter" data-target="3">0</div>
             <div class="text-base text-cyan-100">Year</div>
           </div>
           <div class="text-center fade-in-up" style="transition-delay: 300ms;">
@@ -264,11 +264,11 @@
             <div class="text-base text-cyan-100">Satisfaction</div>
           </div>
           <div class="text-center fade-in-up" style="transition-delay: 400ms;">
-            <div class="text-4xl lg:text-5xl font-bold mb-2"><span class="counter" data-target="1500">0</span></div>
+            <div class="text-4xl lg:text-5xl font-bold mb-2"><span class="counter" data-target="30">0</span>+</div>
             <div class="text-base text-cyan-100">Projects</div>
           </div>
           <div class="text-center fade-in-up" style="transition-delay: 500ms;">
-            <div class="text-4xl lg:text-5xl font-bold mb-2"><span class="counter" data-target="20">0</span></div>
+            <div class="text-4xl lg:text-5xl font-bold mb-2"><span class="counter" data-target="2">0</span></div>
             <div class="text-base text-cyan-100">Devs</div>
           </div>
         </div>
@@ -283,7 +283,7 @@
         </span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">About Ascend Stratus</h2>
         <div class="w-24 h-1 bg-gradient-to-r from-teal-600 to-cyan-600 mx-auto mb-6"></div>
-        <p class="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">Established 15 years ago, Ascend Stratus specializes in inventing, designing, developing, and maintaining custom software solutions. We pride ourselves on honesty, innovation, and deep domain knowledge.</p>
+        <p class="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">Established 3 years ago, Ascend Stratus specializes in inventing, designing, developing, and maintaining custom software solutions. We pride ourselves on honesty, innovation, and deep domain knowledge.</p>
       </div>
       
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -492,15 +492,15 @@
       </div>
     </div>
 
-    <!-- Professional Testimonials Section -->
-    <div class="mb-16 lg:mb-24 bg-gradient-to-br from-gray-50 to-teal-50/30 py-16 rounded-3xl">
+    
+    <!-- <div class="mb-16 lg:mb-24 bg-gradient-to-br from-gray-50 to-teal-50/30 py-16 rounded-3xl">
       <div class="text-center mb-16 fade-in-up">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">Trusted by leading organizations across multiple industries</p>
       </div>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <!-- Testimonial 1 -->
+       
         <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover fade-in-up" style="transition-delay: 100ms;">
           <div class="flex items-center mb-6">
             <div class="flex text-teal-500">
@@ -535,7 +535,6 @@
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
         <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover fade-in-up" style="transition-delay: 200ms;">
           <div class="flex items-center mb-6">
             <div class="flex text-teal-500">
@@ -570,7 +569,6 @@
           </div>
         </div>
 
-        <!-- Testimonial 3 -->
         <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover fade-in-up" style="transition-delay: 300ms;">
           <div class="flex items-center mb-6">
             <div class="flex text-teal-500">
@@ -606,7 +604,6 @@
         </div>
       </div>
       
-      <!-- Client Logos -->
       <div class="text-center fade-in-up" style="transition-delay: 400ms;">
         <p class="text-sm text-gray-500 mb-8">Trusted by leading organizations worldwide</p>
         <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 lg:gap-8">
@@ -647,193 +644,284 @@
             <div class="bg-purple-600 text-white px-3 py-2 rounded text-sm font-bold">Your Logo Here</div>
           </div>
         </div>
+      </div> -->
+
+    <!-- Modern Services Section -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-slate-50 via-white to-teal-50/30 relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-teal-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-blue-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
       </div>
 
-    <!-- Services Section -->
-    <div class="bg-slate-900 rounded-3xl p-8 lg:p-16 mb-16 lg:mb-24">
-      <div class="text-center mb-12">
-        <span class="inline-block text-teal-400 font-semibold text-sm uppercase tracking-wide mb-4">
-          WHAT WE DO
-        </span>
-        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-8">Our Core Services</h2>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-up">
+          <span class="inline-flex items-center gap-2 text-teal-600 font-semibold text-sm uppercase tracking-wide mb-6 bg-teal-50 px-4 py-2 rounded-full">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Our Expertise
+          </span>
+          <h2 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+            Transforming Business Through 
+            <span class="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">Technology</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            We deliver cutting-edge solutions that drive growth, efficiency, and innovation across Africa's most dynamic industries.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <!-- Enterprise Software -->
+          <div class="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-teal-200 fade-in-up relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                </svg>
+              </div>
+              <span class="inline-block bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">FLAGSHIP</span>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-teal-600 transition-colors">Enterprise Software</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Comprehensive fintech and SaaS solutions including payment processing, digital banking, and AI-powered business intelligence designed for African markets.
+              </p>
+              <a href="{{ url('/services/enterprise-software') }}" class="inline-flex items-center text-teal-600 font-semibold hover:text-teal-700 transition-colors group">
+                Explore Solutions
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile App Development -->
+          <div class="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-teal-200 fade-in-up relative overflow-hidden" style="transition-delay: 100ms;">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-50 to-green-50 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z"/>
+                </svg>
+              </div>
+              <span class="inline-block bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">POPULAR</span>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">Mobile App Development</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Native iOS/Android and cross-platform applications with M-Pesa integration, offline capabilities, and multi-language support for African markets.
+              </p>
+              <a href="{{ url('/services/mobile-app-development') }}" class="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 transition-colors group">
+                View Portfolio
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Custom E-Commerce -->
+          <div class="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-teal-200 fade-in-up relative overflow-hidden" style="transition-delay: 200ms;">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                </svg>
+              </div>
+              <span class="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">TRENDING</span>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">Custom E-Commerce</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Tailored online stores and marketplace platforms with African payment integration, mobile-first design, and multi-currency support.
+              </p>
+              <a href="{{ url('/services/dev-team-as-a-service') }}" class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors group">
+                Get Started
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Digital Transformation -->
+          <div class="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-teal-200 fade-in-up relative overflow-hidden" style="transition-delay: 300ms;">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">Digital Transformation</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Comprehensive modernization of business processes with AI, machine learning, cloud computing, and data analytics solutions.
+              </p>
+              <a href="{{ url('/services/digital-transformation') }}" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group">
+                Learn More
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Web Applications -->
+          <div class="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-teal-200 fade-in-up relative overflow-hidden" style="transition-delay: 400ms;">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-50 to-red-50 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">Web Applications</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                High-performance web applications using Laravel, modern JavaScript frameworks, and cloud-native architectures for scalability.
+              </p>
+              <a href="{{ url('/services/web-applications') }}" class="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition-colors group">
+                View Projects
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Consulting Services -->
+          <div class="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-teal-200 fade-in-up relative overflow-hidden" style="transition-delay: 500ms;">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-gray-50 to-slate-50 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-gradient-to-br from-gray-600 to-slate-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-600 transition-colors">Tech Consulting</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Strategic technology consulting, architecture design, and dedicated development teams to accelerate your digital initiatives.
+              </p>
+              <a href="{{ route('contact') }}" class="inline-flex items-center text-gray-600 font-semibold hover:text-gray-700 transition-colors group">
+                Get Consultation
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        <!-- App Development -->
-        <div class="bg-white rounded-2xl p-6 relative">
-          <div class="absolute top-4 right-4">
-            <span class="bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">POPULAR</span>
+        <!-- CTA Section -->
+        <div class="text-center fade-in-up">
+          <div class="bg-gradient-to-r from-teal-600 to-cyan-600 rounded-3xl p-12 text-white">
+            <h3 class="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
+            <p class="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
+              Join hundreds of successful African businesses that have accelerated their growth with our solutions.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="{{ route('contact') }}" class="bg-white text-teal-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 hover:scale-105 shadow-lg">
+                Start Your Project
+              </a>
+              <a href="{{ url('/portfolio') }}" class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-teal-600 transition-all duration-300">
+                View Our Work
+              </a>
+            </div>
           </div>
-          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Mobile App Development</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            Creating native iOS and Android applications using Swift and modern frameworks. 15 years of experience delivering mobile solutions.
-          </p>
-          <button class="text-teal-600 font-semibold text-sm hover:underline">Read more</button>
-        </div>
-
-        <!-- Web Applications -->
-        <div class="bg-white rounded-2xl p-6 relative">
-          <div class="absolute top-4 right-4">
-            <span class="bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">POPULAR</span>
-          </div>
-          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M3 3h18v18H3V3zm16 16V5H5v14h14z"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Custom Software Development</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            Building bespoke software solutions using Laravel PHP framework and modern web technologies. Tailored to your specific business needs.
-          </p>
-          <button class="text-teal-600 font-semibold text-sm hover:underline">Read more</button>
-        </div>
-
-        <!-- Digital Transformation -->
-        <div class="bg-white rounded-2xl p-6">
-          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Digital Transformation</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            Guiding businesses through modernizing their digital infrastructure with AI, machine learning, and cloud computing integration.
-          </p>
-          <button class="text-teal-600 font-semibold text-sm hover:underline">Read more</button>
-        </div>
-
-        <!-- Dev Team as a Service -->
-        <div class="bg-white rounded-2xl p-6">
-          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.5 7h-3c-.83 0-1.5.67-1.5 1.5v6c0 .83.67 1.5 1.5 1.5H17v6h3z"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Dev Team as a Service</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            Team as a Service model offers flexibility and efficiency in development, allowing organizations to respond quickly to changing needs and hire specific expertise for projects.
-          </p>
-          <button class="text-teal-600 font-semibold text-sm hover:underline">Read more</button>
-        </div>
-
-        <!-- High-End Websites -->
-        <div class="bg-white rounded-2xl p-6">
-          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Web Development</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            Crafting high-end websites and web-based applications using Craft CMS. Professional solutions for innovative companies and startups.
-          </p>
-          <button class="text-teal-600 font-semibold text-sm hover:underline">Read more</button>
-        </div>
-
-        <!-- E-Commerce -->
-        <div class="bg-white rounded-2xl p-6">
-          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">E-Commerce Solutions</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            Developing online stores and e-commerce platforms with advanced features and cloud integration to exceed your business goals.
-          </p>
-          <button class="text-teal-600 font-semibold text-sm hover:underline">Read more</button>
         </div>
       </div>
+    </section>
 
-      <!-- See All Services Button -->
-      <div class="text-center">
-        <button class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
-          See all our services
-        </button>
-      </div>
-    </div>
-
-    <!-- Software Solutions Section -->
-    <div class="bg-slate-900 rounded-3xl p-8 lg:p-16 mb-16 lg:mb-24">
-      <div class="text-center mb-12">
-        <span class="inline-block text-teal-400 font-semibold text-sm uppercase tracking-wide mb-4">
-          WHAT TECHNOLOGIES DO WE USE?
-        </span>
-        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-8">The best software for big challenges</h2>
-        <p class="text-gray-300 max-w-3xl mx-auto">
-          Our pit crew of tech experts, armed with AI, machine learning, and cloud computing, is tuning your business for the digital race. We strive to put your business in pole position with our pioneering software.
-        </p>
+    <!-- Modern Technology Stack Section -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tr from-blue-500/10 to-teal-500/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div class="flex items-center justify-center mb-8">
-        <div class="flex items-center gap-4">
-          <button class="p-2 text-white hover:text-teal-400 transition-colors">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-up">
+          <span class="inline-flex items-center gap-2 text-teal-400 font-semibold text-sm uppercase tracking-wide mb-6 bg-teal-900/30 px-4 py-2 rounded-full border border-teal-500/20">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
             </svg>
-          </button>
-          <span class="text-white font-semibold">Software Solutions</span>
-          <button class="p-2 text-white hover:text-teal-400 transition-colors">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- Craft CMS -->
-        <div class="bg-white rounded-2xl p-6">
-          <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Craft CMS</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            Craft CMS is a content management system that is incredibly flexible and user-friendly. It offers a clean, intuitive interface and powerful features for content creation and management.
+            Technology Stack
+          </span>
+          <h2 class="text-4xl lg:text-6xl font-bold text-white mb-6">
+            Powered by 
+            <span class="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">Cutting-Edge</span>
+            <br class="hidden sm:block">Technology
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            We leverage the latest technologies and frameworks to build scalable, secure, and high-performance solutions that drive business success.
           </p>
-          <div class="flex items-center gap-2 text-red-500">
-            <span class="text-sm font-medium">Websites & E-commerce</span>
-          </div>
         </div>
 
-        <!-- Swift -->
-        <div class="bg-white rounded-2xl p-6">
-          <div class="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <!-- Laravel Framework -->
+          <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-red-500/50 transition-all duration-300 fade-in-up">
+            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.02c-.01.003-.021.005-.032.005-.01 0-.021-.002-.031-.005l-.065-.02L.707 18.755a.378.378 0 01-.188-.326V9.584c0-.138.073-.26.188-.327l9.025-5.21c.117-.067.262-.067.379 0L14.44 6.4l4.323-2.49c.117-.068.262-.068.379 0l4.5 2.59zm-1 6.674l-3.819-2.2v-4.29l3.819 2.2v4.29zm-4.138-8.179l-3.819 2.2L10.86 3.925l3.819-2.2 3.825 2.2zM8.678 9.583l-7.25-4.18v8.36l7.25 4.18V9.583zm1.377.795l3.819-2.2v8.36l-3.819 2.2v-8.36z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors">Laravel</h3>
+            <p class="text-gray-400 mb-4 leading-relaxed">
+              Elegant PHP framework for web artisans. Rapid development with expressive syntax and powerful features.
+            </p>
+            <div class="flex items-center gap-2">
+              <span class="bg-red-500/20 text-red-400 text-xs font-medium px-2 py-1 rounded-full">Backend</span>
+              <span class="bg-red-500/20 text-red-400 text-xs font-medium px-2 py-1 rounded-full">API</span>
+            </div>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Swift</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            We also develop in Swift for iOS development and native iOS applications. Swift is Apple's programming language for iOS, macOS, watchOS, and tvOS app development.
-          </p>
-          <div class="flex items-center gap-2 text-teal-600">
-            <span class="text-sm font-medium">iOS apps in Xcode</span>
-          </div>
-        </div>
 
-        <!-- Laravel -->
-        <div class="bg-white rounded-2xl p-6">
-          <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.02c-.01.003-.021.005-.032.005-.01 0-.021-.002-.031-.005l-.065-.02L.707 18.755a.378.378 0 01-.188-.326V9.584c0-.138.073-.26.188-.327l9.025-5.21c.117-.067.262-.067.379 0L14.44 6.4l4.323-2.49c.117-.068.262-.068.379 0l4.5 2.59zm-1 6.674l-3.819-2.2v-4.29l3.819 2.2v4.29zm-4.138-8.179l-3.819 2.2L10.86 3.925l3.819-2.2 3.825 2.2zM8.678 9.583l-7.25-4.18v8.36l7.25 4.18V9.583zm1.377.795l3.819-2.2v8.36l-3.819 2.2v-8.36z"/>
-            </svg>
+          <!-- React Native -->
+          <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 fade-in-up" style="transition-delay: 100ms;">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">React Native</h3>
+            <p class="text-gray-400 mb-4 leading-relaxed">
+              Cross-platform mobile development. Build native apps for iOS and Android with shared codebase.
+            </p>
+            <div class="flex items-center gap-2">
+              <span class="bg-blue-500/20 text-blue-400 text-xs font-medium px-2 py-1 rounded-full">Mobile</span>
+              <span class="bg-blue-500/20 text-blue-400 text-xs font-medium px-2 py-1 rounded-full">Cross-platform</span>
+            </div>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3">Laravel</h3>
-          <p class="text-sm text-gray-600 mb-4">
-            Laravel is a powerful PHP framework that makes it easy to build modern web applications. It provides elegant syntax and powerful features for rapid development.
-          </p>
-          <div class="flex items-center gap-2 text-red-500">
-            <span class="text-sm font-medium">PHP</span>
+
+          <!-- Flutter -->
+          <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 fade-in-up" style="transition-delay: 200ms;">
+            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37zm.159 11.871L6.857 19.487l4.537 4.513H18.9l-4.427-4.43 4.427-4.429L14.473 11.87z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Flutter</h3>
+            <p class="text-gray-400 mb-4 leading-relaxed">
+              Google's UI toolkit for beautiful, natively compiled applications for mobile, web, and desktop.
+            </p>
+            <div class="flex items-center gap-2">
+              <span class="bg-cyan-500/20 text-cyan-400 text-xs font-medium px-2 py-1 rounded-full">Mobile</span>
+              <span class="bg-cyan-500/20 text-cyan-400 text-xs font-medium px-2 py-1 rounded-full">Web</span>
+            </div>
           </div>
-        </div>
+
+          <!-- Swift -->
+          <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-orange-500/50 transition-all duration-300 fade-in-up" style="transition-delay: 300ms;">
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7.508 0c-.287 0-.573 0-.86.002-.239.002-.477.007-.715.015-.473.017-.945.048-1.414.093-.916.088-1.823.254-2.706.493-.441.12-.875.26-1.298.418-.846.317-1.666.732-2.447 1.239-.39.253-.768.525-1.133.816C.312 3.546.312 3.546.312 3.546s.624-.468 1.446-1.079c.411-.305.847-.588 1.307-.845.23-.129.466-.25.707-.364.482-.228.98-.427 1.49-.595.51-.168 1.033-.305 1.564-.41.531-.105 1.068-.178 1.608-.218.54-.04 1.082-.049 1.624-.025.542.024 1.084.077 1.622.16.269.041.536.09.801.146.265.056.528.12.788.192.52.144 1.032.32 1.533.527.501.207.99.445 1.464.714.237.135.47.278.699.428.229.15.454.308.674.473.44.33.862.685 1.264 1.063.201.189.396.384.585.585.189.201.372.408.549.62.354.424.685.869.992 1.334.153.233.3.471.44.714.14.243.274.49.4.742.252.504.476 1.024.671 1.558.098.267.189.537.273.81.084.273.161.549.231.827.07.278.133.558.189.84.056.282.105.566.147.851.042.285.077.572.105.859.028.287.049.575.063.864.014.289.021.578.021.868 0 .289-.007.578-.021.867-.014.289-.035.577-.063.864-.028.287-.063.574-.105.859-.042.285-.091.569-.147.851-.056.282-.119.562-.189.84-.07.278-.147.554-.231.827-.084.273-.175.543-.273.81-.195.534-.419 1.054-.671 1.558-.126.252-.26.499-.4.742-.14.243-.287.481-.44.714-.307.465-.638.91-.992 1.334-.177.212-.36.419-.549.62-.189.201-.384.396-.585.585-.402.378-.824.733-1.264 1.063-.22.165-.445.323-.674.473-.229.15-.462.293-.699.428-.474.269-.963.507-1.464.714-.501.207-1.013.383-1.533.527-.26.072-.523.136-.788.192-.265.056-.532.105-.801.146-.538.083-1.08.136-1.622.16-.542.024-1.084.015-1.624-.025-.54-.04-1.077-.113-1.608-.218-.531-.105-1.054-.242-1.564-.41-.51-.168-1.008-.367-1.49-.595-.241-.114-.477-.235-.707-.364-.46-.257-.896-.54-1.307-.845C.936 20.922.312 20.454.312 20.454s0 0 .623.47c.365.291.743.563 1.133.816.781.507 1.601.922 2.447 1.239.423.158.857.298 1.298.418.883.239 1.79.405 2.706.493.469.045.941.076 1.414.093.238.008.476.013.715.015.287.002.573.002.86.002s.573 0 .86-.002c.239-.002.477-.007.715-.015.473-.017.945-.048 1.414-.093.916-.088 1.823-.254 2.706-.493.441-.12.875-.26 1.298-.418.846-.317 1.666-.732 2.447-1.239.39-.253.768-.525 1.133-.816.623-.47.623-.47.623-.47s-.624.468-1.446 1.079c-.411.305-.847.588-1.307.845-.23.129-.466.25-.707.364-.482.228-.98.427-1.49.595-.51.168-1.033.305-1.564.41-.531.105-1.068.178-1.608.218-.54.04-1.082.049-1.624.025-.542-.024-1.084-.077-1.622-.16-.269-.041-.536-.09-.801-.146-.265-.056-.528-.12-.788-.192-.52-.144-1.032-.32-1.533-.527-.501-.207-.99-.445-1.464-.714-.237-.135-.47-.278-.699-.428-.229-.15-.454-.308-.674-.473-.44-.33-.862-.685-1.264-1.063-.201-.189-.396-.384-.585-.585-.189-.201-.372-.408-.549-.62-.354-.424-.685-.869-.992-1.334-.153-.233-.3-.471-.44-.714-.14-.243-.274-.49-.4-.742-.252-.504-.476-1.024-.671-1.558-.098-.267-.189-.537-.273-.81-.084-.273-.161-.549-.231-.827-.07-.278-.133-.558-.189-.84-.056-.282-.105-.566-.147-.851-.042-.285-.077-.572-.105-.859-.028-.287-.049-.575-.063-.864-.014-.289-.021-.578-.021-.868 0-.289.007-.578.021-.867.014-.289.035-.577.063-.864.028-.287.063-.574.105-.859.042-.285.091-.569.147-.851.056-.282.119-.562.189-.84.07-.278.147-.554.231-.827.084-.273.175-.543.273-.81.195-.534.419-1.054.671-1.558.126-.252.26-.499.4-.742.14-.243.287-.481.44-.714.307-.465.638-.91.992-1.334.177-.212.36-.419.549-.62.189-.201.384-.396.585-.585.402-.378.824-.733 1.264-1.063.22-.165.445-.323.674-.473.229-.15.462-.293.699-.428.474-.269.963-.507 1.464-.714.501-.207 1.013-.383 1.533-.527.26-.072.523-.136.788-.192.265-.056.532-.105.801-.146.538-.083 1.08-.136 1.622-.16.542-.024 1.084-.015 1.624.025.54.04 1.077.113 1.608.218.531.105 1.054.242 1.564.41.51.168 1.008.367 1.49.595.241.114.477.235.707.364.46.257.896.54 1.307.845.822.611 1.446 1.079 1.446 1.079z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">Swift</h3>
+            <p class="text-gray-400 mb-4 leading-relaxed">
+              Apple's powerful programming language for iOS, macOS, watchOS, and tvOS app development.
+            </p>
+            <div class="flex items-center gap-2">
+              <span class="bg-orange-500/20 text-orange-400 text-xs font-medium px-2 py-1 rounded-full">iOS</span>
+              <span class="bg-orange-500/20 text-orange-400 text-xs font-medium px-2 py-1 rounded-full">Native</span>
+            </div>
+          </div>
       </div>
     </div>
 
