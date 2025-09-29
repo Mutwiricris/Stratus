@@ -1,4 +1,4 @@
-<div id="contact-widget" class="fixed z-50 bottom-6 right-6">
+<div id="contact-widget" class="fixed z-50 bottom-6 right-6" data-contact-widget>
     <!-- Floating Button -->
     <button id="contact-widget-toggle" aria-label="Contact us"
             class="h-14 w-14 rounded-full shadow-lg bg-cyan-800 hover:bg-cyan-500 text-white flex items-center justify-center transition">

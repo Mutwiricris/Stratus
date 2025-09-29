@@ -1,7 +1,7 @@
 @extends('layouts.detail')
 
 @section('title', 'Enterprise Software Solutions - Fintech, CRM, HRM & Analytics | Ascend Stratus')
-@section('description', 'Comprehensive enterprise software solutions including fintech platforms like PesaPal, advanced CRM systems, HRM solutions, business analytics, and SaaS applications for African enterprises.')
+@section('description', 'Comprehensive enterprise software solutions including fintech platforms like PayStratus, advanced CRM systems, HRM solutions, business analytics, and SaaS applications for African enterprises.')
 
 @section('content')
 <!-- Hero Section -->
@@ -33,7 +33,7 @@
           <span class="text-gray-900">Fintech & SaaS Solutions</span>
         </h1>
         <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
-          Comprehensive enterprise software solutions including advanced fintech platforms (like PesaPal), sophisticated CRM systems, HRM solutions, business analytics, and modern SaaS applications designed for African enterprises.
+          Comprehensive enterprise software solutions including advanced fintech platforms (like PayStratus), sophisticated CRM systems, HRM solutions, business analytics, and modern SaaS applications designed for African enterprises.
         </p>
         <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
           <a href="#solutions" class="group inline-flex items-center bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:shadow-2xl hover:shadow-indigo-500/25 transition-all duration-500 hover:scale-105">
@@ -89,7 +89,7 @@
       </span>
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Advanced Fintech Platforms</h2>
       <div class="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mb-6"></div>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto">Building next-generation financial technology solutions like PesaPal for African markets</p>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">Building next-generation financial technology solutions like PayStratus for African markets</p>
     </div>
     
     <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">

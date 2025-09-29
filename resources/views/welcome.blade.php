@@ -78,6 +78,9 @@
 
 @section('content')
 
+<!-- Welcome Modal for First-Time Visitors -->
+@include('components.welcome-modal')
+
 <!-- HERO SECTION -->
 <section class="bg-gradient-to-br from-gray-50 via-white to-teal-50/30 min-h-screen relative overflow-hidden">
   <!-- Background Elements -->
