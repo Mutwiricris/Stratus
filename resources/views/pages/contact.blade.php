@@ -159,43 +159,115 @@
       <div class="grid lg:grid-cols-2 gap-0">
         <!-- Form -->
         <div class="p-8 lg:p-12">
-          <form class="space-y-6">
+          <!-- Success Message -->
+          @if(session('success'))
+          <div class="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-emerald-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <p class="text-emerald-700 font-medium">{{ session('success') }}</p>
+            </div>
+          </div>
+          @endif
+
+          <!-- Warning Message -->
+          @if(session('warning'))
+          <div class="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-yellow-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+              <p class="text-yellow-700 font-medium">{{ session('warning') }}</p>
+            </div>
+          </div>
+          @endif
+
+          <!-- Error Messages -->
+          @if($errors->any())
+          <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+            <div class="flex items-start">
+              <svg class="w-5 h-5 text-red-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <div>
+                <p class="text-red-700 font-medium mb-2">Please fix the following errors:</p>
+                <ul class="text-red-600 text-sm list-disc list-inside">
+                  @foreach($errors->all() as $error)
+                  <li>{{ $error }}</li>
+                  @endforeach
+                </ul>
+              </div>
+            </div>
+          </div>
+          @endif
+
+          <!-- Toast Messages -->
+          @if(session('toast'))
+          <div id="page-toast" class="mb-6 p-4 rounded-lg shadow-lg 
+            @if(session('toast.type') === 'success') bg-emerald-600 text-white
+            @elseif(session('toast.type') === 'error') bg-red-600 text-white
+            @elseif(session('toast.type') === 'warning') bg-amber-600 text-white
+            @else bg-blue-600 text-white
+            @endif">
+            @if(session('toast.title'))
+            <div class="font-semibold">{{ session('toast.title') }}</div>
+            <div class="text-sm opacity-90">{{ session('toast.message') }}</div>
+            @else
+            <div>{{ session('toast.message') }}</div>
+            @endif
+          </div>
+          <script>
+            // Auto-hide toast after duration
+            setTimeout(() => {
+              const toast = document.getElementById('page-toast');
+              if (toast) {
+                toast.style.transition = 'opacity 0.5s';
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 500);
+              }
+            }, {{ session('toast.duration', 5000) }});
+          </script>
+          @endif
+
+          <form class="space-y-6" action="{{ route('contact.form') }}" method="POST" id="main-contact-form">
+            @csrf
             <div class="grid md:grid-cols-2 gap-6">
               <div>
-                <label for="first_name" class="block text-sm font-semibold text-gray-900 mb-3">First Name</label>
-                <input type="text" id="first_name" name="first_name" class="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all duration-300 hover:border-teal-300" placeholder="John">
+                <label for="first_name" class="block text-sm font-semibold text-gray-900 mb-3">First Name *</label>
+                <input type="text" id="first_name" name="first_name" required value="{{ old('first_name') }}" class="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all duration-300 hover:border-teal-300" placeholder="John">
               </div>
               <div>
-                <label for="last_name" class="block text-sm font-semibold text-gray-900 mb-3">Last Name</label>
-                <input type="text" id="last_name" name="last_name" class="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all duration-300 hover:border-teal-300" placeholder="Doe">
+                <label for="last_name" class="block text-sm font-semibold text-gray-900 mb-3">Last Name *</label>
+                <input type="text" id="last_name" name="last_name" required value="{{ old('last_name') }}" class="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all duration-300 hover:border-teal-300" placeholder="Doe">
               </div>
             </div>
             
             <div>
-              <label for="email" class="block text-sm font-semibold text-gray-900 mb-3">Email Address</label>
-              <input type="email" id="email" name="email" class="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all duration-300 hover:border-teal-300" placeholder="john@company.com">
+              <label for="email" class="block text-sm font-semibold text-gray-900 mb-3">Email Address *</label>
+              <input type="email" id="email" name="email" required value="{{ old('email') }}" class="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all duration-300 hover:border-teal-300" placeholder="john@company.com">
             </div>
             
             <div>
               <label for="company" class="block text-sm font-semibold text-gray-900 mb-3">Company</label>
-              <input type="text" id="company" name="company" class="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all duration-300 hover:border-teal-300" placeholder="Your Company">
+              <input type="text" id="company" name="company" value="{{ old('company') }}" class="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all duration-300 hover:border-teal-300" placeholder="Your Company">
             </div>
             
             <div>
               <label for="inquiry_type" class="block text-sm font-semibold text-gray-900 mb-3">Inquiry Type</label>
               <select id="inquiry_type" name="inquiry_type" class="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all duration-300 hover:border-teal-300">
                 <option value="">Select an option</option>
-                <option value="partnership">Partnership Opportunity</option>
-                <option value="platform">Platform Demo</option>
-                <option value="venture">Venture Collaboration</option>
-                <option value="careers">Career Opportunities</option>
-                <option value="general">General Inquiry</option>
+                <option value="partnership" {{ old('inquiry_type') === 'partnership' ? 'selected' : '' }}>Partnership Opportunity</option>
+                <option value="platform" {{ old('inquiry_type') === 'platform' ? 'selected' : '' }}>Platform Demo</option>
+                <option value="venture" {{ old('inquiry_type') === 'venture' ? 'selected' : '' }}>Venture Collaboration</option>
+                <option value="careers" {{ old('inquiry_type') === 'careers' ? 'selected' : '' }}>Career Opportunities</option>
+                <option value="general" {{ old('inquiry_type') === 'general' ? 'selected' : '' }}>General Inquiry</option>
               </select>
             </div>
             
             <div>
-              <label for="message" class="block text-sm font-semibold text-gray-900 mb-3">Message</label>
-              <textarea id="message" name="message" rows="6" class="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all duration-300 hover:border-teal-300 resize-none" placeholder="Tell us about your project, challenges, or how we can help..."></textarea>
+              <label for="message" class="block text-sm font-semibold text-gray-900 mb-3">Message *</label>
+              <textarea id="message" name="message" required rows="6" class="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all duration-300 hover:border-teal-300 resize-none" placeholder="Tell us about your project, challenges, or how we can help...">{{ old('message') }}</textarea>
             </div>
             
             <button type="submit" class="group w-full bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/25 transition-all duration-500 hover:scale-105 btn-animate overflow-hidden">

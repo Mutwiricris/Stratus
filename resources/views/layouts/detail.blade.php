@@ -11,6 +11,7 @@
     <meta name="keywords" content="@yield('keywords', 'enterprise software, fintech solutions, mobile app development, digital transformation, technology solutions Africa, business automation, custom software development, African technology company')">
     <meta name="author" content="Ascend Stratus">
     <meta name="robots" content="@yield('robots', 'index, follow')">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="canonical" href="{{ url()->current() }}">
     <meta name="description" content="Ascend Stratus builds smart, custom software and mobile apps (iOS/Android) for real business impact. Specializing in Digital Transformation, Laravel, and Craft CMS." />
 
@@ -599,10 +600,12 @@
     <main class="pt-20">
         @yield('content')
     </main>
-    
     @include('components.footer')
     
     @include('components.cookie-modal')
+    
+    <!-- Contact Widget -->
+    @include('components.contact-widget')
     
     @include('components.scripts')
     <script src="{{ asset('js/navigation.js') }}"></script>

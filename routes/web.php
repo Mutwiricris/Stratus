@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,13 @@ Route::group(['prefix' => ''], function () {
     Route::get('/contact', function () {
         return view('pages.contact');
     })->name('contact');
+
+    // Contact form submissions using controller
+    Route::post('/contact/message', [ContactController::class, 'submitMessage'])->name('contact.message');
+
+    Route::post('/contact/call', [ContactController::class, 'submitCallRequest'])->name('contact.call');
+
+    Route::post('/contact/form', [ContactController::class, 'submitContactForm'])->name('contact.form');
 });
 
 /*
