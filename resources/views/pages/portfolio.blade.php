@@ -51,7 +51,7 @@
       <div class="fade-in-up" style="transition-delay: 200ms;">
         <div class="relative">
           <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-100">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070" alt="Portfolio" class="w-full h-80 object-cover rounded-2xl">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=2070&q=80" alt="African technology professionals showcasing innovative portfolio solutions" class="w-full h-80 object-cover rounded-2xl">
             
             <!-- Floating Portfolio Stats -->
             <div class="absolute -top-4 -left-4 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-4 floating" style="animation-delay: 1s;">
@@ -90,7 +90,7 @@
       <!-- LogiFlow -->
       <div class="bg-gradient-to-br from-turquoise-50 to-cyan-50 rounded-2xl overflow-hidden card-hover fade-in-up">
         <div class="relative h-64">
-          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070" alt="LogiFlow" class="w-full h-full object-cover">
+          <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?auto=format&fit=crop&w=2070&q=80" alt="African logistics professionals using LogiFlow technology in modern warehouse" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-dark-turquoise/80 to-transparent"></div>
           <div class="absolute bottom-6 left-6">
             <div class="bg-cyan-300 text-dark-turquoise px-3 py-1 rounded-full text-sm font-semibold mb-2">Logistics</div>
@@ -114,7 +114,7 @@
       <!-- FinanceCore -->
       <div class="bg-gradient-to-br from-turquoise-50 to-cyan-50 rounded-2xl overflow-hidden card-hover fade-in-up" style="transition-delay: 100ms;">
         <div class="relative h-64">
-          <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=2070" alt="FinanceCore" class="w-full h-full object-cover">
+          <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=2070&q=80" alt="African financial professionals using FinanceCore fintech solutions in modern office" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-turquoise-600/80 to-transparent"></div>
           <div class="absolute bottom-6 left-6">
             <div class="bg-cyan-300 text-dark-turquoise px-3 py-1 rounded-full text-sm font-semibold mb-2">FinTech</div>
@@ -138,7 +138,7 @@
       <!-- AgriSmart -->
       <div class="bg-gradient-to-br from-turquoise-50 to-cyan-50 rounded-2xl overflow-hidden card-hover fade-in-up" style="transition-delay: 200ms;">
         <div class="relative h-64">
-          <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=2070" alt="AgriSmart" class="w-full h-full object-cover">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2070&q=80" alt="African farmers using AgriSmart technology for precision agriculture and crop management" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-cyan-accent/80 to-transparent"></div>
           <div class="absolute bottom-6 left-6">
             <div class="bg-cyan-300 text-dark-turquoise px-3 py-1 rounded-full text-sm font-semibold mb-2">AgriTech</div>

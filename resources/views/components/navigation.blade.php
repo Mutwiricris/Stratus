@@ -105,8 +105,11 @@
           <a href="{{ url('/services') }}" class="block text-gray-800 hover:text-teal-600 hover:bg-white/50 transition-all duration-200 py-4 px-4 rounded-xl border border-transparent hover:border-teal-200/50">Services</a>
           <ul class="ml-4 mt-2 space-y-1">
             <li><a href="{{ url('/services/web-applications') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Web Applications</a></li>
-            <li><a href="{{ url('/services/mobile-app-development') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Mobile Development</a></li>
+            <li><a href="{{ url('/services/mobile-app-development') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Mobile App Development</a></li>
+            <li><a href="{{ url('/services/enterprise-software') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Enterprise Software</a></li>
             <li><a href="{{ url('/services/digital-transformation') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Digital Transformation</a></li>
+            <li><a href="{{ url('/services/dev-team-as-a-service') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">E-Commerce Solutions</a></li>
+            <li><a href="{{ url('/services/ecommerce-solutions') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">E-Commerce Platform</a></li>
           </ul>
         </li>
         <li>
@@ -117,7 +120,19 @@
             <li><a href="{{ url('/benefits') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Benefits</a></li>
           </ul>
         </li>
-        <li><a href="{{ url('/portfolio') }}" class="block text-gray-800 hover:text-teal-600 hover:bg-white/50 transition-all duration-200 py-4 px-4 rounded-xl border border-transparent hover:border-teal-200/50">Portfolio</a></li>
+        <li>
+          <a href="{{ url('/portfolio') }}" class="block text-gray-800 hover:text-teal-600 hover:bg-white/50 transition-all duration-200 py-4 px-4 rounded-xl border border-transparent hover:border-teal-200/50">Portfolio</a>
+          <ul class="ml-4 mt-2 space-y-1">
+            <li><a href="{{ url('/products/logiflow') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">LogiFlow</a></li>
+            <li><a href="{{ url('/products/agrismart') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">AgriSmart</a></li>
+            <li><a href="{{ url('/products/retail-pro') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Retail Pro</a></li>
+            <li><a href="{{ url('/products/ascend-spa') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Ascend SPA</a></li>
+            <li><a href="{{ url('/products/events-pro') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Events Pro</a></li>
+            <li><a href="{{ url('/products/tours-app') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Tours App</a></li>
+            <li><a href="{{ url('/products/pool-billiard') }}" class="block text-gray-600 hover:text-teal-600 hover:bg-white/30 transition-all duration-200 py-2 px-3 rounded-lg text-sm">Pool Billiard</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ url('/platform') }}" class="block text-gray-800 hover:text-teal-600 hover:bg-white/50 transition-all duration-200 py-4 px-4 rounded-xl border border-transparent hover:border-teal-200/50">Platform</a></li>
         <li><a href="{{ url('/insights') }}" class="block text-gray-800 hover:text-teal-600 hover:bg-white/50 transition-all duration-200 py-4 px-4 rounded-xl border border-transparent hover:border-teal-200/50">Insights</a></li>
       </ul>
       

@@ -173,8 +173,8 @@
         <div class="relative group">
           <!-- Main Image -->
           <div class="relative overflow-hidden rounded-3xl shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80" 
-                 alt="African tech team in modern office collaborating on innovative technology solutions" 
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80" 
+                 alt="African technology professionals in modern corporate office developing innovative software solutions" 
                  loading="eager"
                  class="w-full h-[350px] sm:h-[450px] lg:h-[550px] object-cover group-hover:scale-110 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-br from-teal-600/20 via-cyan-600/10 to-blue-600/20 group-hover:opacity-75 transition-opacity duration-500"></div>
@@ -422,8 +422,8 @@
           
           <div class="relative">
             <div class="bg-white rounded-2xl p-4 shadow-2xl transform rotate-3">
-              <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=1920&q=80" 
-                   alt="African business professionals using advanced technology interface for digital transformation" 
+              <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1920&q=80" 
+                   alt="African business executives in modern corporate boardroom discussing digital transformation strategy" 
                    loading="lazy"
                    class="w-full h-64 object-cover rounded-lg">
             </div>
@@ -1162,7 +1162,7 @@
                     <!-- Blog Post 1 -->
                     <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover fade-in-up border border-cyan-200 rounded-lg">
                         <div class="relative h-48">
-                            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Modern Agriculture Technology transforming African farming with smart solutions" loading="lazy" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2070&q=80" alt="African farmers using modern agricultural technology and smart farming solutions in rural setting" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-dark-turquoise mb-3">The Future of AgriTech in Africa</h3>
@@ -1174,7 +1174,7 @@
                     <!-- Blog Post 2 -->
                     <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover fade-in-up border border-cyan-200 rounded-lg" style="transition-delay: 100ms;">
                         <div class="relative h-48">
-                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Logistics warehouse innovation with smart technology and automated systems in Africa" loading="lazy" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?auto=format&fit=crop&w=2070&q=80" alt="African logistics workers using digital technology in modern warehouse with automated systems" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-dark-turquoise mb-3">Innovating Logistics: A Case Study</h3>
@@ -1186,7 +1186,7 @@
                     <!-- Blog Post 3 -->
                     <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover fade-in-up border border-cyan-200 rounded-lg" style="transition-delay: 200ms;">
                         <div class="relative h-48">
-                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI technology development and machine learning solutions empowering African businesses" loading="lazy" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=2070&q=80" alt="African data scientists and AI developers working on machine learning solutions in modern tech office" loading="lazy" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-dark-turquoise mb-3">Empowering Businesses with AI</h3>

@@ -8,7 +8,7 @@
     </div>
 
     <div class="mt-20">
-        <img src="https://images.unsplash.com/photo-1611095789939-81c1b4b2a7d6?q=80&w=2070&auto=format&fit=crop" alt="Data network visualization" class="rounded-lg mx-auto">
+        <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=2070&q=80" alt="African technology professionals analyzing data networks and digital infrastructure" class="rounded-lg mx-auto">
     </div>
 
     <div class="mt-20 max-w-5xl mx-auto">

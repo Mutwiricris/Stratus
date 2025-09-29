@@ -56,8 +56,8 @@
       <div class="order-1 lg:order-2">
         <div class="relative group">
           <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1920&q=80" 
-                 alt="Software development team working on innovative solutions" 
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80" 
+                 alt="African software development team working on innovative technology solutions in modern office" 
                  class="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] object-cover group-hover:scale-110 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-br from-teal-600/20 via-cyan-600/10 to-blue-600/20 group-hover:opacity-75 transition-opacity duration-500"></div>
           </div>
@@ -134,8 +134,8 @@
       <!-- Right Column - Image & Stats -->
       <div class="space-y-8">
         <div class="relative">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80" 
-               alt="Ascend Stratus team collaboration" 
+          <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1920&q=80" 
+               alt="African business executives and technology team collaborating in modern corporate environment" 
                class="w-full h-64 sm:h-80 object-cover rounded-2xl shadow-xl">
           <div class="absolute inset-0 bg-gradient-to-br from-teal-600/20 via-cyan-600/10 to-blue-600/20 rounded-2xl"></div>
         </div>
@@ -301,8 +301,8 @@
       
       <!-- Right Column - Image -->
       <div class="relative">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80" 
-             alt="Team collaboration at Ascend Stratus" 
+        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1920&q=80" 
+             alt="African technology professionals collaborating on innovative solutions in modern workspace" 
              class="w-full h-80 object-cover rounded-2xl shadow-xl">
         <div class="absolute inset-0 bg-gradient-to-br from-teal-600/20 via-cyan-600/10 to-blue-600/20 rounded-2xl"></div>
       </div>

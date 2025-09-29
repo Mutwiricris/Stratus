@@ -1,7 +1,7 @@
 <div id="contact-widget" class="fixed z-50 bottom-6 right-6">
     <!-- Floating Button -->
     <button id="contact-widget-toggle" aria-label="Contact us"
-            class="h-14 w-14 rounded-full shadow-lg bg-[#0047FF] hover:bg-[#0037c7] text-white flex items-center justify-center transition">
+            class="h-14 w-14 rounded-full shadow-lg bg-cyan-800 hover:bg-cyan-500 text-white flex items-center justify-center transition">
         <!-- Chat icon -->
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
@@ -11,7 +11,7 @@
     <!-- Panel -->
     <div id="contact-widget-panel" class="hidden w-[320px] sm:w-[360px] bg-white rounded-2xl shadow-2xl overflow-hidden mt-3">
         <!-- Header -->
-        <div class="bg-[#0047FF] text-white px-4 py-3 flex items-center justify-between">
+        <div class="bg-cyan-800 text-white px-4 py-3 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <div class="h-8 w-8 rounded-full bg-white/15 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -52,7 +52,7 @@
                 <div id="chat-messages" class="flex-1 overflow-y-auto p-3 space-y-3 bg-neutral-50">
                     <!-- Initial bot message -->
                     <div class="flex items-start gap-2">
-                        <div class="w-7 h-7 rounded-full bg-[#0047FF] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">AS</div>
+                        <div class="w-7 h-7 rounded-full bg-cyan-800 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">AS</div>
                         <div class="flex-1">
                             <div class="text-xs text-neutral-600 mb-1">Stratus () • <span class="chat-time">3:16 PM</span></div>
                             <div class="bg-white rounded-lg p-3 shadow-sm text-sm text-neutral-800">
@@ -99,9 +99,9 @@
                             id="chat-input" 
                             type="text" 
                             placeholder="Type a message" 
-                            class="flex-1 border border-neutral-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047FF] focus:border-transparent"
+                            class="flex-1 border border-neutral-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800 focus:border-transparent"
                         >
-                        <button id="send-chat" class="p-2 text-[#0047FF] hover:text-[#0037c7]">
+                        <button id="send-chat" class="p-2 text-cyan-800 hover:text-cyan-500">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                             </svg>
@@ -115,34 +115,34 @@
             <form id="contact-form-message" class="space-y-3 hidden" autocomplete="on">
                 <div>
                     <label class="block text-xs font-medium text-neutral-700 mb-1">Name</label>
-                    <input name="name" required type="text" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047FF]">
+                    <input name="name" required type="text" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-neutral-700 mb-1">Email</label>
-                    <input name="email" required type="email" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047FF]">
+                    <input name="email" required type="email" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-neutral-700 mb-1">Message</label>
-                    <textarea name="message" required rows="4" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047FF]"></textarea>
+                    <textarea name="message" required rows="4" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-[#0047FF] hover:bg-[#0037c7] text-white rounded-lg px-4 py-2 text-sm font-semibold">Send Message</button>
+                <button type="submit" class="w-full bg-cyan-800 hover:bg-cyan-500 text-white rounded-lg px-4 py-2 text-sm font-semibold">Send Message</button>
             </form>
 
             <!-- Call form -->
             <form id="contact-form-call" class="space-y-3 hidden" autocomplete="on">
                 <div>
                     <label class="block text-xs font-medium text-neutral-700 mb-1">Name</label>
-                    <input name="name" required type="text" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047FF]">
+                    <input name="name" required type="text" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-neutral-700 mb-1">Phone Number</label>
-                    <input name="phone" required type="tel" placeholder="e.g. +254700000000" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047FF]">
+                    <input name="phone" required type="tel" placeholder="e.g. +254700000000" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-neutral-700 mb-1">Preferred time (optional)</label>
-                    <input name="time" type="text" placeholder="e.g. Weekdays 9am-5pm EAT" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047FF]">
+                    <input name="time" type="text" placeholder="e.g. Weekdays 9am-5pm EAT" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
                 </div>
-                <button type="submit" class="w-full bg-[#0047FF] hover:bg-[#0037c7] text-white rounded-lg px-4 py-2 text-sm font-semibold">Request a Call</button>
+                <button type="submit" class="w-full bg-cyan-800 hover:bg-cyan-500 text-white rounded-lg px-4 py-2 text-sm font-semibold">Request a Call</button>
             </form>
             <!-- //call button -->
 
@@ -225,7 +225,7 @@
     const messageDiv = document.createElement('div');
     messageDiv.className = 'flex items-start gap-2';
     messageDiv.innerHTML = `
-      <div class="w-7 h-7 rounded-full bg-[#0047FF] flex items-center justify-center text-white text-xs font-bold flex-shrink-0">AS</div>
+      <div class="w-7 h-7 rounded-full bg-cyan-800 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">AS</div>
       <div class="flex-1">
         <div class="text-xs text-neutral-600 mb-1">Stratus () • ${time}</div>
         <div class="bg-white rounded-lg p-3 shadow-sm text-sm text-neutral-800">${text}</div>
@@ -244,7 +244,7 @@
       <div class="flex-1 flex justify-end">
         <div class="max-w-xs">
           <div class="text-xs text-neutral-600 mb-1 text-right">${time}</div>
-          <div class="bg-[#0047FF] text-white rounded-lg p-3 shadow-sm text-sm">${text}</div>
+          <div class="bg-cyan-800 text-white rounded-lg p-3 shadow-sm text-sm">${text}</div>
         </div>
       </div>
     `;
@@ -322,7 +322,7 @@
         const contactDiv = document.createElement('div');
         contactDiv.className = 'px-9';
         contactDiv.innerHTML = `
-          <button class="contact-sales-btn w-full bg-[#0047FF] hover:bg-[#0037c7] text-white rounded-full px-4 py-2 text-sm font-medium transition-colors">
+          <button class="contact-sales-btn w-full bg-cyan-800 hover:bg-cyan-500 text-white rounded-full px-4 py-2 text-sm font-medium transition-colors">
             Contact Sales Team
           </button>
         `;
