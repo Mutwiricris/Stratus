@@ -72,6 +72,8 @@
     <!-- DNS Prefetch -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//images.unsplash.com">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,7 +110,8 @@
                         'float': 'float 6s ease-in-out infinite',
                         'glow': 'glow 2s ease-in-out infinite alternate',
                         'slide-up': 'slideUp 0.6s ease-out forwards',
-                        'scale-in': 'scaleIn 0.5s ease-out forwards'
+                        'scale-in': 'scaleIn 0.5s ease-out forwards',
+                        'gradient-x': 'gradient-x 15s ease infinite'
                     },
                     animationDelay: {
                         '100': '100ms',
@@ -144,6 +147,16 @@
                         scaleIn: {
                             '0%': { opacity: '0', transform: 'scale(0.8)' },
                             '100%': { opacity: '1', transform: 'scale(1)' }
+                        },
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            }
                         }
                     },
                     screens: {

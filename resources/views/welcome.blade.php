@@ -82,12 +82,9 @@
 @include('components.welcome-modal')
 
 <!-- HERO SECTION -->
-<section class="bg-gradient-to-br from-gray-50 via-white to-teal-50/30 min-h-screen relative overflow-hidden">
+<section class="relative min-h-screen overflow-hidden bg-gray-50">
   <!-- Background Elements -->
-  <div class="absolute inset-0 overflow-hidden">
-    <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
-    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-blue-400/20 to-teal-400/20 rounded-full blur-3xl"></div>
-  </div>
+  <div class="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-cyan-50 animate-gradient-x"></div>
   
   <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
     <!-- Top Hero Content -->
@@ -100,14 +97,14 @@
             ASCEND STRATUS
           </span>
           <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-8 leading-[1.1] fade-in-scale" style="transition-delay: 200ms;">
-            Smart software
-            <span class="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">for real</span>
-            <span class="block">business impact.</span>
+            Next-gen software
+            <span class="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">for ambitious</span>
+            <span class="block">African businesses.</span>
           </h1>
         </div>
         
         <p class="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-10 leading-relaxed max-w-2xl slide-in-left" style="transition-delay: 300ms;">
-          We build software that grows with you.
+          We are a full-service digital transformation partner, helping you build and scale your business with cutting-edge technology.
         </p>
         
         <!-- Trust Indicators -->
@@ -139,7 +136,7 @@
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-stretch sm:items-center mb-12 fade-in-up" style="transition-delay: 400ms;">
-          <a href='/contact' class="group relative bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/25 transition-all duration-500 hover:scale-105 btn-animate overflow-hidden">
+          <a href='/contact' class="group relative bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/25 transition-all duration-500 hover:scale-105 btn-animate overflow-hidden w-full sm:w-auto">
             <div class="absolute inset-0 bg-gradient-to-r from-teal-700 via-cyan-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <span class="relative flex items-center justify-center gap-2">
               Get Started Today
@@ -148,7 +145,7 @@
               </svg>
             </span>
           </a>
-          <a href='/services' class="group border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-teal-600 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 btn-animate backdrop-blur-sm bg-white/50">
+          <a href='/services' class="group border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-teal-600 hover:text-teal-600 hover:bg-teal-50 transition-all duration-300 btn-animate backdrop-blur-sm bg-white/50 w-full sm:w-auto">
             <span class="flex items-center justify-center gap-2">
               <svg class="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -201,32 +198,75 @@
       </div>
     </div>
 
-    <!-- What We Do Section - Integrated -->
-    <div class="bg-slate-900 rounded-3xl p-8 lg:p-16 mb-16 lg:mb-24 relative overflow-hidden fade-in-up" style="transition-delay: 500ms;">
-      <div class="absolute inset-0">
-        <div class="absolute top-0 right-0 w-1/3 h-full">
-          <svg viewBox="0 0 400 400" class="w-full h-full opacity-10">
-            <path d="M0,0 Q200,100 400,0 L400,400 L0,400 Z" fill="url(#gradient)" />
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#0d9488;stop-opacity:0.3" />
-                <stop offset="100%" style="stop-color:#0d9488;stop-opacity:0.1" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-      </div>
-      
-      <div class="relative z-10">
-        <div class="max-w-3xl">
-          <span class="inline-block text-teal-400 font-semibold text-sm uppercase tracking-wide mb-4 slide-in-left" style="transition-delay: 600ms;">
-            WHAT DOES ASCEND STRATUS DO?
+    <!-- What We Do Section -->
+    <div class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-up">
+          <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
+            Our Process
           </span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight fade-in-scale" style="transition-delay: 700ms;">
-            We develop custom
-            <span class="block">software together</span>
-            <span class="block">with our customers.</span>
-          </h2>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">How We Bring Your Ideas to Life</h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-teal-600 to-cyan-600 mx-auto mb-6"></div>
+          <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            We follow a proven, transparent process to ensure your project is a success from start to finish. Our collaborative approach keeps you in the loop every step of the way.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          <!-- Connecting Lines -->
+          <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 left-0 w-full h-px bg-gray-200"></div>
+          <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 left-0 w-full">
+            <div class="flex justify-around">
+              <div class="w-4 h-4 bg-teal-600 rounded-full ring-8 ring-white"></div>
+              <div class="w-4 h-4 bg-teal-600 rounded-full ring-8 ring-white"></div>
+              <div class="w-4 h-4 bg-teal-600 rounded-full ring-8 ring-white"></div>
+              <div class="w-4 h-4 bg-teal-600 rounded-full ring-8 ring-white"></div>
+            </div>
+          </div>
+
+          <!-- Step 1: Discovery & Strategy -->
+          <div class="text-center fade-in-up z-10" style="transition-delay: 100ms;">
+            <div class="w-20 h-20 mx-auto mb-6 bg-teal-100 rounded-full flex items-center justify-center ring-4 ring-white">
+              <span class="text-3xl font-bold text-teal-600">1</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Discovery & Strategy</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              We start by understanding your vision, goals, and challenges. This phase includes market research, requirement gathering, and creating a detailed project roadmap.
+            </p>
+          </div>
+
+          <!-- Step 2: Design & Prototyping -->
+          <div class="text-center fade-in-up z-10" style="transition-delay: 200ms;">
+            <div class="w-20 h-20 mx-auto mb-6 bg-cyan-100 rounded-full flex items-center justify-center ring-4 ring-white">
+              <span class="text-3xl font-bold text-cyan-600">2</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Design & Prototyping</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Our team creates intuitive UI/UX designs and interactive prototypes. We focus on user-centric design to ensure a seamless and engaging experience for your audience.
+            </p>
+          </div>
+
+          <!-- Step 3: Development & Testing -->
+          <div class="text-center fade-in-up z-10" style="transition-delay: 300ms;">
+            <div class="w-20 h-20 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center ring-4 ring-white">
+              <span class="text-3xl font-bold text-blue-600">3</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Development & Testing</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Using agile methodologies, our developers write clean, scalable code. Rigorous testing is performed at every stage to ensure a bug-free, high-performance product.
+            </p>
+          </div>
+
+          <!-- Step 4: Deployment & Support -->
+          <div class="text-center fade-in-up z-10" style="transition-delay: 400ms;">
+            <div class="w-20 h-20 mx-auto mb-6 bg-indigo-100 rounded-full flex items-center justify-center ring-4 ring-white">
+              <span class="text-3xl font-bold text-indigo-600">4</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Deployment & Support</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              We handle the deployment process and provide ongoing support and maintenance to ensure your application runs smoothly and continues to evolve with your business.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -278,380 +318,336 @@
       </div>
     </div>
 
-    <!-- About Ascend Stratus Section -->
-    <div class="mb-16 lg:mb-24">
-      <div class="text-center mb-16 fade-in-up">
-        <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
-          About Us
-        </span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">About Ascend Stratus</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-teal-600 to-cyan-600 mx-auto mb-6"></div>
-        <p class="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">Established 3 years ago, Ascend Stratus specializes in inventing, designing, developing, and maintaining custom software solutions. We pride ourselves on honesty, innovation, and deep domain knowledge.</p>
-      </div>
-      
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Honesty -->
-        <div class="text-center fade-in-up" style="transition-delay: 100ms;">
-          <div class="w-16 h-16 mx-auto mb-6 bg-orange-100 rounded-2xl flex items-center justify-center">
-            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
+    <!-- About Us Section -->
+    <div class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Left Column - Image -->
+          <div class="relative fade-in-left">
+            <div class="aspect-w-4 aspect-h-3 rounded-3xl overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=1920&q=80" 
+                   alt="Team of diverse professionals collaborating in a modern office" 
+                   class="w-full h-full object-cover">
+            </div>
+            <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-full blur-2xl"></div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Honesty</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Honest and transparent communication is fundamental to our approach. We believe in building trust through clear expectations and delivering on our promises.
-          </p>
-        </div>
 
-        <!-- Innovative -->
-        <div class="text-center fade-in-up" style="transition-delay: 200ms;">
-          <div class="w-16 h-16 mx-auto mb-6 bg-red-100 rounded-2xl flex items-center justify-center">
-            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
+          <!-- Right Column - Content -->
+          <div class="fade-in-up">
+            <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
+              Who We Are
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Your Partner in Digital Innovation</h2>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+              Ascend Stratus is a forward-thinking technology partner dedicated to helping African businesses thrive in the digital age. We combine deep industry expertise with cutting-edge technology to deliver solutions that drive growth, efficiency, and real-world impact.
+            </p>
+            
+            <div class="grid sm:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                  <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                  Our Mission
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  To empower businesses with innovative and scalable technology solutions that drive sustainable growth.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                  <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                  Our Vision
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  To be the leading catalyst for digital transformation across Africa, fostering a future of innovation and opportunity.
+                </p>
+              </div>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Innovative</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            We embrace new technologies and methodologies to solve complex problems. Innovation drives us to create solutions that push boundaries and exceed expectations.
-          </p>
-        </div>
-
-        <!-- Domain Knowledge -->
-        <div class="text-center fade-in-up" style="transition-delay: 300ms;">
-          <div class="w-16 h-16 mx-auto mb-6 bg-blue-100 rounded-2xl flex items-center justify-center">
-            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Domain Knowledge</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Deep understanding of various industries allows us to create tailored solutions. We speak your business language and understand your unique challenges.
-          </p>
-        </div>
-
-        <!-- Full-service -->
-        <div class="text-center fade-in-up" style="transition-delay: 400ms;">
-          <div class="w-16 h-16 mx-auto mb-6 bg-teal-100 rounded-2xl flex items-center justify-center">
-            <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Full-service</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            From strategy and design to development and support, we provide comprehensive services. One team, one vision, seamless execution from start to finish.
-          </p>
         </div>
       </div>
     </div>
 
     <!-- Showcase Section -->
-    <div class="mb-16 lg:mb-24">
-      <div class="text-center mb-12 fade-in-up">
-        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">This is what we work on every day.</h2>
-      </div>
-      
-      <!-- Project Showcase Card -->
-      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-3xl p-8 lg:p-12 mb-8 relative overflow-hidden fade-in-up">
-        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div>
-            <div class="mb-6">
-              <span class="inline-block bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">Showcase</span>
-              <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                Partners in data-based business growth.
-              </h3>
-              <p class="text-gray-600 leading-relaxed mb-6">
-                We developed a comprehensive business intelligence platform that helps companies make data-driven decisions. The system integrates with multiple data sources and provides real-time analytics and reporting capabilities.
-              </p>
-            </div>
-            
-            <div class="flex items-center gap-2 text-teal-600">
-              <span class="text-sm font-medium">View project</span>
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-          </div>
-          
-          <div class="relative">
-            <div class="bg-white rounded-2xl p-6 shadow-xl">
-              <div class="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-lg h-64 flex items-center justify-center">
-                <div class="text-center">
-                  <div class="w-16 h-16 bg-teal-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                    </svg>
-                  </div>
-                  <h4 class="font-bold text-gray-900 mb-2">Business Intelligence</h4>
-                  <p class="text-sm text-gray-600">Real-time analytics platform</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-up">
+          <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
+            Our Work
+          </span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Innovative Solutions for Modern Challenges</h2>
+          <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            We've partnered with businesses across various industries to build exceptional digital products. Explore some of our success stories.
+          </p>
         </div>
-      </div>
 
-      <!-- Case Study 1 - Featured -->
-      <div class="bg-teal-100 rounded-3xl p-8 lg:p-12 mb-8 relative overflow-hidden card-hover fade-in-up border border-cyan-200 rounded-lg" style="transition-delay: 100ms;">
-        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div class="slide-in-left" style="transition-delay: 200ms;">
-            <div class="flex items-center gap-4 mb-6">
-              <span class="text-teal-600 font-bold text-lg">01.</span>
-              <span class="bg-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">Showcase</span>
+        <!-- Tabbed Showcase -->
+        <div x-data="{ activeTab: 'fintech' }">
+          <!-- Tabs -->
+          <div class="flex justify-center mb-12 fade-in-up">
+            <div class="bg-gray-100 p-2 rounded-full flex space-x-2">
+              <button @click="activeTab = 'fintech'" :class="{ 'bg-teal-600 text-white': activeTab === 'fintech', 'text-gray-600': activeTab !== 'fintech' }" class="px-6 py-2 text-sm font-semibold rounded-full transition-colors duration-300">
+                FinTech
+              </button>
+              <button @click="activeTab = 'logistics'" :class="{ 'bg-teal-600 text-white': activeTab === 'logistics', 'text-gray-600': activeTab !== 'logistics' }" class="px-6 py-2 text-sm font-semibold rounded-full transition-colors duration-300">
+                Logistics
+              </button>
+              <button @click="activeTab = 'healthcare'" :class="{ 'bg-teal-600 text-white': activeTab === 'healthcare', 'text-gray-600': activeTab !== 'healthcare' }" class="px-6 py-2 text-sm font-semibold rounded-full transition-colors duration-300">
+                Healthcare
+              </button>
             </div>
-            
-            <div class="mb-6">
-              <div class="flex items-center gap-3 mb-4">
-                <div class="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center">
-                  <span class="text-white font-bold text-lg">AS</span>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="relative">
+            <!-- FinTech Panel -->
+            <div x-show="activeTab === 'fintech'" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
+              <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                  <div class="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04421a1f3a?auto=format&fit=crop&w=1920&q=80" alt="Fintech application dashboard" class="w-full h-full object-cover">
+                  </div>
                 </div>
                 <div>
-                  <h3 class="font-bold text-gray-900">Ascend Spectrum</h3>
-                  <p class="text-sm text-gray-600">Healthcare Management Platform</p>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">Digital Banking Platform</h3>
+                  <p class="text-gray-600 mb-6">
+                    A comprehensive digital banking solution with mobile payments, P2P transfers, and budgeting tools. We integrated with M-Pesa for seamless transactions, boosting user adoption by 60%.
+                  </p>
+                  <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="bg-teal-100 text-teal-700 text-xs font-medium px-3 py-1 rounded-full">Laravel</span>
+                    <span class="bg-cyan-100 text-cyan-700 text-xs font-medium px-3 py-1 rounded-full">React Native</span>
+                    <span class="bg-blue-100 text-blue-700 text-xs font-medium px-3 py-1 rounded-full">M-Pesa API</span>
+                  </div>
+                  <a href="#" class="text-teal-600 font-semibold hover:underline">View Case Study &rarr;</a>
                 </div>
               </div>
-              
-              <h4 class="text-xl lg:text-2xl font-bold text-teal-800 mb-4">
-                Patients in control and employees unburdened.
-              </h4>
             </div>
-            
-            <div class="flex items-center gap-2 text-teal-600">
-              <span class="text-sm font-medium">Digital transformation</span>
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
+
+            <!-- Logistics Panel -->
+            <div x-show="activeTab === 'logistics'" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
+              <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                  <div class="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1586528116311-0692421b3a9f?auto=format&fit=crop&w=1920&q=80" alt="Logistics and supply chain management" class="w-full h-full object-cover">
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">LogiFlow Supply Chain</h3>
+                  <p class="text-gray-600 mb-6">
+                    An end-to-end logistics platform for real-time tracking, fleet management, and route optimization. Reduced delivery times by 25% and improved operational efficiency.
+                  </p>
+                  <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="bg-teal-100 text-teal-700 text-xs font-medium px-3 py-1 rounded-full">Node.js</span>
+                    <span class="bg-cyan-100 text-cyan-700 text-xs font-medium px-3 py-1 rounded-full">Vue.js</span>
+                    <span class="bg-blue-100 text-blue-700 text-xs font-medium px-3 py-1 rounded-full">Google Maps API</span>
+                  </div>
+                  <a href="#" class="text-teal-600 font-semibold hover:underline">View Case Study &rarr;</a>
+                </div>
+              </div>
             </div>
-          </div>
-          
-          <div class="relative">
-            <div class="bg-white rounded-2xl p-4 shadow-2xl transform rotate-3">
-              <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1920&q=80" 
-                   alt="African business executives in modern corporate boardroom discussing digital transformation strategy" 
-                   loading="lazy"
-                   class="w-full h-64 object-cover rounded-lg">
+
+            <!-- Healthcare Panel -->
+            <div x-show="activeTab === 'healthcare'" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
+              <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                  <div class="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba9996a?auto=format&fit=crop&w=1920&q=80" alt="Healthcare technology" class="w-full h-full object-cover">
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">Telemedicine Platform</h3>
+                  <p class="text-gray-600 mb-6">
+                    A secure telemedicine app connecting patients with doctors for virtual consultations. Features include video calls, e-prescriptions, and electronic health records.
+                  </p>
+                  <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="bg-teal-100 text-teal-700 text-xs font-medium px-3 py-1 rounded-full">Python (Django)</span>
+                    <span class="bg-cyan-100 text-cyan-700 text-xs font-medium px-3 py-1 rounded-full">Flutter</span>
+                    <span class="bg-blue-100 text-blue-700 text-xs font-medium px-3 py-1 rounded-full">WebRTC</span>
+                  </div>
+                  <a href="#" class="text-teal-600 font-semibold hover:underline">View Case Study &rarr;</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Case Studies Grid -->
-      <div class="grid md:grid-cols-2 gap-8 mb-8">
-        <!-- Case Study 2 -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-gray-500 font-bold">02.</span>
-            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">Case Study</span>
-          </div>
-          
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
-              <span class="text-white font-bold">RP</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-bold text-gray-900">Retail Pro - International</h4>
-              <p class="text-sm text-gray-600">App management</p>
-            </div>
-          </div>
-          
-          <div class="flex items-center gap-2 text-gray-600 mt-6">
-            <span class="text-sm font-medium">Digital transformation</span>
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-            </svg>
-          </div>
-        </div>
-
-        <!-- Case Study 3 -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-gray-500 font-bold">03.</span>
-            <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">Case Study</span>
-          </div>
-          
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center">
-              <span class="text-white font-bold">LP</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-bold text-gray-900">LogiFlow</h4>
-              <p class="text-sm text-gray-600">Site identity & Digital connections</p>
-            </div>
-          </div>
-          
-          <div class="flex items-center gap-2 text-gray-600 mt-6">
-            <span class="text-sm font-medium">Web Development</span>
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- View All Button -->
-      <div class="text-center">
-        <button class="bg-white border-2 border-gray-900 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-colors">
-          View all of our case studies
-        </button>
       </div>
     </div>
 
     
-    <!-- <div class="mb-16 lg:mb-24 bg-gradient-to-br from-gray-50 to-teal-50/30 py-16 rounded-3xl">
-      <div class="text-center mb-16 fade-in-up">
-        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Trusted by leading organizations across multiple industries</p>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-       
-        <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover fade-in-up" style="transition-delay: 100ms;">
-          <div class="flex items-center mb-6">
-            <div class="flex text-teal-500">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-            </div>
-          </div>
-          <blockquote class="text-gray-700 mb-6 leading-relaxed">
-            "Ascend Stratus delivered a custom mobile app that streamlined our patient management system. Their Laravel and Swift expertise resulted in a 40% increase in operational efficiency."
-          </blockquote>
-          <div class="flex items-center">
-            <div class="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-              SW
-            </div>
-            <div>
-              <div class="font-semibold text-gray-900">Sarah Wairimu</div>
-              <div class="text-sm text-gray-600">Operations Director, MedTech Solutions</div>
-            </div>
-          </div>
+    <!-- Testimonials Section -->
+    <div class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-up">
+          <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
+            Testimonials
+          </span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Trusted by Industry Leaders</h2>
+          <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            We're proud to have partnered with amazing companies and delivered outstanding results. Here's what they have to say about us.
+          </p>
         </div>
 
-        <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover fade-in-up" style="transition-delay: 200ms;">
-          <div class="flex items-center mb-6">
-            <div class="flex text-teal-500">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover fade-in-up" style="transition-delay: 100ms;">
+            <div class="flex items-center mb-6">
+              <img class="w-16 h-16 rounded-full mr-4 object-cover" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Wairimu">
+              <div>
+                <div class="font-semibold text-gray-900">Sarah Wairimu</div>
+                <div class="text-sm text-gray-600">Operations Director, MedTech Solutions</div>
+              </div>
             </div>
+            <blockquote class="text-gray-700 leading-relaxed">
+              "Ascend Stratus delivered a custom mobile app that streamlined our patient management system. Their expertise resulted in a 40% increase in operational efficiency."
+            </blockquote>
           </div>
-          <blockquote class="text-gray-700 mb-6 leading-relaxed">
-            "Ascend Stratus built our e-commerce platform using Craft CMS. The custom solution increased our online sales by 60% and improved customer experience significantly."
-          </blockquote>
-          <div class="flex items-center">
-            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-              MJ
-            </div>
-            <div>
-              <div class="font-semibold text-gray-900">Michael Johnson</div>
-              <div class="text-sm text-gray-600">CEO, RetailTech Innovations</div>
-            </div>
-          </div>
-        </div>
 
-        <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover fade-in-up" style="transition-delay: 300ms;">
-          <div class="flex items-center mb-6">
-            <div class="flex text-teal-500">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
+          <!-- Testimonial 2 -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover fade-in-up" style="transition-delay: 200ms;">
+            <div class="flex items-center mb-6">
+              <img class="w-16 h-16 rounded-full mr-4 object-cover" src="https://randomuser.me/api/portraits/men/75.jpg" alt="John Omondi">
+              <div>
+                <div class="font-semibold text-gray-900">John Omondi</div>
+                <div class="text-sm text-gray-600">CEO, KenyaFresh Logistics</div>
+              </div>
             </div>
+            <blockquote class="text-gray-700 leading-relaxed">
+              "The logistics platform they built for us has been a game-changer. Real-time tracking and route optimization have cut our costs by 15%. Highly recommended!"
+            </blockquote>
           </div>
-          <blockquote class="text-gray-700 mb-6 leading-relaxed">
-            "Their digital transformation services helped us modernize our entire business infrastructure. The custom software solution integrated AI and cloud computing perfectly."
-          </blockquote>
-          <div class="flex items-center">
-            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-              RD
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover fade-in-up" style="transition-delay: 300ms;">
+            <div class="flex items-center mb-6">
+              <img class="w-16 h-16 rounded-full mr-4 object-cover" src="https://randomuser.me/api/portraits/women/85.jpg" alt="Amina Yusuf">
+              <div>
+                <div class="font-semibold text-gray-900">Amina Yusuf</div>
+                <div class="text-sm text-gray-600">Founder, AgriConnect</div>
+              </div>
             </div>
-            <div>
-              <div class="font-semibold text-gray-900">Robert Davis</div>
-              <div class="text-sm text-gray-600">CTO, FinTech Dynamics</div>
-            </div>
+            <blockquote class="text-gray-700 leading-relaxed">
+              "Working with Ascend Stratus was a fantastic experience. They understood our vision for AgriConnect and delivered a robust platform that connects farmers to markets."
+            </blockquote>
           </div>
         </div>
       </div>
-      
-      <div class="text-center fade-in-up" style="transition-delay: 400ms;">
-        <p class="text-sm text-gray-500 mb-8">Trusted by leading organizations worldwide</p>
-        <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 lg:gap-8">
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <span class="text-lg font-bold text-gray-700">TechCorp</span>
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <div class="bg-blue-600 text-white px-3 py-2 rounded font-bold text-sm">InnovateLab</div>
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <span class="text-lg font-bold text-gray-700">GlobalTech</span>
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <div class="bg-teal-600 text-white px-3 py-2 rounded text-sm font-bold">NEXUS</div>
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <span class="text-lg font-bold text-gray-700">FutureSoft</span>
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <div class="bg-gray-800 text-white px-3 py-2 rounded text-sm font-bold">APEX</div>
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <span class="text-lg font-bold text-gray-700">Microsoft</span>
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <div class="bg-red-600 text-white px-3 py-2 rounded text-sm font-bold">Oracle</div>
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <span class="text-lg font-bold text-gray-700">Salesforce</span>
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <div class="bg-green-600 text-white px-3 py-2 rounded text-sm font-bold">AWS</div>
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <span class="text-lg font-bold text-gray-700">IBM</span>
-          </div>
-          <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-100 flex items-center justify-center h-20 hover:shadow-md transition-shadow duration-300 opacity-60 grayscale hover:opacity-100 hover:grayscale-0">
-            <div class="bg-purple-600 text-white px-3 py-2 rounded text-sm font-bold">Your Logo Here</div>
-          </div>
-        </div>
-      </div> -->
+    </div>
 
-    <!-- Modern Services Section -->
-    <section class="py-20 lg:py-28 bg-gradient-to-br from-slate-50 via-white to-teal-50/30 relative overflow-hidden">
-      <!-- Background Elements -->
+    <!-- Technology Stack Section -->
+    <div class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
+                    Our Tech Stack
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Modern Technologies for Powerful Solutions</h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We leverage a modern, battle-tested technology stack to build reliable, scalable, and high-performance applications that meet the demands of today's digital landscape.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <!-- Frontend -->
+                <div class="text-center fade-in-up" style="transition-delay: 100ms;">
+                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <img src="https://cdn.svgporn.com/logos/react.svg" alt="React" class="h-12">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">React</h3>
+                </div>
+                <!-- Backend -->
+                <div class="text-center fade-in-up" style="transition-delay: 200ms;">
+                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <img src="https://cdn.svgporn.com/logos/laravel.svg" alt="Laravel" class="h-12">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Laravel</h3>
+                </div>
+                <!-- Mobile -->
+                <div class="text-center fade-in-up" style="transition-delay: 300ms;">
+                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <img src="https://cdn.svgporn.com/logos/flutter.svg" alt="Flutter" class="h-12">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Flutter</h3>
+                </div>
+                <!-- Database -->
+                <div class="text-center fade-in-up" style="transition-delay: 400ms;">
+                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <img src="https://cdn.svgporn.com/logos/mysql.svg" alt="MySQL" class="h-12">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">MySQL</h3>
+                </div>
+                <!-- Cloud -->
+                <div class="text-center fade-in-up" style="transition-delay: 500ms;">
+                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <img src="https://cdn.svgporn.com/logos/aws.svg" alt="AWS" class="h-12">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">AWS</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Section -->
+    <div class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
+                    From the Blog
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Insights and Innovations</h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Stay updated with the latest trends in technology, software development, and digital transformation from our team of experts.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in-up" style="transition-delay: 100ms;">
+                    <a href="#" class="block">
+                        <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=80" alt="Blog post image on data analytics">
+                    </a>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">July 15, 2024</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3"><a href="#" class="hover:text-teal-600 transition-colors">The Future of FinTech in Africa</a></h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Exploring the rapid growth of financial technology across the continent and what it means for businesses and consumers.
+                        </p>
+                        <a href="#" class="text-teal-600 font-semibold hover:underline">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in-up" style="transition-delay: 200ms;">
+                    <a href="#" class="block">
+                        <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1920&q=80" alt="Blog post image on collaboration">
+                    </a>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">June 28, 2024</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3"><a href="#" class="hover:text-teal-600 transition-colors">Scaling Your Business with Cloud-Native Solutions</a></h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            A deep dive into how cloud-native architecture can provide the scalability and resilience your business needs to grow.
+                        </p>
+                        <a href="#" class="text-teal-600 font-semibold hover:underline">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in-up" style="transition-delay: 300ms;">
+                    <a href="#" class="block">
+                        <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80" alt="Blog post image on teamwork">
+                    </a>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">June 12, 2024</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3"><a href="#" class="hover:text-teal-600 transition-colors">The Importance of User-Centric Design</a></h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Why putting the user first is the key to building successful and engaging digital products that stand the test of time.
+                        </p>
+                        <a href="#" class="text-teal-600 font-semibold hover:underline">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
       <div class="absolute inset-0 overflow-hidden">
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-teal-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
         <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-blue-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
@@ -831,281 +827,59 @@
       </div>
     </section>
 
-    <!-- Modern Technology Stack Section -->
-    <section class="py-20 lg:py-28 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 relative overflow-hidden">
-      <!-- Background Elements -->
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tr from-blue-500/10 to-teal-500/10 rounded-full blur-3xl"></div>
-      </div>
+    <!-- Technology Stack Section -->
+    <div class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
+                    Our Tech Stack
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Modern Technologies for Powerful Solutions</h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We leverage a modern, battle-tested technology stack to build reliable, scalable, and high-performance applications that meet the demands of today's digital landscape.
+                </p>
+            </div>
 
-      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="text-center mb-16 fade-in-up">
-          <span class="inline-flex items-center gap-2 text-teal-400 font-semibold text-sm uppercase tracking-wide mb-6 bg-teal-900/30 px-4 py-2 rounded-full border border-teal-500/20">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
-            </svg>
-            Technology Stack
-          </span>
-          <h2 class="text-4xl lg:text-6xl font-bold text-white mb-6">
-            Powered by 
-            <span class="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">Cutting-Edge</span>
-            <br class="hidden sm:block">Technology
-          </h2>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We leverage the latest technologies and frameworks to build scalable, secure, and high-performance solutions that drive business success.
-          </p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <!-- Frontend -->
+                <div class="text-center fade-in-up" style="transition-delay: 100ms;">
+                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <img src="https://cdn.svgporn.com/logos/react.svg" alt="React" class="h-12">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">React</h3>
+                </div>
+                <!-- Backend -->
+                <div class="text-center fade-in-up" style="transition-delay: 200ms;">
+                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <img src="https://cdn.svgporn.com/logos/laravel.svg" alt="Laravel" class="h-12">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Laravel</h3>
+                </div>
+                <!-- Mobile -->
+                <div class="text-center fade-in-up" style="transition-delay: 300ms;">
+                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <img src="https://cdn.svgporn.com/logos/flutter.svg" alt="Flutter" class="h-12">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Flutter</h3>
+                </div>
+                <!-- Database -->
+                <div class="text-center fade-in-up" style="transition-delay: 400ms;">
+                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <img src="https://cdn.svgporn.com/logos/mysql.svg" alt="MySQL" class="h-12">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">MySQL</h3>
+                </div>
+                <!-- Cloud -->
+                <div class="text-center fade-in-up" style="transition-delay: 500ms;">
+                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <img src="https://cdn.svgporn.com/logos/aws.svg" alt="AWS" class="h-12">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">AWS</h3>
+                </div>
+            </div>
         </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <!-- Laravel Framework -->
-          <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-red-500/50 transition-all duration-300 fade-in-up">
-            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.02c-.01.003-.021.005-.032.005-.01 0-.021-.002-.031-.005l-.065-.02L.707 18.755a.378.378 0 01-.188-.326V9.584c0-.138.073-.26.188-.327l9.025-5.21c.117-.067.262-.067.379 0L14.44 6.4l4.323-2.49c.117-.068.262-.068.379 0l4.5 2.59zm-1 6.674l-3.819-2.2v-4.29l3.819 2.2v4.29zm-4.138-8.179l-3.819 2.2L10.86 3.925l3.819-2.2 3.825 2.2zM8.678 9.583l-7.25-4.18v8.36l7.25 4.18V9.583zm1.377.795l3.819-2.2v8.36l-3.819 2.2v-8.36z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors">Laravel</h3>
-            <p class="text-gray-400 mb-4 leading-relaxed">
-              Elegant PHP framework for web artisans. Rapid development with expressive syntax and powerful features.
-            </p>
-            <div class="flex items-center gap-2">
-              <span class="bg-red-500/20 text-red-400 text-xs font-medium px-2 py-1 rounded-full">Backend</span>
-              <span class="bg-red-500/20 text-red-400 text-xs font-medium px-2 py-1 rounded-full">API</span>
-            </div>
-          </div>
-
-          <!-- React Native -->
-          <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 fade-in-up" style="transition-delay: 100ms;">
-            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">React Native</h3>
-            <p class="text-gray-400 mb-4 leading-relaxed">
-              Cross-platform mobile development. Build native apps for iOS and Android with shared codebase.
-            </p>
-            <div class="flex items-center gap-2">
-              <span class="bg-blue-500/20 text-blue-400 text-xs font-medium px-2 py-1 rounded-full">Mobile</span>
-              <span class="bg-blue-500/20 text-blue-400 text-xs font-medium px-2 py-1 rounded-full">Cross-platform</span>
-            </div>
-          </div>
-
-          <!-- Flutter -->
-          <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 fade-in-up" style="transition-delay: 200ms;">
-            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37zm.159 11.871L6.857 19.487l4.537 4.513H18.9l-4.427-4.43 4.427-4.429L14.473 11.87z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Flutter</h3>
-            <p class="text-gray-400 mb-4 leading-relaxed">
-              Google's UI toolkit for beautiful, natively compiled applications for mobile, web, and desktop.
-            </p>
-            <div class="flex items-center gap-2">
-              <span class="bg-cyan-500/20 text-cyan-400 text-xs font-medium px-2 py-1 rounded-full">Mobile</span>
-              <span class="bg-cyan-500/20 text-cyan-400 text-xs font-medium px-2 py-1 rounded-full">Web</span>
-            </div>
-          </div>
-
-          <!-- Swift -->
-          <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-orange-500/50 transition-all duration-300 fade-in-up" style="transition-delay: 300ms;">
-            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.508 0c-.287 0-.573 0-.86.002-.239.002-.477.007-.715.015-.473.017-.945.048-1.414.093-.916.088-1.823.254-2.706.493-.441.12-.875.26-1.298.418-.846.317-1.666.732-2.447 1.239-.39.253-.768.525-1.133.816C.312 3.546.312 3.546.312 3.546s.624-.468 1.446-1.079c.411-.305.847-.588 1.307-.845.23-.129.466-.25.707-.364.482-.228.98-.427 1.49-.595.51-.168 1.033-.305 1.564-.41.531-.105 1.068-.178 1.608-.218.54-.04 1.082-.049 1.624-.025.542.024 1.084.077 1.622.16.269.041.536.09.801.146.265.056.528.12.788.192.52.144 1.032.32 1.533.527.501.207.99.445 1.464.714.237.135.47.278.699.428.229.15.454.308.674.473.44.33.862.685 1.264 1.063.201.189.396.384.585.585.189.201.372.408.549.62.354.424.685.869.992 1.334.153.233.3.471.44.714.14.243.274.49.4.742.252.504.476 1.024.671 1.558.098.267.189.537.273.81.084.273.161.549.231.827.07.278.133.558.189.84.056.282.105.566.147.851.042.285.077.572.105.859.028.287.049.575.063.864.014.289.021.578.021.868 0 .289-.007.578-.021.867-.014.289-.035.577-.063.864-.028.287-.063.574-.105.859-.042.285-.091.569-.147.851-.056.282-.119.562-.189.84-.07.278-.147.554-.231.827-.084.273-.175.543-.273.81-.195.534-.419 1.054-.671 1.558-.126.252-.26.499-.4.742-.14.243-.287.481-.44.714-.307.465-.638.91-.992 1.334-.177.212-.36.419-.549.62-.189.201-.384.396-.585.585-.402.378-.824.733-1.264 1.063-.22.165-.445.323-.674.473-.229.15-.462.293-.699.428-.474.269-.963.507-1.464.714-.501.207-1.013.383-1.533.527-.26.072-.523.136-.788.192-.265.056-.532.105-.801.146-.538.083-1.08.136-1.622.16-.542.024-1.084.015-1.624-.025-.54-.04-1.077-.113-1.608-.218-.531-.105-1.054-.242-1.564-.41-.51-.168-1.008-.367-1.49-.595-.241-.114-.477-.235-.707-.364-.46-.257-.896-.54-1.307-.845C.936 20.922.312 20.454.312 20.454s0 0 .623.47c.365.291.743.563 1.133.816.781.507 1.601.922 2.447 1.239.423.158.857.298 1.298.418.883.239 1.79.405 2.706.493.469.045.941.076 1.414.093.238.008.476.013.715.015.287.002.573.002.86.002s.573 0 .86-.002c.239-.002.477-.007.715-.015.473-.017.945-.048 1.414-.093.916-.088 1.823-.254 2.706-.493.441-.12.875-.26 1.298-.418.846-.317 1.666-.732 2.447-1.239.39-.253.768-.525 1.133-.816.623-.47.623-.47.623-.47s-.624.468-1.446 1.079c-.411.305-.847.588-1.307.845-.23.129-.466.25-.707.364-.482.228-.98.427-1.49.595-.51.168-1.033.305-1.564.41-.531.105-1.068.178-1.608.218-.54.04-1.082.049-1.624.025-.542-.024-1.084-.077-1.622-.16-.269-.041-.536-.09-.801-.146-.265-.056-.528-.12-.788-.192-.52-.144-1.032-.32-1.533-.527-.501-.207-.99-.445-1.464-.714-.237-.135-.47-.278-.699-.428-.229-.15-.454-.308-.674-.473-.44-.33-.862-.685-1.264-1.063-.201-.189-.396-.384-.585-.585-.189-.201-.372-.408-.549-.62-.354-.424-.685-.869-.992-1.334-.153-.233-.3-.471-.44-.714-.14-.243-.274-.49-.4-.742-.252-.504-.476-1.024-.671-1.558-.098-.267-.189-.537-.273-.81-.084-.273-.161-.549-.231-.827-.07-.278-.133-.558-.189-.84-.056-.282-.105-.566-.147-.851-.042-.285-.077-.572-.105-.859-.028-.287-.049-.575-.063-.864-.014-.289-.021-.578-.021-.868 0-.289.007-.578.021-.867.014-.289.035-.577.063-.864.028-.287.063-.574.105-.859.042-.285.091-.569.147-.851.056-.282.119-.562.189-.84.07-.278.147-.554.231-.827.084-.273.175-.543.273-.81.195-.534.419-1.054.671-1.558.126-.252.26-.499.4-.742.14-.243.287-.481.44-.714.307-.465.638-.91.992-1.334.177-.212.36-.419.549-.62.189-.201.384-.396.585-.585.402-.378.824-.733 1.264-1.063.22-.165.445-.323.674-.473.229-.15.462-.293.699-.428.474-.269.963-.507 1.464-.714.501-.207 1.013-.383 1.533-.527.26-.072.523-.136.788-.192.265-.056.532-.105.801-.146.538-.083 1.08-.136 1.622-.16.542-.024 1.084-.015 1.624.025.54.04 1.077.113 1.608.218.531.105 1.054.242 1.564.41.51.168 1.008.367 1.49.595.241.114.477.235.707.364.46.257.896.54 1.307.845.822.611 1.446 1.079 1.446 1.079z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">Swift</h3>
-            <p class="text-gray-400 mb-4 leading-relaxed">
-              Apple's powerful programming language for iOS, macOS, watchOS, and tvOS app development.
-            </p>
-            <div class="flex items-center gap-2">
-              <span class="bg-orange-500/20 text-orange-400 text-xs font-medium px-2 py-1 rounded-full">iOS</span>
-              <span class="bg-orange-500/20 text-orange-400 text-xs font-medium px-2 py-1 rounded-full">Native</span>
-            </div>
-          </div>
-      </div>
     </div>
 
-    <!-- Industries Section -->
-    <div class="mb-16 lg:mb-24">
-      <div class="text-center mb-12">
-        <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4">
-          FOR WHO
-        </span>
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">
-          Wij hebben kant-en-klare oplossingen voor gezondheidszorg, fintech, industrie en logistiek
-        </h2>
-      </div>
-
-      <div class="flex flex-wrap justify-center gap-4 mb-12">
-        <div class="flex items-center gap-3 bg-gray-100 rounded-full px-4 py-2">
-          <div class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center">
-            <span class="text-white text-xs font-bold">I</span>
-          </div>
-          <span class="text-gray-700 font-medium">Industry</span>
-        </div>
-        <div class="flex items-center gap-3 bg-gray-100 rounded-full px-4 py-2">
-          <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-            <span class="text-white text-xs font-bold">T</span>
-          </div>
-          <span class="text-gray-700 font-medium">Transportation & logistics</span>
-        </div>
-        <div class="flex items-center gap-3 bg-gray-100 rounded-full px-4 py-2">
-          <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-            <span class="text-white text-xs font-bold">H</span>
-          </div>
-          <span class="text-gray-700 font-medium">Healthcare</span>
-        </div>
-        <div class="flex items-center gap-3 bg-gray-100 rounded-full px-4 py-2">
-          <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-            <span class="text-white text-xs font-bold">F</span>
-          </div>
-          <span class="text-gray-700 font-medium">Fintech</span>
-        </div>
-        <div class="flex items-center gap-3 bg-gray-100 rounded-full px-4 py-2">
-          <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-            <span class="text-white text-xs font-bold">S</span>
-          </div>
-          <span class="text-gray-700 font-medium">Services / B2B</span>
-        </div>
-        <div class="flex items-center gap-3 bg-gray-100 rounded-full px-4 py-2">
-          <div class="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center">
-            <span class="text-white text-xs font-bold">S</span>
-          </div>
-          <span class="text-gray-700 font-medium">Startups</span>
-        </div>
-      </div>
-
-      <div class="text-center">
-        <button class="text-teal-600 font-semibold hover:underline">View more...</button>
-      </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="bg-slate-900 rounded-3xl p-8 lg:p-16">
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
-        <!-- Left Column -->
-        <div>
-          <span class="inline-block text-teal-400 font-semibold text-sm uppercase tracking-wide mb-4">
-            PLAN EEN VRIJBLIJVEND GESPREK
-          </span>
-          <h2 class="text-3xl lg:text-4xl font-bold text-white mb-8">
-            Thinking together about the best solution....
-          </h2>
-          
-          <div class="mb-8">
-            <p class="text-gray-300 mb-6">
-              Together with our customers, we come up with unique software solutions. It starts with an idea, a direction and then our experience comes for the rest.
-            </p>
-            
-            <div class="mb-6">
-              <h4 class="text-white font-semibold mb-4">Where does our strength lie?</h4>
-              <div class="grid grid-cols-2 gap-4">
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                  <span class="text-gray-300 text-sm">Collaborate</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                  <span class="text-gray-300 text-sm">Result-oriented</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                  <span class="text-gray-300 text-sm">Speed</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                  <span class="text-gray-300 text-sm">Transparent</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                  <span class="text-gray-300 text-sm">Quality</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                  <span class="text-gray-300 text-sm">Expertise</span>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h4 class="text-white font-semibold mb-4">Wat is een goed plan?</h4>
-              <div class="space-y-3">
-                <div class="flex items-start gap-3">
-                  <span class="bg-teal-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">1</span>
-                  <div>
-                    <p class="text-white font-medium">We analyze your question and</p>
-                    <p class="text-gray-400 text-sm">everything on the table</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="bg-teal-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">2</span>
-                  <div>
-                    <p class="text-white font-medium">A meeting with</p>
-                    <p class="text-gray-400 text-sm">everything on the table</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="bg-teal-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">3</span>
-                  <div>
-                    <p class="text-white font-medium">We will make a</p>
-                    <p class="text-gray-400 text-sm">competitive</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Right Column - Contact Form -->
-        <div class="bg-white rounded-2xl p-8">
-          <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Plan een vrijblijvend gesprek</h3>
-          
-          <form class="space-y-4">
-            <div>
-              <input type="text" placeholder="Name" 
-                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent">
-            </div>
-            
-            <div>
-              <input type="text" placeholder="Company name" 
-                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent">
-            </div>
-            
-            <div>
-              <input type="email" placeholder="Email" 
-                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent">
-            </div>
-            
-            <div>
-              <input type="tel" placeholder="Phone number" 
-                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent">
-            </div>
-            
-            <div>
-              <textarea placeholder="Message" rows="4"
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent resize-none"></textarea>
-            </div>
-            
-            <div class="flex items-start gap-3">
-              <input type="checkbox" id="privacy" class="mt-1">
-              <label for="privacy" class="text-sm text-gray-600">
-                To get you right to the first line quickly. Please let us know what you signed in detail.
-              </label>
-            </div>
-            
-            <button type="submit" 
-                    class="w-full bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors">
-              Send
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
         <!-- PROFESSIONAL CTA SECTION -->
@@ -1151,61 +925,7 @@
         </section>
 
         <!-- TEAM/LEADERSHIP SECTION -->
-        
-
-    <!-- BLOG SECTION -->
-        <section id="blog" class="py-20 md:py-28 px-8 bg-gradient-to-br from-gray-50 to-turquoise-50/30">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16 fade-in-up">
-                    <h2 class="text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">From Our Blog</h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Stay updated with our latest insights, news, and industry trends.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Blog Post 1 -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover fade-in-up border border-cyan-200 rounded-lg">
-                        <div class="relative h-48">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2070&q=80" alt="African farmers using modern agricultural technology and smart farming solutions in rural setting" loading="lazy" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-dark-turquoise mb-3">The Future of AgriTech in Africa</h3>
-                            <p class="text-gray-600 mb-4 leading-relaxed">Explore how technology is revolutionizing agriculture across the continent.</p>
-                            <a href="{{ route('insights.detail', 'agritech-future') }}" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 2 -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover fade-in-up border border-cyan-200 rounded-lg" style="transition-delay: 100ms;">
-                        <div class="relative h-48">
-                            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?auto=format&fit=crop&w=2070&q=80" alt="African logistics workers using digital technology in modern warehouse with automated systems" loading="lazy" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-dark-turquoise mb-3">Innovating Logistics: A Case Study</h3>
-                            <p class="text-gray-600 mb-4 leading-relaxed">Discover how our LogiFlow solution transformed supply chain efficiency.</p>
-                            <a href="{{ route('insights.detail', 'logistics-case-study') }}" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 3 -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover fade-in-up border border-cyan-200 rounded-lg" style="transition-delay: 200ms;">
-                        <div class="relative h-48">
-                            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=2070&q=80" alt="African data scientists and AI developers working on machine learning solutions in modern tech office" loading="lazy" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-dark-turquoise mb-3">Empowering Businesses with AI</h3>
-                            <p class="text-gray-600 mb-4 leading-relaxed">Learn about our AI-driven platforms and their impact on various sectors.</p>
-                            <a href="{{ route('insights.detail', 'ai-empowerment') }}" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-16 fade-in-up">
-                    <a href="{{ route('insights') }}" class="bg-gradient-to-r from-turquoise-600 to-cyan-accent text-white px-8 py-4 rounded-lg text-lg font-semibold btn-animate shadow-lg hover:shadow-xl transition-all">
-                        View All Articles
-                    </a>
-                </div>
-            </div>
-        </section>
+      
 
     </main>
 
