@@ -222,7 +222,7 @@
       <div class="bg-white rounded-2xl p-8 shadow-lg fade-in-up">
         <div class="text-center mb-8">
           <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Starter</h3>
-          <div class="text-4xl font-bold text-dark-turquoise mb-2">$49<span class="text-lg text-gray-500">/month</span></div>
+          <div class="text-4xl font-bold text-dark-turquoise mb-2">KSH 2000<span class="text-lg text-gray-500">/month</span></div>
           <p class="text-gray-600">Perfect for small spas</p>
         </div>
         <ul class="space-y-4 mb-8">
@@ -241,7 +241,7 @@
         <div class="text-center mb-8">
           <div class="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">Most Popular</div>
           <h3 class=" text-2xl font-bold mb-2">Professional</h3>
-          <div class="text-4xl font-bold mb-2">$99<span class="text-lg opacity-80">/month</span></div>
+          <a href="{{ url('/contact') }}" class="text-4xl bg-teal-600 text-white rounded-lg px-6 py-3 font-bold mb-2">Contact Sales <span class="text-lg opacity-80"></span></a>
           <p class="opacity-90">For growing businesses</p>
         </div>
         <ul class="space-y-4 mb-8">
@@ -260,7 +260,7 @@
       <div class="bg-white rounded-2xl p-8 shadow-lg fade-in-up" style="transition-delay: 200ms;">
         <div class="text-center mb-8">
           <h3 class=" text-2xl font-bold text-dark-turquoise mb-2">Enterprise</h3>
-          <div class="text-4xl font-bold text-dark-turquoise mb-2">$199<span class="text-lg text-gray-500">/month</span></div>
+          <a href="{{ url('/contact') }}" class="text-4xl bg-teal-600 text-white rounded-lg px-6 py-3 font-bold mb-2">Contact Sales <span class="text-lg opacity-80"></span></a>
           <p class="text-gray-600">For large operations</p>
         </div>
         <ul class="space-y-4 mb-8">
