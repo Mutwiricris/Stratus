@@ -238,3 +238,48 @@ Route::get('/robots.txt', function () {
 Route::get('/health', function () {
     return response()->json(['status' => 'ok', 'timestamp' => now()]);
 })->name('health');
+
+// Test contact forms route
+Route::get('/test-contact', function () {
+    return view('test-contact');
+})->name('test-contact');
+
+// Diagnostic route for checking admin credentials (REMOVE IN PRODUCTION!)
+Route::get('/check-admin', function () {
+    $user = \App\Models\User::where('email', 'admin@ascendstratus.com')->first();
+
+    if (!$user) {
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Admin user not found',
+        ], 404);
+    }
+
+    return response()->json([
+        'status' => 'success',
+        'user' => [
+            'name' => $user->name,
+            'email' => $user->email,
+            'role' => $user->role,
+            'status' => $user->status,
+        ],
+        'password_check' => \Illuminate\Support\Facades\Hash::check('password', $user->password) ? 'Valid ✅' : 'Invalid ❌',
+        'can_access_panel' => $user->canAccessPanel(app('filament')->getPanel('stratus')) ? 'Yes ✅' : 'No ❌',
+        'panel_url' => url('/stratus'),
+        'login_url' => url('/stratus/login'),
+        'instructions' => [
+            '1. Visit ' . url('/stratus'),
+            '2. Use email: admin@ascendstratus.com',
+            '3. Use password: password',
+            '4. Clear your browser cache if login fails',
+            '5. Try incognito/private mode',
+            '6. Check browser console for JavaScript errors',
+        ],
+        'troubleshooting' => [
+            'If you see "403 Forbidden": Your user role is not admin/agent',
+            'If password is wrong: Run "php artisan admin:create" to reset',
+            'If page won\'t load: Clear cache with "php artisan optimize:clear"',
+            'Still having issues: Check storage/logs/laravel.log for errors',
+        ],
+    ]);
+})->name('check-admin');

@@ -1,70 +1,122 @@
 @extends('layouts.detail')
 
-@section('title', 'Portfolio - Ascend Stratus')
-@section('description', 'Explore our portfolio of active ventures and successful transformations across logistics, fintech, agritech, and energy sectors.')
+@section('title', 'Portfolio & Case Studies - Ascend Stratus')
+@section('description', 'Explore our portfolio of successful projects across web applications, mobile apps, e-commerce, enterprise software, and digital transformation initiatives.')
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative min-h-[80vh] flex items-center bg-gradient-to-br from-gray-50 via-white to-teal-50/30 overflow-hidden">
-  <!-- Background Elements -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-cyan-50">
+  <!-- Animated Background -->
   <div class="absolute inset-0 overflow-hidden">
-    <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
-    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"></div>
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-cyan-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-br from-teal-500/5 to-cyan-500/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
   </div>
-  
+
   <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-    <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- Left Content -->
       <div class="fade-in-up">
-        <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
-          Our Portfolio
-        </span>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-          <span class="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
-            Transforming Industries.
-          </span>
+        <div class="inline-flex items-center gap-2 bg-cyan-100 text-cyan-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+          </svg>
+          <span>Our Work</span>
+        </div>
+
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <span class="text-gray-900">Transforming</span>
           <br>
-          <span class="text-gray-900">Delivering Results.</span>
+          <span class="bg-gradient-to-r from-cyan-600 via-teal-600 to-blue-600 bg-clip-text text-transparent">Ideas into Reality</span>
         </h1>
-        <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
-          Discover our portfolio of active ventures and successful transformations that are revolutionizing foundational industries through intelligent technology solutions.
+
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          Explore our portfolio of 50+ successful projects across web applications, mobile apps, e-commerce platforms, and enterprise solutions that have transformed businesses across Africa.
         </p>
-        <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-          <a href="#ventures" class="group inline-flex items-center bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:shadow-2xl hover:shadow-teal-500/25 transition-all duration-500 hover:scale-105">
-            <span class="relative flex items-center gap-2">
-              View Ventures
-              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </span>
-          </a>
-          <a href="#case-studies" class="group inline-flex items-center text-gray-700 hover:text-teal-600 font-semibold transition-colors duration-300">
-            Case Studies
-            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+
+        <!-- Key Stats -->
+        <div class="grid grid-cols-3 gap-4 mb-10">
+          <div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-gray-100 shadow-sm">
+            <div class="text-2xl font-bold text-cyan-600 mb-1">50+</div>
+            <div class="text-xs text-gray-600">Projects</div>
+          </div>
+          <div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-gray-100 shadow-sm">
+            <div class="text-2xl font-bold text-teal-600 mb-1">12</div>
+            <div class="text-xs text-gray-600">Countries</div>
+          </div>
+          <div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-gray-100 shadow-sm">
+            <div class="text-2xl font-bold text-blue-600 mb-1">98%</div>
+            <div class="text-xs text-gray-600">Success</div>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#projects" class="group inline-flex items-center justify-center bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105">
+            <span>View Projects</span>
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
             </svg>
+          </a>
+          <a href="{{ url('/contact') }}" class="inline-flex items-center justify-center bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:border-cyan-600 hover:text-cyan-600 transition-all duration-300">
+            Start Your Project
           </a>
         </div>
       </div>
-      
-      <!-- Hero Image/Illustration -->
+
+      <!-- Right Visual -->
       <div class="fade-in-up" style="transition-delay: 200ms;">
         <div class="relative">
-          <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-100">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=2070&q=80" alt="African technology professionals showcasing innovative portfolio solutions" class="w-full h-80 object-cover rounded-2xl">
-            
-            <!-- Floating Portfolio Stats -->
-            <div class="absolute -top-4 -left-4 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-4 floating" style="animation-delay: 1s;">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-teal-600 mb-1">7+</div>
-                <div class="text-xs text-gray-600 font-medium">Active Ventures</div>
+          <div class="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-6 shadow-2xl border border-gray-100">
+            <div class="relative rounded-2xl overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070" alt="Portfolio Success" class="w-full h-96 object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/60 via-transparent to-transparent"></div>
+
+              <!-- Floating Badge -->
+              <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-xl p-4 shadow-lg">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="text-sm text-gray-600 mb-1">Client Satisfaction</div>
+                    <div class="flex items-center gap-2">
+                      <div class="flex gap-1">
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                        <span class="text-yellow-400 text-xl">★</span>
+                      </div>
+                      <span class="text-lg font-bold text-cyan-600">4.9/5</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div class="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-4 floating" style="animation-delay: 1.5s;">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-cyan-600 mb-1">4</div>
-                <div class="text-xs text-gray-600 font-medium">Industries</div>
+          </div>
+
+          <!-- Floating Metric Cards -->
+          <div class="absolute -top-6 -left-6 bg-white rounded-2xl shadow-xl p-5 floating border border-gray-100" style="animation-delay: 1s;">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-600">On-Time Delivery</div>
+                <div class="text-lg font-bold text-gray-900">100%</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-5 floating border border-gray-100" style="animation-delay: 1.5s;">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-600">Avg ROI</div>
+                <div class="text-lg font-bold text-gray-900">250%</div>
               </div>
             </div>
           </div>
@@ -74,306 +126,691 @@
   </div>
 </section>
 
-<!-- Active Ventures Section -->
-<section id="ventures" class="py-24 md:py-32 px-4 sm:px-6 lg:px-8">
+<!-- Filter Section -->
+<section class="py-12 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-200 sticky top-0 z-40 backdrop-blur-md bg-white/95">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-wrap gap-3 justify-center">
+      <button onclick="filterProjects('all')" class="filter-btn active px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-cyan-600 text-white">
+        All Projects
+      </button>
+      <button onclick="filterProjects('web')" class="filter-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-cyan-600 hover:text-white">
+        Web Apps
+      </button>
+      <button onclick="filterProjects('mobile')" class="filter-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-cyan-600 hover:text-white">
+        Mobile Apps
+      </button>
+      <button onclick="filterProjects('ecommerce')" class="filter-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-cyan-600 hover:text-white">
+        E-Commerce
+      </button>
+      <button onclick="filterProjects('enterprise')" class="filter-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-cyan-600 hover:text-white">
+        Enterprise
+      </button>
+      <button onclick="filterProjects('transformation')" class="filter-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-100 text-gray-700 hover:bg-cyan-600 hover:text-white">
+        Digital Transformation
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Grid Section -->
+<section id="projects" class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-20 fade-in-up">
-      <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-wide mb-4 bg-teal-50 px-4 py-2 rounded-full">
-        Active Ventures
-      </span>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Our Portfolio</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-teal-600 to-cyan-600 mx-auto mb-6"></div>
-      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Our diverse portfolio spans multiple sectors, each leveraging our unified platform for unprecedented growth and efficiency</p>
+      <div class="inline-flex items-center gap-2 bg-teal-100 text-teal-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd"/>
+        </svg>
+        <span>Featured Work</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+        Our Latest
+        <span class="bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent"> Success Stories</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Real projects delivering measurable results for businesses across Africa and beyond
+      </p>
     </div>
-    
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-      <!-- LogiFlow -->
-      <div class="bg-gradient-to-br from-turquoise-50 to-cyan-50 rounded-2xl overflow-hidden card-hover fade-in-up">
-        <div class="relative h-64">
-          <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?auto=format&fit=crop&w=2070&q=80" alt="African logistics professionals using LogiFlow technology in modern warehouse" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-dark-turquoise/80 to-transparent"></div>
-          <div class="absolute bottom-6 left-6">
-            <div class="bg-cyan-300 text-dark-turquoise px-3 py-1 rounded-full text-sm font-semibold mb-2">Logistics</div>
-            <h3 class="text-2xl font-bold text-white">LogiFlow</h3>
-          </div>
-        </div>
-        <div class="p-8">
-          <p class="text-gray-600 mb-4 leading-relaxed">
-            Revolutionary supply chain optimization platform that reduces logistics costs by 35% while improving delivery times through AI-powered route optimization and predictive analytics.
-          </p>
-          <div class="flex items-center justify-between">
-            <div class="flex space-x-4 text-sm">
-              <span class="text-turquoise-600 font-semibold">35% Cost Reduction</span>
-              <span class="text-turquoise-600 font-semibold">50+ Partners</span>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
+
+      <!-- Project 1: Healthcare Management System -->
+      <div class="project-card group fade-in-up" data-category="web enterprise">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Healthcare Management System">
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Enterprise</span>
             </div>
-            <a href="#" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Learn More →</a>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">MediCare Plus</h3>
+              <p class="text-blue-100 text-sm">Healthcare Management Platform</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Comprehensive hospital management system serving 50+ clinics across Kenya with patient records, appointments, and billing.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Laravel</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Vue.js</span>
+              <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">PostgreSQL</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-blue-600">50+</span>
+                <span class="text-gray-600 ml-1">Clinics</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-blue-600">10K+</span>
+                <span class="text-gray-600 ml-1">Users</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      
-      <!-- FinanceCore -->
-      <div class="bg-gradient-to-br from-turquoise-50 to-cyan-50 rounded-2xl overflow-hidden card-hover fade-in-up" style="transition-delay: 100ms;">
-        <div class="relative h-64">
-          <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=2070&q=80" alt="African financial professionals using FinanceCore fintech solutions in modern office" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-turquoise-600/80 to-transparent"></div>
-          <div class="absolute bottom-6 left-6">
-            <div class="bg-cyan-300 text-dark-turquoise px-3 py-1 rounded-full text-sm font-semibold mb-2">FinTech</div>
-            <h3 class="text-2xl font-bold text-white">FinanceCore</h3>
-          </div>
-        </div>
-        <div class="p-8">
-          <p class="text-gray-600 mb-4 leading-relaxed">
-            Next-generation financial infrastructure platform enabling seamless cross-border transactions and automated compliance management for enterprise clients.
-          </p>
-          <div class="flex items-center justify-between">
-            <div class="flex space-x-4 text-sm">
-              <span class="text-turquoise-600 font-semibold">$2B+ Processed</span>
-              <span class="text-turquoise-600 font-semibold">99.9% Uptime</span>
+
+      <!-- Project 2: Mobile Banking App -->
+      <div class="project-card group fade-in-up" data-category="mobile" style="transition-delay: 100ms;">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Mobile Banking App">
+            <div class="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Mobile</span>
             </div>
-            <a href="#" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Learn More →</a>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">PesaPay</h3>
+              <p class="text-green-100 text-sm">Mobile Banking & Payments</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Full-featured mobile banking app with M-Pesa integration, supporting 100K+ active users across East Africa.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Flutter</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Node.js</span>
+              <span class="px-3 py-1 bg-red-50 text-red-700 rounded-full text-xs font-medium">Redis</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-green-600">100K+</span>
+                <span class="text-gray-600 ml-1">Users</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-green-600">$5M+</span>
+                <span class="text-gray-600 ml-1">Transactions</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      
-      <!-- AgriSmart -->
-      <div class="bg-gradient-to-br from-turquoise-50 to-cyan-50 rounded-2xl overflow-hidden card-hover fade-in-up" style="transition-delay: 200ms;">
-        <div class="relative h-64">
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2070&q=80" alt="African farmers using AgriSmart technology for precision agriculture and crop management" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-cyan-accent/80 to-transparent"></div>
-          <div class="absolute bottom-6 left-6">
-            <div class="bg-cyan-300 text-dark-turquoise px-3 py-1 rounded-full text-sm font-semibold mb-2">AgriTech</div>
-            <h3 class="text-2xl font-bold text-white">AgriSmart</h3>
-          </div>
-        </div>
-        <div class="p-8">
-          <p class="text-gray-600 mb-4 leading-relaxed">
-            Precision agriculture platform combining IoT sensors, satellite imagery, and machine learning to optimize crop yields while reducing resource consumption.
-          </p>
-          <div class="flex items-center justify-between">
-            <div class="flex space-x-4 text-sm">
-              <span class="text-turquoise-600 font-semibold">25% Yield Increase</span>
-              <span class="text-turquoise-600 font-semibold">30% Water Savings</span>
+
+      <!-- Project 3: E-Commerce Platform -->
+      <div class="project-card group fade-in-up" data-category="ecommerce web" style="transition-delay: 200ms;">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2032" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="E-Commerce Platform">
+            <div class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">E-Commerce</span>
             </div>
-            <a href="#" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Learn More →</a>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">ShopAfrica</h3>
+              <p class="text-purple-100 text-sm">Multi-Vendor Marketplace</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Leading African marketplace connecting 5,000+ vendors with customers across 12 countries with local payment support.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-medium">Laravel</span>
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">React</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Stripe</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-purple-600">5K+</span>
+                <span class="text-gray-600 ml-1">Vendors</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-purple-600">200K+</span>
+                <span class="text-gray-600 ml-1">Products</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      
-      <!-- EnergyGrid -->
-      <div class="bg-gradient-to-br from-turquoise-50 to-cyan-50 rounded-2xl overflow-hidden card-hover fade-in-up" style="transition-delay: 300ms;">
-        <div class="relative h-64">
-          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070" alt="EnergyGrid" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-turquoise-700/80 to-transparent"></div>
-          <div class="absolute bottom-6 left-6">
-            <div class="bg-cyan-300 text-dark-turquoise px-3 py-1 rounded-full text-sm font-semibold mb-2">Energy</div>
-            <h3 class="text-2xl font-bold text-white">EnergyGrid</h3>
-          </div>
-        </div>
-        <div class="p-8">
-          <p class="text-gray-600 mb-4 leading-relaxed">
-            Smart grid management system that optimizes energy distribution, integrates renewable sources, and reduces operational costs through predictive maintenance.
-          </p>
-          <div class="flex items-center justify-between">
-            <div class="flex space-x-4 text-sm">
-              <span class="text-turquoise-600 font-semibold">40% Efficiency Gain</span>
-              <span class="text-turquoise-600 font-semibold">Carbon Neutral</span>
+
+      <!-- Project 4: Logistics Platform -->
+      <div class="project-card group fade-in-up" data-category="web enterprise" style="transition-delay: 300ms;">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Logistics Platform">
+            <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/90 via-cyan-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-cyan-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Enterprise</span>
             </div>
-            <a href="#" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors">Learn More →</a>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">LogiFlow</h3>
+              <p class="text-cyan-100 text-sm">Supply Chain Optimization</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              AI-powered logistics platform reducing delivery costs by 35% through route optimization and predictive analytics.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-cyan-50 text-cyan-700 rounded-full text-xs font-medium">Python</span>
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">TensorFlow</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">React</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-cyan-600">35%</span>
+                <span class="text-gray-600 ml-1">Cost Saved</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-cyan-600">50+</span>
+                <span class="text-gray-600 ml-1">Partners</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Project 5: Education Platform -->
+      <div class="project-card group fade-in-up" data-category="web mobile" style="transition-delay: 400ms;">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2032" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Education Platform">
+            <div class="absolute inset-0 bg-gradient-to-t from-orange-900/90 via-orange-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Web & Mobile</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">EduConnect</h3>
+              <p class="text-orange-100 text-sm">Learning Management System</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Comprehensive LMS serving 200+ schools with virtual classrooms, assessments, and progress tracking for 50K+ students.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-medium">Laravel</span>
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Vue.js</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">WebRTC</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-orange-600">200+</span>
+                <span class="text-gray-600 ml-1">Schools</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-orange-600">50K+</span>
+                <span class="text-gray-600 ml-1">Students</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: Restaurant Management -->
+      <div class="project-card group fade-in-up" data-category="web ecommerce" style="transition-delay: 500ms;">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Restaurant Management">
+            <div class="absolute inset-0 bg-gradient-to-t from-red-900/90 via-red-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Web App</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">FoodHub POS</h3>
+              <p class="text-red-100 text-sm">Restaurant Management System</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Complete restaurant POS with online ordering, inventory management, and delivery tracking for 100+ restaurants.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-medium">Laravel</span>
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">React</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Stripe</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-red-600">100+</span>
+                <span class="text-gray-600 ml-1">Restaurants</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-red-600">$2M+</span>
+                <span class="text-gray-600 ml-1">Revenue</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7: Real Estate Platform -->
+      <div class="project-card group fade-in-up" data-category="web mobile" style="transition-delay: 600ms;">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Real Estate Platform">
+            <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/90 via-indigo-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Web & Mobile</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">PropertyPro</h3>
+              <p class="text-indigo-100 text-sm">Real Estate Marketplace</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Leading property listing platform with virtual tours, mortgage calculators, and agent management for 10K+ listings.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Next.js</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Node.js</span>
+              <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">MongoDB</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-indigo-600">10K+</span>
+                <span class="text-gray-600 ml-1">Listings</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-indigo-600">500+</span>
+                <span class="text-gray-600 ml-1">Agents</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 8: Fitness Tracking App -->
+      <div class="project-card group fade-in-up" data-category="mobile" style="transition-delay: 700ms;">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Fitness App">
+            <div class="absolute inset-0 bg-gradient-to-t from-pink-900/90 via-pink-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Mobile</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">FitTrack Pro</h3>
+              <p class="text-pink-100 text-sm">Health & Fitness Tracker</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Comprehensive fitness app with workout plans, nutrition tracking, and social features for 75K+ active users.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">React Native</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Firebase</span>
+              <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">HealthKit</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-pink-600">75K+</span>
+                <span class="text-gray-600 ml-1">Users</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-pink-600">4.8★</span>
+                <span class="text-gray-600 ml-1">Rating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 9: AgriTech Solution -->
+      <div class="project-card group fade-in-up" data-category="web mobile transformation" style="transition-delay: 800ms;">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="AgriTech Platform">
+            <div class="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Digital Transform</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">AgriSmart</h3>
+              <p class="text-green-100 text-sm">Precision Agriculture Platform</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              IoT-powered platform helping farmers optimize yields by 25% through weather data, soil analysis, and crop management.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-cyan-50 text-cyan-700 rounded-full text-xs font-medium">Python</span>
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">IoT</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Flutter</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-green-600">25%</span>
+                <span class="text-gray-600 ml-1">Yield ↑</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-green-600">2K+</span>
+                <span class="text-gray-600 ml-1">Farmers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 10: HR Management System -->
+      <div class="project-card group fade-in-up" data-category="enterprise web" style="transition-delay: 900ms;">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="HR Management">
+            <div class="absolute inset-0 bg-gradient-to-t from-teal-900/90 via-teal-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Enterprise</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">PeopleFlow</h3>
+              <p class="text-teal-100 text-sm">HR & Payroll Management</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Enterprise HR solution managing 100K+ employees with recruitment, payroll, performance reviews, and analytics.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-medium">Laravel</span>
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">React</span>
+              <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">MySQL</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-teal-600">100K+</span>
+                <span class="text-gray-600 ml-1">Employees</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-teal-600">500+</span>
+                <span class="text-gray-600 ml-1">Companies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 11: Tourism Booking Platform -->
+      <div class="project-card group fade-in-up" data-category="web mobile ecommerce" style="transition-delay: 1000ms;">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Tourism Platform">
+            <div class="absolute inset-0 bg-gradient-to-t from-yellow-900/90 via-yellow-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-xs font-semibold">E-Commerce</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">Safari360</h3>
+              <p class="text-yellow-100 text-sm">Tourism & Travel Booking</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Complete tourism platform with safari bookings, hotel reservations, and itinerary planning for Kenya tourism.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Next.js</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Stripe</span>
+              <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">MongoDB</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-yellow-600">15K+</span>
+                <span class="text-gray-600 ml-1">Bookings</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-yellow-600">$1.5M+</span>
+                <span class="text-gray-600 ml-1">Revenue</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 12: Event Management Platform -->
+      <div class="project-card group fade-in-up" data-category="web ecommerce" style="transition-delay: 1100ms;">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2012" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Event Management">
+            <div class="absolute inset-0 bg-gradient-to-t from-rose-900/90 via-rose-900/50 to-transparent"></div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-rose-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Web App</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-bold text-2xl mb-2">EventHub Pro</h3>
+              <p class="text-rose-100 text-sm">Event & Ticketing Platform</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Full-featured event platform with ticketing, virtual events, attendee management for 1000+ events annually.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-medium">Laravel</span>
+              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Vue.js</span>
+              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Stripe</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <div class="text-sm">
+                <span class="font-bold text-rose-600">1000+</span>
+                <span class="text-gray-600 ml-1">Events</span>
+              </div>
+              <div class="text-sm">
+                <span class="font-bold text-rose-600">50K+</span>
+                <span class="text-gray-600 ml-1">Attendees</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- Portfolio Stats -->
-<section class="py-20 md:py-28 bg-gradient-to-br from-dark-turquoise to-turquoise-700">
-  <div class="max-w-7xl mx-auto px-8">
-    <div class="text-center mb-16 fade-in-up">
-      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-4">Portfolio Impact</h2>
-      <p class="text-lg text-cyan-100 max-w-2xl mx-auto">Measurable results across our venture ecosystem</p>
-    </div>
-    
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-      <div class="text-center fade-in-up">
-        <div class="text-5xl md:text-6xl font-extrabold text-cyan-300 mb-2">$5B+</div>
-        <div class="text-white font-semibold mb-2">Total Value Created</div>
-        <div class="text-sm text-cyan-100">Across all ventures</div>
-      </div>
-      <div class="text-center fade-in-up" style="transition-delay: 100ms;">
-        <div class="text-5xl md:text-6xl font-extrabold text-cyan-300 mb-2">200+</div>
-        <div class="text-white font-semibold mb-2">Enterprise Clients</div>
-        <div class="text-sm text-cyan-100">Served globally</div>
-      </div>
-      <div class="text-center fade-in-up" style="transition-delay: 200ms;">
-        <div class="text-5xl md:text-6xl font-extrabold text-cyan-300 mb-2">4</div>
-        <div class="text-white font-semibold mb-2">Core Sectors</div>
-        <div class="text-sm text-cyan-100">Transformed industries</div>
-      </div>
-      <div class="text-center fade-in-up" style="transition-delay: 300ms;">
-        <div class="text-5xl md:text-6xl font-extrabold text-cyan-300 mb-2">95%</div>
-        <div class="text-white font-semibold mb-2">Client Retention</div>
-        <div class="text-sm text-cyan-100">Long-term partnerships</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Case Studies Section -->
-<section id="case-studies" class="py-20 md:py-28 px-8">
+<!-- Portfolio Impact Section -->
+<section class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white">
   <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16 fade-in-up">
-      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Success Stories</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Real transformations, measurable results</p>
-    </div>
-    
-    <div class="space-y-16">
-      <!-- Case Study 1 -->
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="fade-in-up">
-          <img src="https://images.unsplash.com/photo-1560250056-07ba64664864?q=80&w=1974" alt="Global Logistics Transformation" class="rounded-2xl shadow-2xl w-full">
-        </div>
-        <div class="fade-in-up" style="transition-delay: 200ms;">
-          <div class="bg-gradient-to-r from-turquoise-600 to-cyan-accent text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 inline-block">Case Study</div>
-          <h3 class=" text-3xl md:text-4xl font-bold text-dark-turquoise mb-4">Global Logistics Transformation</h3>
-          <p class="text-gray-600 mb-6 leading-relaxed">
-            How a Fortune 500 logistics company reduced operational costs by 35% and improved delivery times by 50% through our integrated platform solution.
-          </p>
-          <div class="grid grid-cols-2 gap-4 mb-6">
-            <div class="bg-turquoise-50 p-4 rounded-lg">
-              <div class="text-2xl font-bold text-turquoise-600">35%</div>
-              <div class="text-sm text-gray-600">Cost Reduction</div>
-            </div>
-            <div class="bg-turquoise-50 p-4 rounded-lg">
-              <div class="text-2xl font-bold text-turquoise-600">50%</div>
-              <div class="text-sm text-gray-600">Faster Delivery</div>
-            </div>
-          </div>
-          <a href="{{ url('/case-studies') }}" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors group">
-            Read Full Case Study
-            <svg class="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
-        </div>
+    <div class="text-center mb-20 fade-in-up">
+      <div class="inline-flex items-center gap-2 bg-cyan-900/40 backdrop-blur-sm text-cyan-300 px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-cyan-700/30">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Impact Metrics</span>
       </div>
-      
-      <!-- Case Study 2 -->
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="fade-in-up lg:order-2">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070" alt="FinTech Innovation" class="rounded-2xl shadow-2xl w-full">
-        </div>
-        <div class="fade-in-up lg:order-1" style="transition-delay: 200ms;">
-          <div class="bg-gradient-to-r from-turquoise-600 to-cyan-accent text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 inline-block">Case Study</div>
-          <h3 class=" text-3xl md:text-4xl font-bold text-dark-turquoise mb-4">FinTech Innovation Platform</h3>
-          <p class="text-gray-600 mb-6 leading-relaxed">
-            Enabling a regional bank to process $2B+ in transactions while maintaining 99.9% uptime and reducing compliance costs by 60%.
-          </p>
-          <div class="grid grid-cols-2 gap-4 mb-6">
-            <div class="bg-turquoise-50 p-4 rounded-lg">
-              <div class="text-2xl font-bold text-turquoise-600">$2B+</div>
-              <div class="text-sm text-gray-600">Transactions Processed</div>
-            </div>
-            <div class="bg-turquoise-50 p-4 rounded-lg">
-              <div class="text-2xl font-bold text-turquoise-600">60%</div>
-              <div class="text-sm text-gray-600">Compliance Cost Reduction</div>
-            </div>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+        Delivering Real
+        <span class="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent"> Business Value</span>
+      </h2>
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        Measurable results across all our client projects
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="text-center fade-in-up">
+        <div class="relative inline-block mb-4">
+          <div class="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+            $50M+
           </div>
-          <a href="{{ url('/case-studies') }}" class="text-dark-turquoise hover:text-turquoise-600 font-semibold transition-colors group">
-            Read Full Case Study
-            <svg class="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
+          <div class="absolute -top-2 -right-2 w-4 h-4 bg-cyan-500 rounded-full animate-ping"></div>
         </div>
+        <div class="text-lg font-bold text-white mb-2">Value Created</div>
+        <div class="text-sm text-gray-400">For our clients</div>
+      </div>
+
+      <div class="text-center fade-in-up" style="transition-delay: 100ms;">
+        <div class="relative inline-block mb-4">
+          <div class="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-teal-400 to-green-400 bg-clip-text text-transparent">
+            300K+
+          </div>
+          <div class="absolute -top-2 -right-2 w-4 h-4 bg-teal-500 rounded-full animate-ping" style="animation-delay: 0.2s;"></div>
+        </div>
+        <div class="text-lg font-bold text-white mb-2">End Users</div>
+        <div class="text-sm text-gray-400">Served daily</div>
+      </div>
+
+      <div class="text-center fade-in-up" style="transition-delay: 200ms;">
+        <div class="relative inline-block mb-4">
+          <div class="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            99.5%
+          </div>
+          <div class="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full animate-ping" style="animation-delay: 0.4s;"></div>
+        </div>
+        <div class="text-lg font-bold text-white mb-2">Uptime</div>
+        <div class="text-sm text-gray-400">Average reliability</div>
+      </div>
+
+      <div class="text-center fade-in-up" style="transition-delay: 300ms;">
+        <div class="relative inline-block mb-4">
+          <div class="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            250%
+          </div>
+          <div class="absolute -top-2 -right-2 w-4 h-4 bg-purple-500 rounded-full animate-ping" style="animation-delay: 0.6s;"></div>
+        </div>
+        <div class="text-lg font-bold text-white mb-2">Average ROI</div>
+        <div class="text-sm text-gray-400">Client returns</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Technology Stack Section -->
-<section class="py-20 md:py-28 bg-gradient-to-br from-cyan-50 to-turquoise-50">
-  <div class="max-w-7xl mx-auto px-8">
-    <div class="text-center mb-16 fade-in-up">
-      <h2 class=" text-4xl md:text-5xl font-bold text-dark-turquoise mb-4">Technology Stack</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Cutting-edge technologies powering our venture ecosystem</p>
+<!-- Client Testimonials -->
+<section class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-20 fade-in-up">
+      <div class="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"/>
+          <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"/>
+        </svg>
+        <span>Client Voices</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+        What Our
+        <span class="bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent"> Clients Say</span>
+      </h2>
     </div>
-    
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-      <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-white/40 text-center card-hover fade-in-up">
-        <div class="w-12 h-12 bg-gradient-to-r from-turquoise-600 to-cyan-accent rounded-xl flex items-center justify-center mx-auto mb-3">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-          </svg>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-gradient-to-br from-cyan-600 to-teal-600 rounded-3xl p-10 shadow-2xl fade-in-up">
+        <div class="flex items-center justify-center mb-6">
+          <div class="flex gap-1">
+            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
         </div>
-        <h4 class="font-semibold text-dark-turquoise text-sm">AI/ML</h4>
+        <blockquote class="text-xl text-white font-medium text-center mb-8 leading-relaxed">
+          "Ascend Stratus delivered our e-commerce platform ahead of schedule with exceptional quality. Our sales increased by 200% in the first 3 months!"
+        </blockquote>
+        <div class="flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&h=80&fit=crop&crop=face" alt="Client" class="w-16 h-16 rounded-full border-4 border-white/30 mb-3">
+          <div class="text-center">
+            <div class="text-white font-bold text-lg">Samuel Mwangi</div>
+            <div class="text-cyan-100 text-sm">CEO, ShopAfrica</div>
+          </div>
+        </div>
       </div>
-      
-      <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-white/40 text-center card-hover fade-in-up" style="transition-delay: 100ms;">
-        <div class="w-12 h-12 bg-gradient-to-r from-turquoise-600 to-cyan-accent rounded-xl flex items-center justify-center mx-auto mb-3">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
-          </svg>
+
+      <div class="bg-gradient-to-br from-purple-600 to-pink-600 rounded-3xl p-10 shadow-2xl fade-in-up" style="transition-delay: 100ms;">
+        <div class="flex items-center justify-center mb-6">
+          <div class="flex gap-1">
+            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
         </div>
-        <h4 class="font-semibold text-dark-turquoise text-sm">Cloud Native</h4>
-      </div>
-      
-      <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-white/40 text-center card-hover fade-in-up" style="transition-delay: 200ms;">
-        <div class="w-12 h-12 bg-gradient-to-r from-turquoise-600 to-cyan-accent rounded-xl flex items-center justify-center mx-auto mb-3">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-          </svg>
+        <blockquote class="text-xl text-white font-medium text-center mb-8 leading-relaxed">
+          "The healthcare platform they built has revolutionized how we manage our clinics. Patient satisfaction improved by 40% and administrative costs dropped by 30%."
+        </blockquote>
+        <div class="flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face" alt="Client" class="w-16 h-16 rounded-full border-4 border-white/30 mb-3">
+          <div class="text-center">
+            <div class="text-white font-bold text-lg">Dr. Amina Hassan</div>
+            <div class="text-purple-100 text-sm">Director, MediCare Plus</div>
+          </div>
         </div>
-        <h4 class="font-semibold text-dark-turquoise text-sm">Blockchain</h4>
-      </div>
-      
-      <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-white/40 text-center card-hover fade-in-up" style="transition-delay: 300ms;">
-        <div class="w-12 h-12 bg-gradient-to-r from-turquoise-600 to-cyan-accent rounded-xl flex items-center justify-center mx-auto mb-3">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-          </svg>
-        </div>
-        <h4 class="font-semibold text-dark-turquoise text-sm">Big Data</h4>
-      </div>
-      
-      <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-white/40 text-center card-hover fade-in-up" style="transition-delay: 400ms;">
-        <div class="w-12 h-12 bg-gradient-to-r from-turquoise-600 to-cyan-accent rounded-xl flex items-center justify-center mx-auto mb-3">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
-          </svg>
-        </div>
-        <h4 class="font-semibold text-dark-turquoise text-sm">IoT</h4>
-      </div>
-      
-      <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-white/40 text-center card-hover fade-in-up" style="transition-delay: 500ms;">
-        <div class="w-12 h-12 bg-gradient-to-r from-turquoise-600 to-cyan-accent rounded-xl flex items-center justify-center mx-auto mb-3">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-          </svg>
-        </div>
-        <h4 class="font-semibold text-dark-turquoise text-sm">Security</h4>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA Section -->
-<section class="py-20 md:py-28 bg-gradient-to-r from-dark-turquoise to-turquoise-600">
-  <div class="max-w-4xl mx-auto text-center px-8">
-    <div class="fade-in-up">
-      <h2 class=" text-4xl md:text-5xl font-bold text-white mb-6">Ready to Join Our Portfolio?</h2>
-      <p class="text-lg text-cyan-100 mb-8 max-w-2xl mx-auto">
-        Discover how our platform can transform your business and unlock new opportunities for growth and innovation.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-        <a href="{{ url('/contact') }}" class="bg-cyan-300 text-dark-turquoise px-8 py-4 rounded-lg text-lg font-semibold btn-animate shadow-lg hover:bg-white hover:text-dark-turquoise transition-colors">
-          Partner With Us
-        </a>
-        <a href="{{ url('/platform') }}" class="text-white/90 hover:text-white font-medium border-b border-white/40 hover:border-cyan-300 transition-all duration-300 py-2">
-          Explore Platform
-        </a>
-      </div>
+<section class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-cyan-50">
+  <div class="max-w-4xl mx-auto text-center fade-in-up">
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+      Ready to Start
+      <span class="bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent"> Your Project?</span>
+    </h2>
+    <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+      Let's transform your vision into reality with cutting-edge technology and expert execution
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="{{ url('/contact') }}" class="group inline-flex items-center justify-center bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-10 py-5 rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105">
+        <span>Start Your Project</span>
+        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
+      <a href="{{ url('/services') }}" class="inline-flex items-center justify-center bg-white text-gray-700 px-10 py-5 rounded-xl text-lg font-semibold border-2 border-gray-200 hover:border-cyan-600 hover:text-cyan-600 transition-all duration-300">
+        View All Services
+      </a>
     </div>
+    <p class="text-sm text-gray-500 mt-8">
+      Free consultation • No obligation • Response within 24 hours
+    </p>
   </div>
 </section>
+
+<script>
+// Filter functionality
+function filterProjects(category) {
+  const cards = document.querySelectorAll('.project-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  // Update active button
+  buttons.forEach(btn => {
+    btn.classList.remove('active', 'bg-cyan-600', 'text-white');
+    btn.classList.add('bg-gray-100', 'text-gray-700');
+  });
+  event.target.classList.add('active', 'bg-cyan-600', 'text-white');
+  event.target.classList.remove('bg-gray-100', 'text-gray-700');
+
+  // Filter cards
+  cards.forEach(card => {
+    if (category === 'all' || card.dataset.category.includes(category)) {
+      card.style.display = 'block';
+      setTimeout(() => {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 10);
+    } else {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        card.style.display = 'none';
+      }, 300);
+    }
+  });
+}
+</script>
 @endsection

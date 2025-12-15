@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactMessage;
+use App\Models\CallRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -15,164 +17,83 @@ class ContactController extends Controller
      */
     public function submitMessage(Request $request)
     {
-        $submissionId = uniqid('widget_msg_', true);
-        
-        // Log submission start
-        Log::info('Widget message submission started', [
-            'submission_id' => $submissionId,
-            'ip' => $request->ip(),
-            'user_agent' => $request->userAgent(),
-            'timestamp' => now()->toISOString(),
-            'referrer' => $request->header('referer'),
-        ]);
+        Log::info('========== CONTACT MESSAGE SUBMISSION STARTED ==========');
+        Log::info('Request data:', $request->all());
 
         try {
             // Validate input
-            $data = $request->validate([
+            $validated = $request->validate([
                 'name' => 'required|string|max:200|min:2',
                 'email' => 'required|email|max:255',
+                'phone' => 'nullable|string|max:40',
+                'company' => 'nullable|string|max:200',
+                'subject' => 'nullable|string|max:255',
                 'message' => 'required|string|max:5000|min:10',
             ], [
                 'name.required' => 'Please enter your name',
                 'name.min' => 'Name must be at least 2 characters',
-                'name.max' => 'Name cannot exceed 200 characters',
                 'email.required' => 'Please enter your email address',
                 'email.email' => 'Please enter a valid email address',
                 'message.required' => 'Please enter your message',
                 'message.min' => 'Message must be at least 10 characters',
-                'message.max' => 'Message cannot exceed 5000 characters',
             ]);
-            
-            // Log successful validation
-            Log::info('Widget message validation passed', [
-                'submission_id' => $submissionId,
-                'name' => $data['name'],
-                'email' => $data['email'],
-                'message_length' => strlen($data['message']),
-                'domain' => substr(strrchr($data['email'], "@"), 1),
+
+            Log::info('Validation passed', $validated);
+
+            // Save to database
+            $contactMessage = ContactMessage::create([
+                'name' => $validated['name'],
+                'email' => $validated['email'],
+                'phone' => $validated['phone'] ?? null,
+                'company' => $validated['company'] ?? null,
+                'subject' => $validated['subject'] ?? null,
+                'message' => $validated['message'],
+                'client_ip' => $request->ip(),
+                'status' => 'new',
             ]);
-            
-            // Check email configuration
-            $this->validateEmailConfig();
-            
-            // Send email notification
-            $recipientEmail = env('CONTACT_EMAIL', 'mutwiric00@gmail.com');
-            
-            Log::info('Attempting to send widget message email', [
-                'submission_id' => $submissionId,
-                'recipient' => $recipientEmail,
-                'sender' => $data['email'],
-                'mail_driver' => config('mail.default'),
+
+            Log::info('Contact message saved successfully!', [
+                'id' => $contactMessage->id,
+                'message_number' => $contactMessage->message_number,
+                'email' => $validated['email'],
             ]);
-            
-            Mail::to($recipientEmail)->send(new ContactSubmission($data, 'widget_message'));
-            
-            // Log successful email send
-            Log::info('Widget message email sent successfully', [
-                'submission_id' => $submissionId,
-                'recipient' => $recipientEmail,
-                'sender_name' => $data['name'],
-                'sender_email' => $data['email'],
-                'processing_time' => microtime(true) - LARAVEL_START,
+
+            // Try to send email notification (optional - doesn't block submission)
+            try {
+                $recipientEmail = env('CONTACT_EMAIL', 'mutwiric00@gmail.com');
+                Mail::to($recipientEmail)->send(new ContactSubmission($validated, 'widget_message'));
+                Log::info('Email sent successfully');
+            } catch (\Exception $e) {
+                Log::warning('Email notification failed', ['error' => $e->getMessage()]);
+            }
+
+            Log::info('Redirecting back with success message');
+
+            return redirect()->back()->with([
+                'success' => 'Thank you! Your message has been received. Reference: ' . $contactMessage->message_number,
+                'message_number' => $contactMessage->message_number,
             ]);
-            
-            // Log success to separate channel for analytics
-            Log::channel('single')->info('CONTACT_SUBMISSION_SUCCESS', [
-                'type' => 'widget_message',
-                'submission_id' => $submissionId,
-                'user_data' => [
-                    'name' => $data['name'],
-                    'email' => $data['email'],
-                    'domain' => substr(strrchr($data['email'], "@"), 1),
-                    'message_length' => strlen($data['message']),
-                ],
-                'timestamp' => now()->toISOString(),
-                'success' => true,
-            ]);
-            
-            return response()->json([
-                'ok' => true,
-                'success' => true,
-                'message' => 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.',
-                'submission_id' => $submissionId,
-                'toast' => [
-                    'type' => 'success',
-                    'title' => 'Message Sent!',
-                    'message' => '✅ Thank you! We\'ll get back to you soon.',
-                    'duration' => 4000,
-                ]
-            ]);
-            
-        } catch (ValidationException $e) {
-            Log::warning('Widget message validation failed', [
-                'submission_id' => $submissionId,
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            Log::warning('Validation failed', [
                 'errors' => $e->errors(),
-                'input' => $request->except(['_token']),
-                'ip' => $request->ip(),
             ]);
-            
-            return response()->json([
-                'ok' => false,
-                'success' => false,
-                'message' => 'Please check your input and try again.',
-                'errors' => $e->errors(),
-                'toast' => [
-                    'type' => 'error',
-                    'title' => 'Validation Error',
-                    'message' => '❌ Please fix the form errors and try again.',
-                    'duration' => 5000,
-                ]
-            ], 422);
-            
+
+            return redirect()->back()
+                ->withInput()
+                ->withErrors($e->errors());
+
         } catch (\Exception $e) {
-            // Comprehensive error logging
-            Log::error('Widget message email failed to send', [
-                'submission_id' => $submissionId,
+            Log::error('Contact message submission FAILED!', [
                 'error' => $e->getMessage(),
-                'error_code' => $e->getCode(),
-                'error_file' => $e->getFile(),
-                'error_line' => $e->getLine(),
+                'file' => $e->getFile(),
+                'line' => $e->getLine(),
                 'trace' => $e->getTraceAsString(),
-                'data' => $data ?? null,
-                'mail_config' => $this->getMailConfigForLogging(),
-                'system_info' => [
-                    'php_version' => PHP_VERSION,
-                    'laravel_version' => app()->version(),
-                    'memory_usage' => memory_get_usage(true),
-                ],
             ]);
-            
-            // Log to separate failure channel
-            Log::channel('single')->error('CONTACT_SUBMISSION_FAILED', [
-                'type' => 'widget_message',
-                'submission_id' => $submissionId,
-                'user_data' => [
-                    'name' => $data['name'] ?? 'Unknown',
-                    'email' => $data['email'] ?? 'Unknown',
-                    'message_preview' => isset($data['message']) ? substr($data['message'], 0, 100) . '...' : 'No message',
-                ],
-                'error_summary' => $e->getMessage(),
-                'error_type' => get_class($e),
-                'timestamp' => now()->toISOString(),
-                'success' => false,
-            ]);
-            
-            return response()->json([
-                'ok' => false,
-                'success' => false,
-                'message' => 'Message received but email notification failed. We will still review your message.',
-                'submission_id' => $submissionId,
-                'toast' => [
-                    'type' => 'warning',
-                    'title' => 'Partial Success',
-                    'message' => '⚠️ Message received but there was an email issue. We\'ll still review it!',
-                    'duration' => 6000,
-                ],
-                'debug_info' => app()->environment('local') ? [
-                    'error' => $e->getMessage(),
-                    'mail_config_check' => $this->checkMailConfig(),
-                ] : null
-            ], 500);
+
+            return redirect()->back()
+                ->withInput()
+                ->withErrors(['error' => 'An error occurred: ' . $e->getMessage()]);
         }
     }
 
@@ -181,153 +102,82 @@ class ContactController extends Controller
      */
     public function submitCallRequest(Request $request)
     {
-        $submissionId = uniqid('widget_call_', true);
-        
-        Log::info('Widget call request started', [
-            'submission_id' => $submissionId,
-            'ip' => $request->ip(),
-            'user_agent' => $request->userAgent(),
-            'timestamp' => now()->toISOString(),
-            'referrer' => $request->header('referer'),
-        ]);
+        Log::info('========== CALL REQUEST SUBMISSION STARTED ==========');
+        Log::info('Request data:', $request->all());
 
         try {
             // Validate input
-            $data = $request->validate([
+            $validated = $request->validate([
                 'name' => 'required|string|max:200|min:2',
                 'phone' => 'required|string|max:40|min:8',
+                'email' => 'nullable|email|max:255',
+                'company' => 'nullable|string|max:200',
                 'time' => 'nullable|string|max:120',
+                'note' => 'nullable|string|max:500',
             ], [
                 'name.required' => 'Please enter your name',
                 'name.min' => 'Name must be at least 2 characters',
-                'name.max' => 'Name cannot exceed 200 characters',
                 'phone.required' => 'Please enter your phone number',
                 'phone.min' => 'Phone number must be at least 8 characters',
-                'phone.max' => 'Phone number cannot exceed 40 characters',
-                'time.max' => 'Preferred time cannot exceed 120 characters',
             ]);
-            
-            Log::info('Widget call validation passed', [
-                'submission_id' => $submissionId,
-                'name' => $data['name'],
-                'phone' => $data['phone'],
-                'preferred_time' => $data['time'] ?? 'Not specified',
-                'phone_country_code' => $this->extractCountryCode($data['phone']),
+
+            Log::info('Validation passed', $validated);
+
+            // Save to database
+            $callRequest = CallRequest::create([
+                'name' => $validated['name'],
+                'phone' => $validated['phone'],
+                'email' => $validated['email'] ?? null,
+                'company' => $validated['company'] ?? null,
+                'preferred_time' => $validated['time'] ?? null,
+                'timezone' => $request->input('timezone', date_default_timezone_get()),
+                'note' => $validated['note'] ?? null,
+                'client_ip' => $request->ip(),
+                'status' => 'pending',
             ]);
-            
-            // Check email configuration
-            $this->validateEmailConfig();
-            
-            // Send email notification
-            $recipientEmail = env('CONTACT_EMAIL', 'mutwiric00@gmail.com');
-            
-            Log::info('Attempting to send widget call email', [
-                'submission_id' => $submissionId,
-                'recipient' => $recipientEmail,
-                'caller' => $data['name'],
-                'mail_driver' => config('mail.default'),
+
+            Log::info('Call request saved successfully!', [
+                'id' => $callRequest->id,
+                'request_number' => $callRequest->request_number,
+                'phone' => $validated['phone'],
             ]);
-            
-            Mail::to($recipientEmail)->send(new ContactSubmission($data, 'widget_call'));
-            
-            Log::info('Widget call email sent successfully', [
-                'submission_id' => $submissionId,
-                'recipient' => $recipientEmail,
-                'caller_name' => $data['name'],
-                'caller_phone' => $data['phone'],
-                'processing_time' => microtime(true) - LARAVEL_START,
+
+            // Try to send email notification (optional - doesn't block submission)
+            try {
+                $recipientEmail = env('CONTACT_EMAIL', 'mutwiric00@gmail.com');
+                Mail::to($recipientEmail)->send(new ContactSubmission($validated, 'widget_call'));
+                Log::info('Email sent successfully');
+            } catch (\Exception $e) {
+                Log::warning('Email notification failed', ['error' => $e->getMessage()]);
+            }
+
+            Log::info('Redirecting back with success message');
+
+            return redirect()->back()->with([
+                'success' => 'Thank you! Your call request has been received. Reference: ' . $callRequest->request_number,
+                'request_number' => $callRequest->request_number,
             ]);
-            
-            // Log success to separate channel
-            Log::channel('single')->info('CONTACT_SUBMISSION_SUCCESS', [
-                'type' => 'widget_call',
-                'submission_id' => $submissionId,
-                'user_data' => [
-                    'name' => $data['name'],
-                    'phone' => $data['phone'],
-                    'preferred_time' => $data['time'] ?? 'Not specified',
-                    'phone_country_code' => $this->extractCountryCode($data['phone']),
-                ],
-                'timestamp' => now()->toISOString(),
-                'success' => true,
-            ]);
-            
-            return response()->json([
-                'ok' => true,
-                'success' => true,
-                'message' => 'Thank you! Your call request has been submitted. We will contact you within 2 business hours.',
-                'submission_id' => $submissionId,
-                'toast' => [
-                    'type' => 'success',
-                    'title' => 'Call Request Submitted!',
-                    'message' => '✅ Thank you! We\'ll call you soon.',
-                    'duration' => 4000,
-                ]
-            ]);
-            
-        } catch (ValidationException $e) {
-            Log::warning('Widget call validation failed', [
-                'submission_id' => $submissionId,
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            Log::warning('Call validation failed', [
                 'errors' => $e->errors(),
-                'input' => $request->except(['_token']),
-                'ip' => $request->ip(),
             ]);
-            
-            return response()->json([
-                'ok' => false,
-                'success' => false,
-                'message' => 'Please check your input and try again.',
-                'errors' => $e->errors(),
-                'toast' => [
-                    'type' => 'error',
-                    'title' => 'Validation Error',
-                    'message' => '❌ Please fix the form errors and try again.',
-                    'duration' => 5000,
-                ]
-            ], 422);
-            
+
+            return redirect()->back()
+                ->withInput()
+                ->withErrors($e->errors());
+
         } catch (\Exception $e) {
-            Log::error('Widget call email failed to send', [
-                'submission_id' => $submissionId,
+            Log::error('Call request submission FAILED!', [
                 'error' => $e->getMessage(),
-                'error_code' => $e->getCode(),
-                'error_file' => $e->getFile(),
-                'error_line' => $e->getLine(),
+                'file' => $e->getFile(),
+                'line' => $e->getLine(),
                 'trace' => $e->getTraceAsString(),
-                'data' => $data ?? null,
-                'mail_config' => $this->getMailConfigForLogging(),
             ]);
-            
-            Log::channel('single')->error('CONTACT_SUBMISSION_FAILED', [
-                'type' => 'widget_call',
-                'submission_id' => $submissionId,
-                'user_data' => [
-                    'name' => $data['name'] ?? 'Unknown',
-                    'phone' => $data['phone'] ?? 'Unknown',
-                    'preferred_time' => $data['time'] ?? 'Not specified',
-                ],
-                'error_summary' => $e->getMessage(),
-                'error_type' => get_class($e),
-                'timestamp' => now()->toISOString(),
-                'success' => false,
-            ]);
-            
-            return response()->json([
-                'ok' => false,
-                'success' => false,
-                'message' => 'Call request received but email notification failed. We will still review your request.',
-                'submission_id' => $submissionId,
-                'toast' => [
-                    'type' => 'warning',
-                    'title' => 'Partial Success',
-                    'message' => '⚠️ Request received but there was an email issue. We\'ll still call you!',
-                    'duration' => 6000,
-                ],
-                'debug_info' => app()->environment('local') ? [
-                    'error' => $e->getMessage(),
-                    'mail_config_check' => $this->checkMailConfig(),
-                ] : null
-            ], 500);
+
+            return redirect()->back()
+                ->withInput()
+                ->withErrors(['error' => 'An error occurred: ' . $e->getMessage()]);
         }
     }
 

@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- SEO Meta Tags -->
     <title>@yield('title', 'Ascend Stratus - Leading Technology Solutions & Digital Transformation in Africa')</title>
     <meta name="description" content="@yield('description', 'Ascend Stratus is a premier technology holding company providing enterprise software, fintech solutions, mobile app development, and digital transformation services across Africa. Transform your business with our cutting-edge solutions.')">
@@ -170,6 +171,9 @@
     
     <!-- Scroll to Top Button -->
     @include('components.scroll-to-top')
+
+    <!-- Contact Modal (Simple & Working) -->
+    @include('components.contact-modal')
 
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>

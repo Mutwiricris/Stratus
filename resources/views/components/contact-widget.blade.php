@@ -52,13 +52,15 @@
                 <div id="chat-messages" class="flex-1 overflow-y-auto p-3 space-y-3 bg-neutral-50">
                     <!-- Initial bot message -->
                     <div class="flex items-start gap-2">
-                        <div class="w-7 h-7 rounded-full bg-cyan-800 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">AS</div>
+                        <div class="w-7 h-7 rounded-full bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">AS</div>
                         <div class="flex-1">
-                            <div class="text-xs text-neutral-600 mb-1">Stratus () • <span class="chat-time">3:16 PM</span></div>
+                            <div class="text-xs text-neutral-600 mb-1">Stratus Assistant • <span class="chat-time">3:16 PM</span></div>
                             <div class="bg-white rounded-lg p-3 shadow-sm text-sm text-neutral-800">
-                                Hi there, I'm Stratus, your Ascend Stratus . I'm here to help you transform your business.
+                                👋 <strong>Hello!</strong> Welcome to Ascend Stratus - your partner for digital transformation in Africa.
                                 <br><br>
-                                Ask me a question, choose an option below, or connect directly with our sales team.
+                                I can help you learn about our services, pricing, and how we can bring your software ideas to life.
+                                <br><br>
+                                <em>Choose an option below or type your question:</em>
                             </div>
                         </div>
                     </div>
@@ -76,6 +78,12 @@
                         </button>
                         <button class="chat-option bg-white border border-neutral-200 rounded-lg px-3 py-2 text-sm text-left hover:bg-neutral-50 transition-colors" data-option="tech">
                             🔧 What technologies do you use?
+                        </button>
+                        <button class="chat-option bg-white border border-neutral-200 rounded-lg px-3 py-2 text-sm text-left hover:bg-neutral-50 transition-colors" data-option="portfolio">
+                            🏆 Show me your recent work
+                        </button>
+                        <button class="chat-option bg-white border border-neutral-200 rounded-lg px-3 py-2 text-sm text-left hover:bg-neutral-50 transition-colors" data-option="support">
+                            🛟 What support do you provide?
                         </button>
                     </div>
                     
@@ -112,35 +120,77 @@
             </div>
 
             <!-- Message form -->
-            <form id="contact-form-message" class="space-y-3 hidden" autocomplete="on">
+            <form id="contact-form-message" action="{{ route('contact.message') }}" method="POST" class="space-y-3 hidden" autocomplete="on">
+                @csrf
                 <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Name</label>
-                    <input name="name" required type="text" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
+                    <label class="block text-xs font-medium text-neutral-700 mb-1">Name <span class="text-red-500">*</span></label>
+                    <input name="name" required type="text" value="{{ old('name') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800 @error('name') border-red-500 @enderror">
+                    @error('name')
+                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Email</label>
-                    <input name="email" required type="email" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
+                    <label class="block text-xs font-medium text-neutral-700 mb-1">Email <span class="text-red-500">*</span></label>
+                    <input name="email" required type="email" value="{{ old('email') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800 @error('email') border-red-500 @enderror">
+                    @error('email')
+                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Message</label>
-                    <textarea name="message" required rows="4" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800"></textarea>
+                    <label class="block text-xs font-medium text-neutral-700 mb-1">Phone (optional)</label>
+                    <input name="phone" type="tel" value="{{ old('phone') }}" placeholder="e.g. +254700000000" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-neutral-700 mb-1">Company (optional)</label>
+                    <input name="company" type="text" value="{{ old('company') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-neutral-700 mb-1">Subject (optional)</label>
+                    <input name="subject" type="text" value="{{ old('subject') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-neutral-700 mb-1">Message <span class="text-red-500">*</span></label>
+                    <textarea name="message" required rows="3" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800 @error('message') border-red-500 @enderror">{{ old('message') }}</textarea>
+                    @error('message')
+                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <button type="submit" class="w-full bg-cyan-800 hover:bg-cyan-500 text-white rounded-lg px-4 py-2 text-sm font-semibold">Send Message</button>
             </form>
 
             <!-- Call form -->
-            <form id="contact-form-call" class="space-y-3 hidden" autocomplete="on">
+            <form id="contact-form-call" action="{{ route('contact.call') }}" method="POST" class="space-y-3 hidden" autocomplete="on">
+                @csrf
+                <input type="hidden" name="timezone" id="call-timezone" value="">
                 <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Name</label>
-                    <input name="name" required type="text" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
+                    <label class="block text-xs font-medium text-neutral-700 mb-1">Name <span class="text-red-500">*</span></label>
+                    <input name="name" required type="text" value="{{ old('name') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800 @error('name') border-red-500 @enderror">
+                    @error('name')
+                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Phone Number</label>
-                    <input name="phone" required type="tel" placeholder="e.g. +254700000000" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
+                    <label class="block text-xs font-medium text-neutral-700 mb-1">Phone Number <span class="text-red-500">*</span></label>
+                    <input name="phone" required type="tel" value="{{ old('phone') }}" placeholder="e.g. +254700000000" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800 @error('phone') border-red-500 @enderror">
+                    @error('phone')
+                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-neutral-700 mb-1">Email (optional)</label>
+                    <input name="email" type="email" value="{{ old('email') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-neutral-700 mb-1">Company (optional)</label>
+                    <input name="company" type="text" value="{{ old('company') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-neutral-700 mb-1">Preferred time (optional)</label>
-                    <input name="time" type="text" placeholder="e.g. Weekdays 9am-5pm EAT" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
+                    <input name="time" type="text" value="{{ old('time') }}" placeholder="e.g. Tomorrow 2pm EAT" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-neutral-700 mb-1">Message (optional)</label>
+                    <textarea name="note" rows="2" placeholder="Any specific questions?" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">{{ old('note') }}</textarea>
                 </div>
                 <button type="submit" class="w-full bg-cyan-800 hover:bg-cyan-500 text-white rounded-lg px-4 py-2 text-sm font-semibold">Request a Call</button>
             </form>
@@ -157,11 +207,16 @@
     </div>
 
     <!-- Toast -->
-    <div id="contact-toast" class="hidden fixed bottom-24 right-6 bg-neutral-900 text-white text-sm px-4 py-2 rounded-md shadow-lg">Sent successfully</div>
+    <div id="contact-toast" class="hidden fixed bottom-24 right-6 bg-neutral-900 text-white text-sm px-4 py-3 rounded-lg shadow-2xl max-w-sm transition-all duration-300 transform animate-slide-up z-50">
+        <div class="flex items-start gap-2">
+            <div class="flex-1">Sent successfully</div>
+        </div>
+    </div>
 </div>
 
 <script>
 (function(){
+  console.log('Contact widget script loading...');
   const $ = (s, root=document) => root.querySelector(s);
   const $$ = (s, root=document) => Array.from(root.querySelectorAll(s));
   const panel = $('#contact-widget-panel');
@@ -169,14 +224,13 @@
   const closeBtn = $('#contact-widget-close');
   const statusBox = $('#contact-widget-status');
   const toast = $('#contact-toast');
-  const csrf = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
-  
-  // Debug: Check if CSRF token is available
-  if (!csrf) {
-    console.error('CSRF token not found! Make sure <meta name="csrf-token" content="{{ csrf_token() }}"> is in the page head.');
-  } else {
-    console.log('CSRF token loaded successfully');
-  }
+  const messageForm = $('#contact-form-message');
+  const callForm = $('#contact-form-call');
+
+  console.log('Forms found:', {
+    messageForm: !!messageForm,
+    callForm: !!callForm
+  });
 
   function openPanel(){ panel.classList.remove('hidden'); }
   function closePanel(){ panel.classList.add('hidden'); }
@@ -211,12 +265,185 @@
   }
   updateChatTime();
 
-  // Chat option responses
+  // Chat option responses - comprehensive answers for Ascend Stratus
   const responses = {
-    services: "We provide enterprise software development, fintech solutions, mobile app development, and digital transformation services across Africa. Our solutions include M-Pesa integration, custom CRM systems, and cloud-native applications.",
-    pricing: "We offer flexible pricing: Fixed-price projects, hourly rates ($50-150/hr), and dedicated team models. Contact us for a custom quote based on your specific needs.",
-    timeline: "Project timelines vary: Mobile apps (2-4 months), Web applications (1-3 months), Enterprise software (3-8 months). We'll provide a detailed timeline after understanding your requirements.",
-    tech: "Laravel/PHP, React/Vue.js, React Native/Flutter, Node.js, Python, AWS/Azure cloud services, and modern DevOps practices. We choose the best tech stack for each project."
+    services: `<strong>🎯 Our Core Services:</strong><br><br>
+      <strong>🏢 Enterprise Software Development</strong><br>
+      Custom ERP, CRM, and HRM systems tailored for African businesses. Full M-Pesa, Airtel Money, and mobile banking integration. Cloud-based or on-premise deployment.<br><br>
+
+      <strong>📱 Mobile App Development</strong><br>
+      Native iOS & Android apps, cross-platform Flutter/React Native solutions. Offline-first architecture, USSD/SMS fallbacks, optimized for 2G/3G networks.<br><br>
+
+      <strong>🛒 E-Commerce & Online Stores</strong><br>
+      Custom-built stores with multi-currency support, local payment gateways, inventory management, and delivery tracking. Shopify, WooCommerce, or custom solutions.<br><br>
+
+      <strong>🌐 Web Applications & SaaS Platforms</strong><br>
+      Progressive web apps, customer portals, admin dashboards, and real-time applications. Scalable, secure, and cloud-ready.<br><br>
+
+      <strong>🔄 Digital Transformation & Consulting</strong><br>
+      Legacy system modernization, process automation, API integrations, and digital strategy consulting.<br><br>
+
+      <strong>👥 Dev Team as a Service</strong><br>
+      Dedicated developers, product teams, or full technical departments on demand. Scale up or down as needed.<br><br>
+
+      <em>✨ All solutions include: Free consultation, ongoing support, training, and documentation.</em>`,
+
+    pricing: `<strong>💰 Flexible Pricing Models:</strong><br><br>
+      <strong>💼 Fixed Price Projects</strong><br>
+      • Small Projects: $2,000 - $5,000<br>
+      • Medium Projects: $5,000 - $15,000<br>
+      • Large Projects: $15,000 - $50,000+<br>
+      Best for: Well-defined scope, clear deliverables<br>
+      Payment: 30% upfront, 40% milestone, 30% delivery<br><br>
+
+      <strong>⏱️ Time & Materials</strong><br>
+      • Junior Developer: $40-60/hour<br>
+      • Mid-Level Developer: $60-80/hour<br>
+      • Senior Developer: $80-100/hour<br>
+      • Tech Lead/Architect: $100-150/hour<br>
+      Best for: Evolving requirements, ongoing projects<br>
+      Billing: Weekly or bi-weekly invoices<br><br>
+
+      <strong>👥 Dedicated Team (Monthly Retainer)</strong><br>
+      • 1 Developer: $3,000/month<br>
+      • 2-3 Developers: $8,000/month<br>
+      • Full Team (5+): $15,000+/month<br>
+      Includes: Project management, daily standups, sprint planning<br>
+      Commitment: 3-month minimum<br><br>
+
+      <strong>🚀 MVP/Prototype Package</strong><br>
+      • Basic MVP: $8,000 (6-8 weeks)<br>
+      • Advanced MVP: $15,000 (8-12 weeks)<br>
+      Includes: Design, development, testing, deployment<br><br>
+
+      <em>💳 We accept: Bank transfer, M-Pesa, PayPal, Stripe. Flexible payment plans available!</em>`,
+
+    timeline: `<strong>⏰ Project Timelines & Delivery:</strong><br><br>
+      <strong>📱 Mobile Applications</strong><br>
+      • Simple App (3-5 screens): 6-8 weeks<br>
+      • Standard App (8-12 screens): 10-14 weeks<br>
+      • Complex App (15+ screens): 16-24 weeks<br>
+      <em>Includes: iOS & Android, backend, testing</em><br><br>
+
+      <strong>🌐 Web Applications</strong><br>
+      • Landing Page + Forms: 1-2 weeks<br>
+      • Business Website: 3-4 weeks<br>
+      • Web Portal/Dashboard: 8-12 weeks<br>
+      • SaaS Platform: 16-24 weeks<br>
+      <em>Includes: Design, frontend, backend, hosting</em><br><br>
+
+      <strong>🛒 E-Commerce Stores</strong><br>
+      • Basic Store (50 products): 2-3 weeks<br>
+      • Medium Store (500 products): 4-6 weeks<br>
+      • Enterprise Store: 8-12 weeks<br>
+      <em>Includes: Setup, payment integration, training</em><br><br>
+
+      <strong>🏢 Enterprise Software</strong><br>
+      • Small Business ERP: 12-16 weeks<br>
+      • Medium Business Solution: 20-28 weeks<br>
+      • Large Enterprise System: 6-12 months<br>
+      <em>Phased delivery with MVP in first 8 weeks</em><br><br>
+
+      <strong>🚀 MVP/Prototype</strong><br>
+      • Quick Prototype: 2-3 weeks<br>
+      • Functional MVP: 6-8 weeks<br>
+      • Market-Ready MVP: 10-12 weeks<br><br>
+
+      <em>⚡ We use Agile methodology: Weekly demos, bi-weekly sprints, continuous delivery</em>`,
+
+    tech: `<strong>🔧 Our Technology Stack:</strong><br><br>
+      <strong>🔵 Backend Development</strong><br>
+      • PHP: Laravel (primary framework)<br>
+      • JavaScript: Node.js, Express, NestJS<br>
+      • Python: Django, Flask, FastAPI<br>
+      • Java: Spring Boot (enterprise)<br><br>
+
+      <strong>🎨 Frontend Development</strong><br>
+      • React.js + Next.js (modern SPAs)<br>
+      • Vue.js + Nuxt.js (flexible UIs)<br>
+      • Tailwind CSS + Flowbite (styling)<br>
+      • Alpine.js (lightweight interactivity)<br><br>
+
+      <strong>📱 Mobile Development</strong><br>
+      • Flutter (cross-platform, our favorite)<br>
+      • React Native (JavaScript-based)<br>
+      • Swift (native iOS)<br>
+      • Kotlin (native Android)<br><br>
+
+      <strong>💾 Databases & Storage</strong><br>
+      • MySQL/MariaDB (relational)<br>
+      • PostgreSQL (advanced features)<br>
+      • MongoDB (document store)<br>
+      • Redis (caching, queues)<br>
+      • AWS S3 (file storage)<br><br>
+
+      <strong>☁️ Cloud & DevOps</strong><br>
+      • AWS (preferred for scalability)<br>
+      • DigitalOcean (cost-effective)<br>
+      • Google Cloud (ML/AI projects)<br>
+      • Docker + Kubernetes<br>
+      • CI/CD: GitHub Actions, GitLab CI<br><br>
+
+      <strong>💳 Payment Integrations</strong><br>
+      • <strong>M-Pesa (Safaricom)</strong> - STK Push, C2B, B2C<br>
+      • Airtel Money, T-Kash<br>
+      • Stripe, PayPal (international)<br>
+      • Flutterwave, Paystack (Africa)<br><br>
+
+      <strong>🔐 Security & Compliance</strong><br>
+      • SSL/TLS encryption<br>
+      • OAuth 2.0, JWT authentication<br>
+      • GDPR, PCI-DSS compliant<br>
+      • Regular security audits<br><br>
+
+      <em>🎯 We choose the best tech for YOUR needs - not just what's trendy!</em>`,
+
+    portfolio: `<strong>🏆 Our Recent Work:</strong><br><br>
+      <strong>🏦 FinTech Platform - Kenya</strong><br>
+      Built a microfinance mobile app with M-Pesa integration serving 50,000+ users. Loan processing, repayment tracking, and SMS notifications.<br>
+      <em>Tech: Flutter, Laravel, MySQL, M-Pesa API</em><br><br>
+
+      <strong>🛒 E-Commerce Platform - Uganda</strong><br>
+      Multi-vendor marketplace with 200+ vendors, 10,000+ products. Mobile money integration, delivery tracking.<br>
+      <em>Tech: Laravel, Vue.js, PostgreSQL</em><br><br>
+
+      <strong>🏥 Hospital Management System - Tanzania</strong><br>
+      Complete HMS with patient records, appointments, billing, pharmacy, and lab management for 3 hospitals.<br>
+      <em>Tech: Laravel, React, MySQL</em><br><br>
+
+      <strong>🚜 AgriTech Mobile App - Rwanda</strong><br>
+      Farmer marketplace connecting 5,000+ farmers with buyers. Weather alerts, market prices, offline mode.<br>
+      <em>Tech: Flutter, Node.js, MongoDB</em><br><br>
+
+      <strong>📚 EdTech Learning Platform - Multi-Country</strong><br>
+      Online learning platform with video courses, quizzes, certificates. 20,000+ active students.<br>
+      <em>Tech: Laravel, Next.js, AWS</em><br><br>
+
+      <em>📸 View full portfolio on our website or request case studies!</em>`,
+
+    support: `<strong>🛟 Support & Maintenance:</strong><br><br>
+      <strong>What's Included:</strong><br>
+      ✅ Bug fixes (critical bugs fixed within 24hrs)<br>
+      ✅ Security updates & patches<br>
+      ✅ Performance monitoring<br>
+      ✅ Monthly backups<br>
+      ✅ Technical support (email/phone)<br>
+      ✅ Minor updates & improvements<br><br>
+
+      <strong>Support Plans:</strong><br>
+      • <strong>Basic:</strong> $200/month - Email support, monthly updates<br>
+      • <strong>Standard:</strong> $500/month - Priority support, weekly monitoring<br>
+      • <strong>Premium:</strong> $1,000/month - 24/7 support, dedicated manager<br><br>
+
+      <strong>First 3 Months:</strong><br>
+      FREE support included with every project! We ensure smooth launch and handle any issues.<br><br>
+
+      <strong>SLA Guarantees:</strong><br>
+      • Critical bugs: Fixed within 24 hours<br>
+      • High priority: Fixed within 72 hours<br>
+      • Normal issues: Fixed within 1 week<br><br>
+
+      <em>💚 We build long-term partnerships - your success is our success!</em>`
   };
 
   // Add bot message
@@ -225,10 +452,10 @@
     const messageDiv = document.createElement('div');
     messageDiv.className = 'flex items-start gap-2';
     messageDiv.innerHTML = `
-      <div class="w-7 h-7 rounded-full bg-cyan-800 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">AS</div>
+      <div class="w-7 h-7 rounded-full bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">AS</div>
       <div class="flex-1">
-        <div class="text-xs text-neutral-600 mb-1">Stratus () • ${time}</div>
-        <div class="bg-white rounded-lg p-3 shadow-sm text-sm text-neutral-800">${text}</div>
+        <div class="text-xs text-neutral-600 mb-1">Stratus Assistant • ${time}</div>
+        <div class="bg-white rounded-lg p-3 shadow-sm text-sm text-neutral-800 leading-relaxed">${text}</div>
       </div>
     `;
     chatMessages.appendChild(messageDiv);
@@ -307,32 +534,148 @@
     $('#contact-form-call').classList.add('hidden');
   }
 
-  // Send chat message
-  function sendChatMessage() {
+  // Send chat message - ENHANCED WITH LIVE CHAT
+  async function sendChatMessage() {
     const message = chatInput.value.trim();
     if (!message) return;
-    
+
+    // If already in live chat, send to conversation
+    if (window.liveChat && window.liveChat.isLiveChatActive) {
+      addUserMessage(message);
+      chatInput.value = '';
+
+      const result = await window.liveChat.sendMessage(message);
+      if (!result.success) {
+        addBotMessage("⚠️ Message failed to send. Please try again.");
+      }
+      return;
+    }
+
+    // Add user message to UI
     addUserMessage(message);
     chatInput.value = '';
-    
-    // Simple bot response
-    setTimeout(() => {
-      addBotMessage("Thanks for your message! For detailed assistance, I'll connect you with our sales team. Please use the Message tab to provide your contact details.");
+
+    // Check if this is a predefined question
+    const predefinedOptions = Object.keys(responses);
+    const messageLower = message.toLowerCase();
+    const isPredefined = predefinedOptions.some(opt =>
+      messageLower.includes(opt.toLowerCase())
+    );
+
+    if (isPredefined) {
+      // Handle with bot response (existing functionality)
       setTimeout(() => {
-        const contactDiv = document.createElement('div');
-        contactDiv.className = 'px-9';
-        contactDiv.innerHTML = `
-          <button class="contact-sales-btn w-full bg-cyan-800 hover:bg-cyan-500 text-white rounded-full px-4 py-2 text-sm font-medium transition-colors">
-            Contact Sales Team
-          </button>
-        `;
-        chatMessages.appendChild(contactDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-        
-        contactDiv.querySelector('.contact-sales-btn').addEventListener('click', switchToMessageTab);
-      }, 1000);
-    }, 1500);
+        addBotMessage("Thanks for your message! For detailed assistance, I'll connect you with our sales team.");
+        setTimeout(() => {
+          const contactDiv = document.createElement('div');
+          contactDiv.className = 'px-9';
+          contactDiv.innerHTML = `
+            <button class="contact-sales-btn w-full bg-cyan-800 hover:bg-cyan-500 text-white rounded-full px-4 py-2 text-sm font-medium transition-colors">
+              Contact Sales Team
+            </button>
+          `;
+          chatMessages.appendChild(contactDiv);
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+
+          contactDiv.querySelector('.contact-sales-btn').addEventListener('click', switchToMessageTab);
+        }, 1000);
+      }, 1500);
+    } else {
+      // START LIVE CHAT with an agent
+      addBotMessage("🔄 Connecting you with an agent...");
+
+      try {
+        const result = await window.liveChat.startConversation(message);
+
+        if (result.success) {
+          addBotMessage(`✅ <strong>Connected!</strong> An agent will respond shortly.<br><em>Conversation #${result.conversation.conversation_number}</em>`);
+
+          // Listen for new agent messages
+          window.addEventListener('liveChat:newMessages', handleAgentMessages);
+          window.addEventListener('liveChat:conversationEnded', handleConversationEnded);
+
+        } else {
+          addBotMessage("❌ Sorry, couldn't connect to live chat. Please use the Message tab to contact us.");
+          switchToMessageTab();
+        }
+      } catch (error) {
+        console.error('Live chat error:', error);
+        addBotMessage("⚠️ Connection error. Please try again or use the Message tab.");
+      }
+    }
   }
+
+  // Handle incoming agent messages
+  function handleAgentMessages(event) {
+    const { messages } = event.detail;
+
+    messages.forEach(msg => {
+      if (msg.sender_type === 'agent') {
+        addAgentMessage(msg.body, msg.sender_name);
+      }
+    });
+
+    // Mark as seen
+    window.liveChat.markAsSeen();
+  }
+
+  // Add agent message to UI
+  function addAgentMessage(text, agentName) {
+    const time = new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'flex items-start gap-2';
+    messageDiv.innerHTML = `
+      <div class="w-7 h-7 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">${agentName.charAt(0)}</div>
+      <div class="flex-1">
+        <div class="text-xs text-neutral-600 mb-1">${agentName} (Agent) • ${time}</div>
+        <div class="bg-white rounded-lg p-3 shadow-sm text-sm text-neutral-800 leading-relaxed">${text}</div>
+      </div>
+    `;
+    chatMessages.appendChild(messageDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Handle conversation end
+  function handleConversationEnded(event) {
+    const { status } = event.detail;
+    addBotMessage(`💚 <strong>Chat ${status}!</strong> Thank you for contacting Ascend Stratus. Feel free to start a new chat anytime.`);
+
+    // Clean up
+    window.removeEventListener('liveChat:newMessages', handleAgentMessages);
+    window.removeEventListener('liveChat:conversationEnded', handleConversationEnded);
+  }
+
+  // Handle conversation resumption on page load
+  function handleConversationResumed(event) {
+    const { conversation, messages } = event.detail;
+
+    // Clear chat messages first
+    chatMessages.innerHTML = '';
+
+    // Add system message
+    addBotMessage(`🔄 <strong>Chat Resumed!</strong> Continuing conversation #${conversation.conversation_number || conversation.id}`);
+
+    // Restore all previous messages
+    if (messages && messages.length > 0) {
+      messages.forEach(msg => {
+        if (msg.sender_type === 'customer') {
+          addUserMessage(msg.body);
+        } else if (msg.sender_type === 'agent') {
+          addAgentMessage(msg.body, msg.sender_name);
+        }
+      });
+    }
+
+    // Listen for new messages
+    window.addEventListener('liveChat:newMessages', handleAgentMessages);
+    window.addEventListener('liveChat:conversationEnded', handleConversationEnded);
+
+    // Scroll to bottom
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Listen for conversation resumed event
+  window.addEventListener('liveChat:conversationResumed', handleConversationResumed);
 
   sendBtn.addEventListener('click', sendChatMessage);
   chatInput.addEventListener('keypress', (e) => {
@@ -357,182 +700,144 @@
 
   function showEnhancedToast(toastData) {
     const { type, title, message, duration = 4000 } = toastData;
-    
+
     // Update toast styling based on type
-    toast.className = 'fixed bottom-24 right-6 px-4 py-3 rounded-lg shadow-lg text-white text-sm max-w-sm';
-    
+    toast.className = 'fixed bottom-24 right-6 px-4 py-3 rounded-lg shadow-2xl text-white text-sm max-w-sm transition-all duration-300 transform z-50';
+
     if (type === 'success') {
-      toast.classList.add('bg-emerald-600');
+      toast.classList.add('bg-gradient-to-r', 'from-emerald-500', 'to-green-600');
     } else if (type === 'error') {
-      toast.classList.add('bg-red-600');
+      toast.classList.add('bg-gradient-to-r', 'from-red-500', 'to-red-600');
     } else if (type === 'warning') {
-      toast.classList.add('bg-amber-600');
+      toast.classList.add('bg-gradient-to-r', 'from-amber-500', 'to-orange-600');
     } else {
-      toast.classList.add('bg-blue-600');
+      toast.classList.add('bg-gradient-to-r', 'from-blue-500', 'to-cyan-600');
     }
-    
+
     // Set content with title if provided
     if (title) {
-      toast.innerHTML = `<div class="font-semibold">${title}</div><div class="text-sm opacity-90">${message}</div>`;
+      toast.innerHTML = `
+        <div class="flex items-start gap-3">
+          <div class="flex-1">
+            <div class="font-semibold text-base mb-1">${title}</div>
+            <div class="text-sm opacity-90 leading-relaxed">${message}</div>
+          </div>
+          <button onclick="this.parentElement.parentElement.classList.add('hidden')" class="text-white/80 hover:text-white">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      `;
     } else {
       toast.textContent = message;
     }
-    
+
+    // Show with animation
     toast.classList.remove('hidden');
-    setTimeout(() => toast.classList.add('hidden'), duration);
+    setTimeout(() => toast.style.transform = 'translateY(0)', 10);
+
+    // Hide with animation
+    setTimeout(() => {
+      toast.style.transform = 'translateY(20px)';
+      toast.style.opacity = '0';
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.style.transform = '';
+        toast.style.opacity = '';
+      }, 300);
+    }, duration);
   }
 
-  // Enhanced form submissions with comprehensive error handling
-  $('#contact-form-message').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const submitBtn = e.target.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    
-    // Show loading state
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    statusBox.classList.add('hidden');
-    
-    try {
-      if (!csrf) {
-        throw new Error('CSRF token not available. Please refresh the page.');
-      }
-      
-      const response = await fetch('/contact/message', {
-        method: 'POST',
-        body: formData,
-        headers: { 'X-CSRF-TOKEN': csrf }
-      });
-      
-      const result = await response.json();
-      
-      if (response.ok && result.success) {
-        showStatus('success', result.message || 'Message sent successfully!');
-        e.target.reset();
-        
-        // Show enhanced toast if available
-        if (result.toast) {
-          showEnhancedToast(result.toast);
-        } else {
-          showToast('✅ ' + (result.message || 'Thank you! We\'ll get back to you soon.'));
-        }
-        
-        // Log success for debugging
-        console.log('Message sent successfully:', result.submission_id);
-        
-        // Auto-close widget after success
-        setTimeout(() => {
-          closePanel();
-        }, 3000);
-        
-      } else if (response.status === 422) {
-        // Validation errors
-        const errorMessages = Object.values(result.errors || {}).flat();
-        showStatus('error', errorMessages.join(', ') || 'Please check your input.');
-        
-        if (result.toast) {
-          showEnhancedToast(result.toast);
-        } else {
-          showToast('❌ Please fix the form errors and try again.');
-        }
-        
-      } else {
-        // Server errors but message might still be received
-        showStatus('error', result.message || 'Failed to send message. Please try again.');
-        
-        if (result.toast) {
-          showEnhancedToast(result.toast);
-        } else {
-          showToast('⚠️ ' + (result.message || 'There was an issue, but we may have received your message.'));
-        }
-      }
-      
-    } catch (error) {
-      console.error('Network error:', error);
-      showStatus('error', 'Network error. Please check your connection and try again.');
-      showToast('❌ Network error. Please try again.');
-    } finally {
-      // Reset button state
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-    }
-  });
+  // NO JavaScript form handling - pure Laravel form submission
+  console.log('Contact widget initialized - forms will submit via Laravel');
 
-  $('#contact-form-call').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const submitBtn = e.target.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    
-    // Show loading state
-    submitBtn.textContent = 'Submitting...';
-    submitBtn.disabled = true;
-    statusBox.classList.add('hidden');
-    
+  // Debug form submissions
+  if (messageForm) {
+    messageForm.addEventListener('submit', function(e) {
+      console.log('🚀 MESSAGE FORM SUBMITTING VIA LARAVEL!');
+      console.log('Form action:', this.action);
+      console.log('Form method:', this.method);
+      console.log('Form data:', new FormData(this));
+      // Let it submit naturally - don't prevent default
+    });
+  }
+
+  if (callForm) {
+    callForm.addEventListener('submit', function(e) {
+      console.log('🚀 CALL FORM SUBMITTING VIA LARAVEL!');
+      console.log('Form action:', this.action);
+      console.log('Form method:', this.method);
+      console.log('Form data:', new FormData(this));
+      // Let it submit naturally - don't prevent default
+    });
+  }
+
+  // Set timezone for call request form
+  const timezoneInput = document.getElementById('call-timezone');
+  if (timezoneInput) {
     try {
-      if (!csrf) {
-        throw new Error('CSRF token not available. Please refresh the page.');
-      }
-      
-      const response = await fetch('/contact/call', {
-        method: 'POST',
-        body: formData,
-        headers: { 'X-CSRF-TOKEN': csrf }
-      });
-      
-      const result = await response.json();
-      
-      if (response.ok && result.success) {
-        showStatus('success', result.message || 'Call request submitted!');
-        e.target.reset();
-        
-        // Show enhanced toast if available
-        if (result.toast) {
-          showEnhancedToast(result.toast);
-        } else {
-          showToast('✅ ' + (result.message || 'Thank you! We\'ll call you soon.'));
-        }
-        
-        // Log success for debugging
-        console.log('Call request sent successfully:', result.submission_id);
-        
-        // Auto-close widget after success
-        setTimeout(() => {
-          closePanel();
-        }, 3000);
-        
-      } else if (response.status === 422) {
-        // Validation errors
-        const errorMessages = Object.values(result.errors || {}).flat();
-        showStatus('error', errorMessages.join(', ') || 'Please check your input.');
-        
-        if (result.toast) {
-          showEnhancedToast(result.toast);
-        } else {
-          showToast('❌ Please fix the form errors and try again.');
-        }
-        
-      } else {
-        // Server errors but request might still be received
-        showStatus('error', result.message || 'Failed to submit request. Please try again.');
-        
-        if (result.toast) {
-          showEnhancedToast(result.toast);
-        } else {
-          showToast('⚠️ ' + (result.message || 'There was an issue, but we may have received your request.'));
-        }
-      }
-      
-    } catch (error) {
-      console.error('Network error:', error);
-      showStatus('error', 'Network error. Please check your connection and try again.');
-      showToast('❌ Network error. Please try again.');
-    } finally {
-      // Reset button state
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      timezoneInput.value = timezone;
+      console.log('Timezone set:', timezone);
+    } catch (e) {
+      timezoneInput.value = 'UTC';
     }
-  });
+  }
 })();
 </script>
+
+<!-- Handle Laravel session messages -->
+@if(session('success'))
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toast = document.getElementById('contact-toast');
+    const messageForm = document.getElementById('contact-form-message');
+    const callForm = document.getElementById('contact-form-call');
+
+    if (toast) {
+        toast.className = 'fixed bottom-24 right-6 px-4 py-3 rounded-lg shadow-2xl text-white text-sm max-w-sm transition-all duration-300 transform z-50 bg-gradient-to-r from-green-500 to-green-600';
+        toast.innerHTML = `
+            <div class="flex items-start gap-3">
+                <div class="flex-1">
+                    <div class="font-semibold text-base mb-1">✅ Success!</div>
+                    <div class="text-sm opacity-90 leading-relaxed">{{ session('success') }}</div>
+                </div>
+            </div>
+        `;
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 5000);
+
+        // Clear both forms after successful submission
+        if (messageForm) messageForm.reset();
+        if (callForm) callForm.reset();
+
+        console.log('✅ Forms cleared after successful submission');
+    }
+});
+</script>
+@endif
+
+@if($errors->any())
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toast = document.getElementById('contact-toast');
+    if (toast) {
+        toast.className = 'fixed bottom-24 right-6 px-4 py-3 rounded-lg shadow-2xl text-white text-sm max-w-sm transition-all duration-300 transform z-50 bg-gradient-to-r from-red-500 to-red-600';
+        toast.innerHTML = `
+            <div class="flex items-start gap-3">
+                <div class="flex-1">
+                    <div class="font-semibold text-base mb-1">❌ Error</div>
+                    <div class="text-sm opacity-90 leading-relaxed">{{ $errors->first() }}</div>
+                </div>
+            </div>
+        `;
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 5000);
+    }
+});
+</script>
+@endif
+
+<!-- Live Chat Library -->
+<script src="{{ asset('js/live-chat.js') }}"></script>
