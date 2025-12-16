@@ -609,9 +609,10 @@
     </script>
     
     @stack('head-scripts')
-    
+
     <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
     @stack('styles')
+    @livewireStyles
 </head>
 
 <body class="bg-white text-gray-900 antialiased font-sans overflow-x-hidden selection:bg-teal-100 selection:text-teal-900">
@@ -636,5 +637,6 @@
     @include('components.contact-widget')
 
     @stack('scripts')
+    @livewireScripts
 </body>
 </html>
