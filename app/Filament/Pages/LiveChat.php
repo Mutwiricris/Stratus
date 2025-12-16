@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages;
 
+use App\Events\MessageSent;
 use App\Models\Conversation;
 use App\Models\Message;
 use BackedEnum;
@@ -112,7 +113,7 @@ class LiveChat extends Page
             return;
         }
 
-        Message::create([
+        $message = Message::create([
             'conversation_id' => $this->selectedConversationId,
             'sender_type' => 'agent',
             'sender_id' => Auth::id(),
@@ -122,6 +123,9 @@ class LiveChat extends Page
         Conversation::find($this->selectedConversationId)->update([
             'last_message_at' => now(),
         ]);
+
+        // Broadcast the message to customer via WebSocket
+        broadcast(new MessageSent($message))->toOthers();
 
         $this->messageBody = '';
         $this->loadMessages();

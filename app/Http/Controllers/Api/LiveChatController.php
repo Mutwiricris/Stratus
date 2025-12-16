@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Events\MessageSent;
 use App\Http\Controllers\Controller;
 use App\Models\Conversation;
 use App\Models\Message;
@@ -46,6 +47,9 @@ class LiveChatController extends Controller
                 'message' => $request->message,
             ]);
 
+            // Broadcast the message
+            broadcast(new MessageSent($message))->toOthers();
+
             return response()->json([
                 'success' => true,
                 'conversation' => [
@@ -79,6 +83,9 @@ class LiveChatController extends Controller
             'message' => $request->message,
         ]);
 
+        // Broadcast the message
+        broadcast(new MessageSent($message))->toOthers();
+
         return response()->json([
             'success' => true,
             'conversation' => [
@@ -111,6 +118,9 @@ class LiveChatController extends Controller
         $conversation->update([
             'last_message_at' => now(),
         ]);
+
+        // Broadcast the message
+        broadcast(new MessageSent($message))->toOthers();
 
         return response()->json([
             'success' => true,

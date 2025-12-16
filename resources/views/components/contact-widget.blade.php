@@ -840,4 +840,4 @@ document.addEventListener('DOMContentLoaded', function() {
 @endif
 
 <!-- Live Chat Library -->
-<script src="{{ asset('js/live-chat.js') }}"></script>
+<script src="{{ asset('js/live-chat.js') }}?v={{ time() }}"></script>

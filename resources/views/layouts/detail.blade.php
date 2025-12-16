@@ -12,6 +12,13 @@
     <meta name="author" content="Ascend Stratus">
     <meta name="robots" content="@yield('robots', 'index, follow')">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Reverb WebSocket Configuration -->
+    <meta name="reverb-key" content="{{ config('broadcasting.connections.reverb.key') }}">
+    <meta name="reverb-host" content="{{ config('broadcasting.connections.reverb.options.host') }}">
+    <meta name="reverb-port" content="{{ config('broadcasting.connections.reverb.options.port') }}">
+    <meta name="reverb-scheme" content="{{ config('broadcasting.connections.reverb.options.scheme') }}">
+
     <link rel="canonical" href="{{ url()->current() }}">
     <meta name="description" content="Ascend Stratus builds smart, custom software and mobile apps (iOS/Android) for real business impact. Specializing in Digital Transformation, Laravel, and Craft CMS." />
 
@@ -616,12 +623,18 @@
     @include('components.footer')
     
     @include('components.cookie-modal')
-    
-    <!-- Contact Widget -->
-    @include('components.contact-widget')
-    
+
     @include('components.scripts')
     <script src="{{ asset('js/navigation.js') }}"></script>
+
+    <!-- Laravel Echo & Reverb WebSocket (MUST load before live-chat.js) -->
+    <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/laravel-echo@1.16.1/dist/echo.iife.min.js"></script>
+    <script src="{{ asset('js/echo-setup.js') }}?v={{ time() }}"></script>
+
+    <!-- Contact Widget (includes live-chat.js which depends on Echo) -->
+    @include('components.contact-widget')
+
     @stack('scripts')
 </body>
 </html>

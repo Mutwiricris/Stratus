@@ -1,6 +1,7 @@
 /**
- * Live Chat Integration - Real-time with Session Persistence
- * Works without external dependencies - pure polling
+ * Live Chat Integration - Real-time WebSocket with Laravel Reverb
+ * Uses Laravel Echo for real-time bidirectional communication
+ * Requires: Laravel Echo and Pusher JS loaded before this script
  */
 
 class LiveChat {
@@ -11,7 +12,7 @@ class LiveChat {
         this.customerName = null;
         this.customerEmail = null;
         this.clientFingerprint = null;
-        this.pollingInterval = null;
+        this.channel = null; // WebSocket channel
 
         // Initialize fingerprint
         this.initializeFingerprint();
@@ -184,32 +185,50 @@ class LiveChat {
     }
 
     /**
-     * Start polling for new messages (every 1 second for real-time feel)
+     * Start listening for new messages via WebSockets (real-time)
      */
     startPolling() {
-        if (this.pollingInterval) {
-            clearInterval(this.pollingInterval);
+        // Check if Echo is available
+        if (!window.Echo) {
+            console.error('❌ Laravel Echo not initialized! WebSocket connection failed.');
+            console.error('Make sure echo-setup.js is loaded before live-chat.js');
+            return;
         }
 
-        // Poll every 1 second for near real-time updates
-        this.pollingInterval = setInterval(async () => {
-            const result = await this.getNewMessages();
+        // Clean up any existing subscriptions
+        if (this.channel) {
+            window.Echo.leave(`conversation.${this.conversationId}`);
+        }
 
-            if (result.success && result.messages.length > 0) {
-                // Trigger event with new messages
+        console.log(`🔌 Subscribing to channel: conversation.${this.conversationId}`);
+
+        // Subscribe to the conversation channel
+        this.channel = window.Echo.channel(`conversation.${this.conversationId}`)
+            .listen('.message.sent', (data) => {
+                console.log('📨 New message received via WebSocket:', data);
+
+                // Trigger event with new message (for all messages, let UI decide what to show)
                 window.dispatchEvent(new CustomEvent('liveChat:newMessages', {
-                    detail: { messages: result.messages }
+                    detail: {
+                        messages: [{
+                            id: data.id,
+                            sender_type: data.sender_type,
+                            sender_name: data.sender_name,
+                            body: data.message,
+                            created_at: data.created_at,
+                            timestamp: data.timestamp,
+                        }]
+                    }
                 }));
-            }
 
-            // Stop polling if conversation ended
-            if (result.status === 'closed' || result.status === 'resolved') {
-                this.stopPolling();
-                window.dispatchEvent(new CustomEvent('liveChat:conversationEnded', {
-                    detail: { status: result.status }
-                }));
-            }
-        }, 1000); // 1 second polling for real-time feel
+                // Update last message ID
+                this.lastMessageId = data.id;
+            })
+            .error((error) => {
+                console.error('❌ WebSocket channel error:', error);
+            });
+
+        console.log(`✅ Subscribed to WebSocket channel: conversation.${this.conversationId}`);
     }
 
     /**
@@ -270,12 +289,13 @@ class LiveChat {
     }
 
     /**
-     * Stop polling
+     * Stop listening to WebSocket channel
      */
     stopPolling() {
-        if (this.pollingInterval) {
-            clearInterval(this.pollingInterval);
-            this.pollingInterval = null;
+        if (this.channel && this.conversationId) {
+            window.Echo.leave(`conversation.${this.conversationId}`);
+            this.channel = null;
+            console.log(`🔌 Disconnected from WebSocket channel: conversation.${this.conversationId}`);
         }
     }
 
