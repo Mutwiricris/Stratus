@@ -174,450 +174,53 @@
     <!-- Projects Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
 
-      <!-- Project 1: Healthcare Management System -->
-      <div class="project-card group fade-in-up" data-category="web enterprise">
+      @foreach($portfolios as $portfolio)
+      <!-- {{ $portfolio->title }} -->
+      <div class="project-card group fade-in-up cursor-pointer" data-category="{{ $portfolio->category }}" onclick="window.location.href='{{ route('portfolio.show', $portfolio->slug) }}'">
         <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
           <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Healthcare Management System">
-            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent"></div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Enterprise</span>
-            </div>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">MediCare Plus</h3>
-              <p class="text-blue-100 text-sm">Healthcare Management Platform</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              Comprehensive hospital management system serving 50+ clinics across Kenya with patient records, appointments, and billing.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Laravel</span>
-              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Vue.js</span>
-              <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">PostgreSQL</span>
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-blue-600">50+</span>
-                <span class="text-gray-600 ml-1">Clinics</span>
-              </div>
-              <div class="text-sm">
-                <span class="font-bold text-blue-600">10K+</span>
-                <span class="text-gray-600 ml-1">Users</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2: Mobile Banking App -->
-      <div class="project-card group fade-in-up" data-category="mobile" style="transition-delay: 100ms;">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Mobile Banking App">
-            <div class="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-900/50 to-transparent"></div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Mobile</span>
-            </div>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">PesaPay</h3>
-              <p class="text-green-100 text-sm">Mobile Banking & Payments</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              Full-featured mobile banking app with M-Pesa integration, supporting 100K+ active users across East Africa.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Flutter</span>
-              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Node.js</span>
-              <span class="px-3 py-1 bg-red-50 text-red-700 rounded-full text-xs font-medium">Redis</span>
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-green-600">100K+</span>
-                <span class="text-gray-600 ml-1">Users</span>
-              </div>
-              <div class="text-sm">
-                <span class="font-bold text-green-600">$5M+</span>
-                <span class="text-gray-600 ml-1">Transactions</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3: E-Commerce Platform -->
-      <div class="project-card group fade-in-up" data-category="ecommerce web" style="transition-delay: 200ms;">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2032" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="E-Commerce Platform">
-            <div class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/50 to-transparent"></div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">E-Commerce</span>
-            </div>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">ShopAfrica</h3>
-              <p class="text-purple-100 text-sm">Multi-Vendor Marketplace</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              Leading African marketplace connecting 5,000+ vendors with customers across 12 countries with local payment support.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-medium">Laravel</span>
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">React</span>
-              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Stripe</span>
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-purple-600">5K+</span>
-                <span class="text-gray-600 ml-1">Vendors</span>
-              </div>
-              <div class="text-sm">
-                <span class="font-bold text-purple-600">200K+</span>
-                <span class="text-gray-600 ml-1">Products</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 4: Logistics Platform -->
-      <div class="project-card group fade-in-up" data-category="web enterprise" style="transition-delay: 300ms;">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Logistics Platform">
+            <img src="{{ $portfolio->featured_image ?? 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426' }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="{{ $portfolio->title }}">
             <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/90 via-cyan-900/50 to-transparent"></div>
             <div class="absolute top-4 right-4">
-              <span class="bg-cyan-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Enterprise</span>
+              <span class="bg-cyan-600 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ ucfirst($portfolio->category) }}</span>
             </div>
+            @if($portfolio->is_featured)
+            <div class="absolute top-4 left-4">
+              <span class="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                Featured
+              </span>
+            </div>
+            @endif
             <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">LogiFlow</h3>
-              <p class="text-cyan-100 text-sm">Supply Chain Optimization</p>
+              <h3 class="text-white font-bold text-2xl mb-2">{{ $portfolio->title }}</h3>
+              <p class="text-cyan-100 text-sm">{{ $portfolio->tagline }}</p>
             </div>
           </div>
           <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              AI-powered logistics platform reducing delivery costs by 35% through route optimization and predictive analytics.
+            <p class="text-gray-600 mb-4 leading-relaxed line-clamp-3">
+              {{ $portfolio->description }}
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-cyan-50 text-cyan-700 rounded-full text-xs font-medium">Python</span>
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">TensorFlow</span>
-              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">React</span>
+              @foreach(array_slice($portfolio->technologies, 0, 3, true) as $tech => $description)
+              <span class="px-3 py-1 bg-cyan-50 text-cyan-700 rounded-full text-xs font-medium">{{ is_numeric($tech) ? $description : $tech }}</span>
+              @endforeach
             </div>
             <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-cyan-600">35%</span>
-                <span class="text-gray-600 ml-1">Cost Saved</span>
+              <div class="flex items-center gap-2 text-sm text-gray-600">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                {{ $portfolio->completed_at?->format('M Y') ?? 'Ongoing' }}
               </div>
-              <div class="text-sm">
-                <span class="font-bold text-cyan-600">50+</span>
-                <span class="text-gray-600 ml-1">Partners</span>
-              </div>
+              <a href="{{ route('portfolio.show', $portfolio->slug) }}" class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 group-hover:scale-105 text-sm" onclick="event.stopPropagation()">
+                View Details
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project 5: Education Platform -->
-      <div class="project-card group fade-in-up" data-category="web mobile" style="transition-delay: 400ms;">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2032" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Education Platform">
-            <div class="absolute inset-0 bg-gradient-to-t from-orange-900/90 via-orange-900/50 to-transparent"></div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Web & Mobile</span>
-            </div>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">EduConnect</h3>
-              <p class="text-orange-100 text-sm">Learning Management System</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              Comprehensive LMS serving 200+ schools with virtual classrooms, assessments, and progress tracking for 50K+ students.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-medium">Laravel</span>
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Vue.js</span>
-              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">WebRTC</span>
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-orange-600">200+</span>
-                <span class="text-gray-600 ml-1">Schools</span>
-              </div>
-              <div class="text-sm">
-                <span class="font-bold text-orange-600">50K+</span>
-                <span class="text-gray-600 ml-1">Students</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 6: Restaurant Management -->
-      <div class="project-card group fade-in-up" data-category="web ecommerce" style="transition-delay: 500ms;">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Restaurant Management">
-            <div class="absolute inset-0 bg-gradient-to-t from-red-900/90 via-red-900/50 to-transparent"></div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Web App</span>
-            </div>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">FoodHub POS</h3>
-              <p class="text-red-100 text-sm">Restaurant Management System</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              Complete restaurant POS with online ordering, inventory management, and delivery tracking for 100+ restaurants.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-medium">Laravel</span>
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">React</span>
-              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Stripe</span>
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-red-600">100+</span>
-                <span class="text-gray-600 ml-1">Restaurants</span>
-              </div>
-              <div class="text-sm">
-                <span class="font-bold text-red-600">$2M+</span>
-                <span class="text-gray-600 ml-1">Revenue</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 7: Real Estate Platform -->
-      <div class="project-card group fade-in-up" data-category="web mobile" style="transition-delay: 600ms;">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Real Estate Platform">
-            <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/90 via-indigo-900/50 to-transparent"></div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Web & Mobile</span>
-            </div>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">PropertyPro</h3>
-              <p class="text-indigo-100 text-sm">Real Estate Marketplace</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              Leading property listing platform with virtual tours, mortgage calculators, and agent management for 10K+ listings.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Next.js</span>
-              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Node.js</span>
-              <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">MongoDB</span>
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-indigo-600">10K+</span>
-                <span class="text-gray-600 ml-1">Listings</span>
-              </div>
-              <div class="text-sm">
-                <span class="font-bold text-indigo-600">500+</span>
-                <span class="text-gray-600 ml-1">Agents</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 8: Fitness Tracking App -->
-      <div class="project-card group fade-in-up" data-category="mobile" style="transition-delay: 700ms;">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Fitness App">
-            <div class="absolute inset-0 bg-gradient-to-t from-pink-900/90 via-pink-900/50 to-transparent"></div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Mobile</span>
-            </div>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">FitTrack Pro</h3>
-              <p class="text-pink-100 text-sm">Health & Fitness Tracker</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              Comprehensive fitness app with workout plans, nutrition tracking, and social features for 75K+ active users.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">React Native</span>
-              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Firebase</span>
-              <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">HealthKit</span>
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-pink-600">75K+</span>
-                <span class="text-gray-600 ml-1">Users</span>
-              </div>
-              <div class="text-sm">
-                <span class="font-bold text-pink-600">4.8★</span>
-                <span class="text-gray-600 ml-1">Rating</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 9: AgriTech Solution -->
-      <div class="project-card group fade-in-up" data-category="web mobile transformation" style="transition-delay: 800ms;">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="AgriTech Platform">
-            <div class="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-900/50 to-transparent"></div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Digital Transform</span>
-            </div>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">AgriSmart</h3>
-              <p class="text-green-100 text-sm">Precision Agriculture Platform</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              IoT-powered platform helping farmers optimize yields by 25% through weather data, soil analysis, and crop management.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-cyan-50 text-cyan-700 rounded-full text-xs font-medium">Python</span>
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">IoT</span>
-              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Flutter</span>
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-green-600">25%</span>
-                <span class="text-gray-600 ml-1">Yield ↑</span>
-              </div>
-              <div class="text-sm">
-                <span class="font-bold text-green-600">2K+</span>
-                <span class="text-gray-600 ml-1">Farmers</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 10: HR Management System -->
-      <div class="project-card group fade-in-up" data-category="enterprise web" style="transition-delay: 900ms;">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="HR Management">
-            <div class="absolute inset-0 bg-gradient-to-t from-teal-900/90 via-teal-900/50 to-transparent"></div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Enterprise</span>
-            </div>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">PeopleFlow</h3>
-              <p class="text-teal-100 text-sm">HR & Payroll Management</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              Enterprise HR solution managing 100K+ employees with recruitment, payroll, performance reviews, and analytics.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-medium">Laravel</span>
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">React</span>
-              <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">MySQL</span>
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-teal-600">100K+</span>
-                <span class="text-gray-600 ml-1">Employees</span>
-              </div>
-              <div class="text-sm">
-                <span class="font-bold text-teal-600">500+</span>
-                <span class="text-gray-600 ml-1">Companies</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 11: Tourism Booking Platform -->
-      <div class="project-card group fade-in-up" data-category="web mobile ecommerce" style="transition-delay: 1000ms;">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=2070" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Tourism Platform">
-            <div class="absolute inset-0 bg-gradient-to-t from-yellow-900/90 via-yellow-900/50 to-transparent"></div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-xs font-semibold">E-Commerce</span>
-            </div>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">Safari360</h3>
-              <p class="text-yellow-100 text-sm">Tourism & Travel Booking</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              Complete tourism platform with safari bookings, hotel reservations, and itinerary planning for Kenya tourism.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Next.js</span>
-              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Stripe</span>
-              <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">MongoDB</span>
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-yellow-600">15K+</span>
-                <span class="text-gray-600 ml-1">Bookings</span>
-              </div>
-              <div class="text-sm">
-                <span class="font-bold text-yellow-600">$1.5M+</span>
-                <span class="text-gray-600 ml-1">Revenue</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 12: Event Management Platform -->
-      <div class="project-card group fade-in-up" data-category="web ecommerce" style="transition-delay: 1100ms;">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2012" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Event Management">
-            <div class="absolute inset-0 bg-gradient-to-t from-rose-900/90 via-rose-900/50 to-transparent"></div>
-            <div class="absolute top-4 right-4">
-              <span class="bg-rose-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Web App</span>
-            </div>
-            <div class="absolute bottom-4 left-4 right-4">
-              <h3 class="text-white font-bold text-2xl mb-2">EventHub Pro</h3>
-              <p class="text-rose-100 text-sm">Event & Ticketing Platform</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4 leading-relaxed">
-              Full-featured event platform with ticketing, virtual events, attendee management for 1000+ events annually.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-medium">Laravel</span>
-              <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Vue.js</span>
-              <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Stripe</span>
-            </div>
-            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-              <div class="text-sm">
-                <span class="font-bold text-rose-600">1000+</span>
-                <span class="text-gray-600 ml-1">Events</span>
-              </div>
-              <div class="text-sm">
-                <span class="font-bold text-rose-600">50K+</span>
-                <span class="text-gray-600 ml-1">Attendees</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      @endforeach
     </div>
   </div>
 </section>

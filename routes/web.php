@@ -42,8 +42,16 @@ Route::group(['prefix' => ''], function () {
     })->name('culture');
 
     Route::get('/portfolio', function () {
-        return view('pages.portfolio');
+        $portfolios = \App\Models\Portfolio::where('is_published', true)
+            ->orderBy('order')
+            ->orderByDesc('completed_at')
+            ->get();
+        return view('pages.portfolio', compact('portfolios'));
     })->name('portfolio');
+
+    Route::get('/portfolio/{portfolio:slug}', function (\App\Models\Portfolio $portfolio) {
+        return view('pages.portfolio-detail', compact('portfolio'));
+    })->name('portfolio.show');
 
     Route::get('/insights', function () {
         return view('pages.insights');

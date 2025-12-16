@@ -13,6 +13,7 @@ class ContactMessage extends Model
         'phone',
         'company',
         'subject',
+        'inquiry_type',
         'message',
         'status',
         'client_ip',

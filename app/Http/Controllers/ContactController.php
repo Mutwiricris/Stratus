@@ -187,7 +187,7 @@ class ContactController extends Controller
     public function submitContactForm(Request $request)
     {
         $submissionId = uniqid('contact_form_', true);
-        
+
         Log::info('Main contact form submission started', [
             'submission_id' => $submissionId,
             'ip' => $request->ip(),
@@ -215,10 +215,10 @@ class ContactController extends Controller
                 'message.min' => 'Message must be at least 10 characters',
                 'message.max' => 'Message cannot exceed 5000 characters',
             ]);
-            
+
             // Combine first and last name
             $data['name'] = trim($data['first_name'] . ' ' . $data['last_name']);
-            
+
             Log::info('Main contact form validation passed', [
                 'submission_id' => $submissionId,
                 'name' => $data['name'],
@@ -228,35 +228,53 @@ class ContactController extends Controller
                 'message_length' => strlen($data['message']),
                 'domain' => substr(strrchr($data['email'], "@"), 1),
             ]);
-            
-            // Check email configuration
-            $this->validateEmailConfig();
-            
-            // Send email notification
-            $recipientEmail = env('CONTACT_EMAIL', 'mutwiric00@gmail.com');
-            
-            Log::info('Attempting to send main contact form email', [
-                'submission_id' => $submissionId,
-                'recipient' => $recipientEmail,
-                'sender' => $data['email'],
-                'mail_driver' => config('mail.default'),
+
+            // Save to database
+            $contactMessage = ContactMessage::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'company' => $data['company'] ?? null,
+                'inquiry_type' => $data['inquiry_type'] ?? 'general',
+                'message' => $data['message'],
+                'client_ip' => $request->ip(),
+                'status' => 'new',
             ]);
-            
-            Mail::to($recipientEmail)->send(new ContactSubmission($data, 'contact_form'));
-            
-            Log::info('Main contact form email sent successfully', [
+
+            Log::info('Main contact form saved to database', [
                 'submission_id' => $submissionId,
-                'recipient' => $recipientEmail,
-                'sender_name' => $data['name'],
-                'sender_email' => $data['email'],
-                'company' => $data['company'] ?? 'N/A',
-                'processing_time' => microtime(true) - LARAVEL_START,
+                'message_id' => $contactMessage->id,
+                'message_number' => $contactMessage->message_number,
             ]);
-            
+
+            // Try to send email notification (optional - doesn't block submission)
+            try {
+                $recipientEmail = env('CONTACT_EMAIL', 'mutwiric00@gmail.com');
+
+                Log::info('Attempting to send main contact form email', [
+                    'submission_id' => $submissionId,
+                    'recipient' => $recipientEmail,
+                    'sender' => $data['email'],
+                    'mail_driver' => config('mail.default'),
+                ]);
+
+                Mail::to($recipientEmail)->send(new ContactSubmission($data, 'contact_form'));
+
+                Log::info('Main contact form email sent successfully', [
+                    'submission_id' => $submissionId,
+                    'recipient' => $recipientEmail,
+                    'sender_name' => $data['name'],
+                    'sender_email' => $data['email'],
+                    'company' => $data['company'] ?? 'N/A',
+                ]);
+            } catch (\Exception $e) {
+                Log::warning('Email notification failed', ['error' => $e->getMessage()]);
+            }
+
             // Log success to separate channel
             Log::channel('single')->info('CONTACT_SUBMISSION_SUCCESS', [
                 'type' => 'contact_form',
                 'submission_id' => $submissionId,
+                'message_number' => $contactMessage->message_number,
                 'user_data' => [
                     'name' => $data['name'],
                     'email' => $data['email'],
@@ -268,10 +286,10 @@ class ContactController extends Controller
                 'timestamp' => now()->toISOString(),
                 'success' => true,
             ]);
-            
+
             return redirect()->back()->with([
-                'success' => 'Thank you for your message! We\'ll get back to you within 24 hours. Reference ID: ' . $submissionId,
-                'submission_id' => $submissionId,
+                'success' => 'Thank you for your message! We\'ll get back to you within 24 hours. Reference: ' . $contactMessage->message_number,
+                'message_number' => $contactMessage->message_number,
                 'toast' => [
                     'type' => 'success',
                     'title' => 'Message Sent Successfully!',
@@ -279,7 +297,7 @@ class ContactController extends Controller
                     'duration' => 5000,
                 ]
             ]);
-            
+
         } catch (ValidationException $e) {
             Log::warning('Main contact form validation failed', [
                 'submission_id' => $submissionId,
@@ -287,7 +305,7 @@ class ContactController extends Controller
                 'input' => $request->except(['_token']),
                 'ip' => $request->ip(),
             ]);
-            
+
             return redirect()->back()
                 ->withErrors($e->errors())
                 ->withInput()
@@ -297,9 +315,9 @@ class ContactController extends Controller
                     'message' => '❌ Please fix the form errors and try again.',
                     'duration' => 5000,
                 ]);
-                
+
         } catch (\Exception $e) {
-            Log::error('Main contact form email failed to send', [
+            Log::error('Main contact form submission failed', [
                 'submission_id' => $submissionId,
                 'error' => $e->getMessage(),
                 'error_code' => $e->getCode(),
@@ -307,9 +325,8 @@ class ContactController extends Controller
                 'error_line' => $e->getLine(),
                 'trace' => $e->getTraceAsString(),
                 'data' => $data ?? null,
-                'mail_config' => $this->getMailConfigForLogging(),
             ]);
-            
+
             Log::channel('single')->error('CONTACT_SUBMISSION_FAILED', [
                 'type' => 'contact_form',
                 'submission_id' => $submissionId,
@@ -325,19 +342,16 @@ class ContactController extends Controller
                 'timestamp' => now()->toISOString(),
                 'success' => false,
             ]);
-            
+
             return redirect()->back()
-                ->with([
-                    'warning' => 'Your message was received but there was an issue with email notification. We will still review your submission. Reference ID: ' . $submissionId,
-                    'submission_id' => $submissionId,
-                    'toast' => [
-                        'type' => 'warning',
-                        'title' => 'Partial Success',
-                        'message' => '⚠️ Message received but there was an email issue. We\'ll still review it!',
-                        'duration' => 6000,
-                    ]
-                ])
-                ->withInput();
+                ->withInput()
+                ->withErrors(['error' => 'An error occurred: ' . $e->getMessage()])
+                ->with('toast', [
+                    'type' => 'error',
+                    'title' => 'Submission Failed',
+                    'message' => '❌ There was an error submitting your message. Please try again.',
+                    'duration' => 6000,
+                ]);
         }
     }
 

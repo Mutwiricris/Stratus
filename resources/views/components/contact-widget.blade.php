@@ -120,80 +120,14 @@
             </div>
 
             <!-- Message form -->
-            <form id="contact-form-message" action="{{ route('contact.message') }}" method="POST" class="space-y-3 hidden" autocomplete="on">
-                @csrf
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Name <span class="text-red-500">*</span></label>
-                    <input name="name" required type="text" value="{{ old('name') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800 @error('name') border-red-500 @enderror">
-                    @error('name')
-                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                    @enderror
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Email <span class="text-red-500">*</span></label>
-                    <input name="email" required type="email" value="{{ old('email') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800 @error('email') border-red-500 @enderror">
-                    @error('email')
-                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                    @enderror
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Phone (optional)</label>
-                    <input name="phone" type="tel" value="{{ old('phone') }}" placeholder="e.g. +254700000000" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Company (optional)</label>
-                    <input name="company" type="text" value="{{ old('company') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Subject (optional)</label>
-                    <input name="subject" type="text" value="{{ old('subject') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Message <span class="text-red-500">*</span></label>
-                    <textarea name="message" required rows="3" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800 @error('message') border-red-500 @enderror">{{ old('message') }}</textarea>
-                    @error('message')
-                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                    @enderror
-                </div>
-                <button type="submit" class="w-full bg-cyan-800 hover:bg-cyan-500 text-white rounded-lg px-4 py-2 text-sm font-semibold">Send Message</button>
-            </form>
+            <div id="contact-form-message" class="hidden">
+                <livewire:widget-message-form />
+            </div>
 
             <!-- Call form -->
-            <form id="contact-form-call" action="{{ route('contact.call') }}" method="POST" class="space-y-3 hidden" autocomplete="on">
-                @csrf
-                <input type="hidden" name="timezone" id="call-timezone" value="">
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Name <span class="text-red-500">*</span></label>
-                    <input name="name" required type="text" value="{{ old('name') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800 @error('name') border-red-500 @enderror">
-                    @error('name')
-                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                    @enderror
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Phone Number <span class="text-red-500">*</span></label>
-                    <input name="phone" required type="tel" value="{{ old('phone') }}" placeholder="e.g. +254700000000" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800 @error('phone') border-red-500 @enderror">
-                    @error('phone')
-                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                    @enderror
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Email (optional)</label>
-                    <input name="email" type="email" value="{{ old('email') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Company (optional)</label>
-                    <input name="company" type="text" value="{{ old('company') }}" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Preferred time (optional)</label>
-                    <input name="time" type="text" value="{{ old('time') }}" placeholder="e.g. Tomorrow 2pm EAT" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-neutral-700 mb-1">Message (optional)</label>
-                    <textarea name="note" rows="2" placeholder="Any specific questions?" class="w-full border border-neutral-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-800">{{ old('note') }}</textarea>
-                </div>
-                <button type="submit" class="w-full bg-cyan-800 hover:bg-cyan-500 text-white rounded-lg px-4 py-2 text-sm font-semibold">Request a Call</button>
-            </form>
+            <div id="contact-form-call" class="hidden">
+                <livewire:call-request-form />
+            </div>
             <!-- //call button -->
 
 
