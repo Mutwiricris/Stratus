@@ -36,8 +36,7 @@ class LiveChat extends Page
 
     public function loadActiveConversations()
     {
-        $this->activeConversations = Conversation::whereIn('status', ['open', 'pending'])
-            ->with(['assignedAgent', 'messages' => function ($query) {
+        $this->activeConversations = Conversation::with(['assignedAgent', 'messages' => function ($query) {
                 $query->latest()->limit(1);
             }])
             ->orderByDesc('last_message_at')
@@ -120,8 +119,10 @@ class LiveChat extends Page
             'message' => $this->messageBody,
         ]);
 
-        Conversation::find($this->selectedConversationId)->update([
+        $conversation = Conversation::find($this->selectedConversationId);
+        $conversation->update([
             'last_message_at' => now(),
+            'status' => 'open', // Reopen conversation when replying
         ]);
 
         // Broadcast the message to customer via WebSocket
@@ -148,15 +149,5 @@ class LiveChat extends Page
         $this->loadActiveConversations();
     }
 
-    public function resolveConversation()
-    {
-        if (!$this->selectedConversationId) {
-            return;
-        }
-
-        $conversation = Conversation::find($this->selectedConversationId);
-        $conversation->markAsResolved();
-
-        $this->loadActiveConversations();
-    }
+    // Resolve functionality removed - conversations remain accessible
 }

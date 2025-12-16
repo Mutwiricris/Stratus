@@ -22,7 +22,7 @@
             <div style="flex: 1; background: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: flex; flex-direction: column;">
                 <div style="padding: 1rem; border-bottom: 1px solid #e5e7eb;">
                     <h3 style="font-size: 1.125rem; font-weight: 600; margin: 0;">
-                        Active Chats ({{ count($activeConversations) }})
+                        All Chats ({{ count($activeConversations) }})
                     </h3>
                     <p style="font-size: 0.875rem; color: #6b7280; margin: 0.25rem 0 0 0;">
                         <span wire:loading wire:target="loadActiveConversations">
@@ -52,6 +52,15 @@
                                             <span style="background: #ef4444; color: white; font-size: 0.75rem; padding: 0.125rem 0.5rem; border-radius: 9999px; font-weight: 600;">
                                                 {{ $conv['unread_count'] }}
                                             </span>
+                                        @endif
+                                        @if($conv['status'] === 'open')
+                                            <span style="background: #10b981; color: white; font-size: 0.75rem; padding: 0.125rem 0.5rem; border-radius: 0.25rem; font-weight: 500;">Open</span>
+                                        @elseif($conv['status'] === 'closed')
+                                            <span style="background: #6b7280; color: white; font-size: 0.75rem; padding: 0.125rem 0.5rem; border-radius: 0.25rem; font-weight: 500;">Closed</span>
+                                        @elseif($conv['status'] === 'resolved')
+                                            <span style="background: #3b82f6; color: white; font-size: 0.75rem; padding: 0.125rem 0.5rem; border-radius: 0.25rem; font-weight: 500;">Resolved</span>
+                                        @else
+                                            <span style="background: #f59e0b; color: white; font-size: 0.75rem; padding: 0.125rem 0.5rem; border-radius: 0.25rem; font-weight: 500;">{{ ucfirst($conv['status']) }}</span>
                                         @endif
                                     </div>
                                     <div style="font-size: 0.875rem; color: #6b7280; margin-top: 0.25rem;">{{ $conv['subject'] }}</div>
@@ -95,9 +104,6 @@
                                 </p>
                             </div>
                             <div style="display: flex; gap: 0.5rem;">
-                                <x-filament::button wire:click="resolveConversation" color="success" size="sm">
-                                    Resolve
-                                </x-filament::button>
                                 <x-filament::button wire:click="closeConversation" color="danger" size="sm">
                                     Close
                                 </x-filament::button>
