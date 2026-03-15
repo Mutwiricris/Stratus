@@ -10,14 +10,14 @@ class PortfolioSeeder extends Seeder
     public function run(): void
     {
         $portfolios = [
-            // Safari360 - Tourism & Safari Booking Platform
+            // ZuriTrails - Tourism & Safari Booking Platform
             [
-                'title' => 'Safari360',
-                'slug' => 'safari360',
+                'title' => 'ZuriTrails',
+                'slug' => 'zuritrails',
                 'tagline' => 'Africa\'s Premier Safari Booking & Wildlife Experience Platform',
-                'description' => 'Safari360 is a revolutionary digital platform transforming how travelers discover, book, and experience authentic African safaris. Built with cutting-edge technology and deep understanding of the tourism industry, Safari360 connects adventure seekers with verified safari operators, lodges, and wildlife experiences across East Africa. The platform offers real-time availability, instant bookings, secure payments, and immersive 360° virtual tours of destinations, creating an end-to-end safari planning experience that\'s seamless, transparent, and unforgettable.',
+                'description' => 'ZuriTrails is a revolutionary digital platform transforming how travelers discover, book, and experience authentic African safaris. Built with cutting-edge technology and deep understanding of the tourism industry, ZuriTrails connects adventure seekers with verified safari operators, lodges, and wildlife experiences across East Africa. The platform offers real-time availability, instant bookings, secure payments, and immersive 360° virtual tours of destinations, creating an end-to-end safari planning experience that\'s seamless, transparent, and unforgettable.',
                 'challenge' => 'The African safari industry faced significant digital transformation challenges: fragmented booking systems, lack of real-time availability, price transparency issues, limited payment options for international travelers, difficulty showcasing remote locations, and trust concerns when booking high-value safari packages online. Tour operators struggled with manual booking processes, while travelers found it difficult to compare options and make informed decisions.',
-                'solution' => 'We developed Safari360 as a comprehensive marketplace that digitizes the entire safari booking ecosystem. The platform features intelligent search with filters for budget, duration, wildlife interests, and accommodation preferences. Real-time inventory management ensures accurate availability across hundreds of safari operators. Integrated payment gateway supports M-Pesa, cards, and international transfers with multi-currency support. Virtual 360° tours with interactive hotspots let travelers explore camps and reserves before booking. Smart itinerary builder helps create custom multi-day safari packages. The mobile-first Progressive Web App works offline in remote areas, while the vendor dashboard streamlines operations for safari operators.',
+                'solution' => 'We developed ZuriTrails as a comprehensive marketplace that digitizes the entire safari booking ecosystem. The platform features intelligent search with filters for budget, duration, wildlife interests, and accommodation preferences. Real-time inventory management ensures accurate availability across hundreds of safari operators. Integrated payment gateway supports M-Pesa, cards, and international transfers with multi-currency support. Virtual 360° tours with interactive hotspots let travelers explore camps and reserves before booking. Smart itinerary builder helps create custom multi-day safari packages. The mobile-first Progressive Web App works offline in remote areas, while the vendor dashboard streamlines operations for safari operators.',
                 'features' => [
                     [
                         'icon' => '🎯',
@@ -89,8 +89,8 @@ class PortfolioSeeder extends Seeder
                 'category' => 'web',
                 'industry' => 'Tourism & Hospitality',
                 'completed_at' => '2024-08-15',
-                'url' => 'https://safari360.africa',
-                'featured_image' => '/images/portfolio/safari360-hero.jpg',
+                'url' => 'https://zuritrails.africa',
+                'featured_image' => '/images/portfolio/zuritrails-hero.jpg',
                 'is_featured' => true,
                 'is_published' => true,
                 'order' => 1,
@@ -98,7 +98,7 @@ class PortfolioSeeder extends Seeder
                     'name' => 'David Kimani',
                     'role' => 'CEO, Maasai Adventures',
                     'photo' => '/images/testimonials/david-kimani.jpg',
-                    'quote' => 'Safari360 transformed our business completely. We went from 5-10 manual bookings per month to over 150 automated bookings. The platform handles everything - inventory, payments, customer communication. Our revenue increased 600% in the first year.',
+                    'quote' => 'ZuriTrails transformed our business completely. We went from 5-10 manual bookings per month to over 150 automated bookings. The platform handles everything - inventory, payments, customer communication. Our revenue increased 600% in the first year.',
                 ],
             ],
 

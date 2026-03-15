@@ -10,7 +10,7 @@ class EnhancedPortfolioSeeder extends Seeder
     public function run(): void
     {
         // First, update existing portfolios with Unsplash images
-        Portfolio::where('slug', 'safari360')->update([
+        Portfolio::where('slug', 'zuritrails')->update([
             'featured_image' => 'https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=2068',
         ]);
 

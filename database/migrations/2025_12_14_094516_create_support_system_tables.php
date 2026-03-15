@@ -117,7 +117,11 @@ return new class extends Migration
             $table->timestamps();
 
             $table->index('category');
-            $table->fullText(['title', 'content']);
+
+            // Conditionally add fulltext index
+            if (Schema::getConnection()->getDriverName() === 'mysql') {
+                $table->fullText(['title', 'content']);
+            }
         });
 
         // Conversation Tags table
